@@ -8,6 +8,7 @@ export default function Navbar() {
 				<a href="/hotels">Book Hotels</a>
 				<button>Inspirasi Seru</button>
 				<button>Rencanakan Perjalanan</button>
+				<button>Game</button>
 				<button>Go Explore</button>
 				<button>Panduan Dasar</button>
 			</div>
