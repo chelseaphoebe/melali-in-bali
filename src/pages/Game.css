@@ -1,41 +1,64 @@
-body, html {
-    height: 100%;
-    margin: 0;
-  }
-  .fixed-nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  /* Sesuaikan tinggi navbar sesuai dengan desain Anda */
-  height: 50px;
-  /* Sesuaikan warna latar belakang navbar sesuai dengan desain Anda */
-  background-color: #00a087;
+.game-area {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
+  border: 2px solid #000;
+  background-size: cover;
 }
 
-/* Tambahkan margin-top pada elemen yang menampung game */
-.game-container {
-  margin-top: 50px; /* Sesuaikan ini dengan tinggi navbar */
+.snake-segment {
+  position: absolute;
+  width: 20px;
+  height: 20px; 
+  background-color: green;
 }
-  .game-item {
-    position: absolute;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+@media (max-width: 768px) {
+  .game-area {
+    width: 100vw; 
+    height: 80vh; 
   }
-  
-  .game-item:hover {
-    transform: scale(1.1);
-  }
-  
-  .score {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: white;
-    font-size: 24px;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-  }
+}
+.food {
+  position: absolute;
+  width: 20px; 
+  height: 20px; 
+  border-radius: 50%; 
+}
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: red;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  font-style: bold;
+}
+.Game h1 {
+  font-family: 'Circular Std', sans-serif;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+}
+.Game h2 {
+  font-family: 'Circular Std', sans-serif;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+}
+h2 label {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h1, p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h1, p {
+  color: black;
+}
