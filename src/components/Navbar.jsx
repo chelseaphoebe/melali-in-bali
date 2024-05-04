@@ -1,6 +1,23 @@
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+
 export default function Navbar() {
+
+	const [topPage, setTopPage] = useState('') 
+
+	useEffect (() => {
+		window.addEventListener('scroll', ()=> {
+			if(window.scrollY === 0){
+				setTopPage("bg-opacity-0");
+			} else {
+				setTopPage("bg-black");
+			}
+		})}, []
+	);
+
 	return (
-		<div className="bg-black text-white pl-14 pr-28  flex justify-between items-center bg-opacity-75 fixed w-full py-3">
+		<div id="navBar" className={`${topPage} text-white pl-14 pr-28  flex justify-between items-center bg-opacity-75 fixed w-full py-3`}>
 			<a href="/"> 
         <img src="./images/logo.png" alt="" className="size-12"/>
       </a>
