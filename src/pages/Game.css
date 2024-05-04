@@ -2,7 +2,22 @@ body, html {
     height: 100%;
     margin: 0;
   }
-  
+  .fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  /* Sesuaikan tinggi navbar sesuai dengan desain Anda */
+  height: 50px;
+  /* Sesuaikan warna latar belakang navbar sesuai dengan desain Anda */
+  background-color: #00a087;
+}
+
+/* Tambahkan margin-top pada elemen yang menampung game */
+.game-container {
+  margin-top: 50px; /* Sesuaikan ini dengan tinggi navbar */
+}
   .game-item {
     position: absolute;
     cursor: pointer;
