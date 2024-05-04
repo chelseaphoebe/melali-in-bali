@@ -3,13 +3,6 @@ body, html {
     margin: 0;
   }
   
-  .game-container {
-    background-image: url('./images/background.jpg');
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-  }
-  
   .game-item {
     position: absolute;
     cursor: pointer;
