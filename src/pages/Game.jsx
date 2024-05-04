@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import background from './images/background.jpg';
-import bali from './images/bali.jpg';
 import './Game.css'; 
 
 function Game() {
