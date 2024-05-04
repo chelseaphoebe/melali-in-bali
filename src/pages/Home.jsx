@@ -27,7 +27,7 @@ export default function Home() {
 			<section id="section1">
 				<div className="bg-[url('/public/images/background.jpg')] bg-center bg-cover bg-no-repeat min-h-[600px] px-52 flex items-center justify-center">
 					<p className="text-white text-5xl font-semibold text-center tracking-wide">
-						Jelajahi 38 Destinasi Indonesia Dari Sabang Sampai Merauke!
+						Jelajahi Ribuan Destinasi Bali dengan Kami!
 					</p>
 				</div>
 			</section>
