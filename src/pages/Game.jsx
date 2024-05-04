@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './Game.css';
-
+import img1 from '../images/background1.jpg'
 const gridSize = 20;
 const gridCount = 20;
 const gameOverDelay = 20000;
 
 function Navbar() {
   return (
-    <nav style={{ height: '200px', backgroundColor: 'white', color: 'black', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <h1> Get That Beach!</h1>
+    <nav style={{ height: '80px', backgroundColor: 'transparent', color: 'black', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'sticky', top: 0, zIndex: 1 }}>
+      <h1 style={{ fontSize: '36px', backgroundColor: 'yellow',marginTop:'150px',fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }}> Get That Beach!</h1>
     </nav>
   );
 }
 
-const ColorPicker = ({ onColorChange }) => {
+function ColorPicker({ onColorChange }) {
   const [color, setColor] = useState('#00ff00');
 
   const handleColorChange = (e) => {
@@ -23,16 +23,15 @@ const ColorPicker = ({ onColorChange }) => {
 
   return (
     <div>
-     <h2><label htmlFor="color-picker">Choose Snake Color:</label></h2> 
+      <h2><label htmlFor="color-picker">Choose Snake Color:</label></h2>
       <input
         id="color-picker"
         type="color"
         value={color}
-        onChange={handleColorChange}
-      />
+        onChange={handleColorChange} />
     </div>
   );
-};
+}
 
 function Game(props) {
   const [snake, setSnake] = useState([{ x: 2, y: 2 }]);
@@ -133,7 +132,7 @@ function Game(props) {
 
   return (
     <div className="Game">
-      <div className="game-area" style={{ backgroundImage: 'url(beach-background.jpg)' }}>
+      <div className="game-area" style={{ backgroundImage: img1 }}>
         {snake.map((segment, index) => (
           <div
             key={index}
