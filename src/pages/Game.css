@@ -62,3 +62,17 @@ h1, p {
 h1, p {
   color: black;
 }
+
+.game-area{
+  background: url('../images/background1.jpg');
+}
+
+.Game{
+  background: url('../images/background2.jpg');
+  background-size:100%;
+}
+}
+
+h1, p {
+  color: black;
+}
