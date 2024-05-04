@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Game.css'; 
+import './Game.css';
 
 function Game() {
   const [score, setScore] = useState(0);
@@ -21,18 +21,17 @@ function Game() {
   }, []);
 
   const handleClick = (id) => {
-    // Tangani ketika item diklik
+    // Handle when an item is clicked
     setItems(items.filter(item => item.id !== id));
     setScore(score + 1);
   };
 
   return (
-    <div style={{ backgroundImage: `url(${background})`, height: '100vh', position: 'relative' }}>
+    <div>
       {items.map(item => (
-        <img
-          key={item.id}
-          src={bali}
-          alt="Bali"
+        <div
+          key={item.id} // Added a key prop for each item for React to efficiently update and identify each element in the list.
+          className="item" // Assuming there's a CSS class to style the items.
           style={{ position: 'absolute', left: item.x, top: item.y }}
           onClick={() => handleClick(item.id)}
         />
