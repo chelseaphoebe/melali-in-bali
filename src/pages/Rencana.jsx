@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Footer from "../components/Footer";
 import './Rencana.css';
+import { WeatherBox } from '../components/Footer';
 
 function Navbar() {
     return (
@@ -8,42 +9,6 @@ function Navbar() {
       </h1>
     )
   }
-const WeatherBox = () => {
-    const [weather, setWeather] = useState(null);
-    const [error, setError] = useState(null);
-  
-    useEffect(() => {
-      const fetchWeather = async () => {
-        try {
-          const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Bali,ID&appid=bd5e378503939ddaee76f12ad7a97608&units=metric`);
-          const data = await response.json();
-          setWeather(data);
-        } catch (err) {
-          setError(err);
-        }
-      };
-  
-      fetchWeather();
-    }, []);
-  
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    }
-  
-    if (!weather) {
-      return <div>Loading...</div>;
-    }
-  
-    return (
-      <div className="weather-box">
-        <h2>Cuaca di Bali</h2>
-       <h3> <p>Suhu: {weather.main.temp}°C</p>
-        <p>Kondisi: {weather.weather[0].description}</p></h3>
-        <img src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`} alt="Weather Icon" />
-      </div>
-    );
-  };
-
 const Rencana = () => {
   const [itinerary, setItinerary] = useState([]);
   const [tips, setTips] = useState([]);
