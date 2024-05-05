@@ -8,7 +8,6 @@ function Navbar() {
       </h1>
     )
   }
-  
 const WeatherBox = () => {
     const [weather, setWeather] = useState(null);
     const [error, setError] = useState(null);

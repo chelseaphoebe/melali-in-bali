@@ -10,9 +10,6 @@
   background: url('../images/background1.jpg');
   background-size: cover;
 }
-
-
-
 .snake-segment {
   position: absolute;
   width: 20px;
