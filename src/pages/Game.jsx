@@ -11,15 +11,11 @@ function Navbar() {
   return (
       <h1 style={{fontSize: '36px', background: 'transparent',marginTop:'150px',fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }}> Get That Beach!</h1>
   )
-}
-
-function Navbar({ onStartGame }) {
-  const handleStartGame = () => {
+const handleStartGame = () => {
     if (onStartGame) {
       onStartGame();
     }
   };
-
   return (
     <h1 style={{ fontSize: '36px', background: 'transparent', marginTop: '150px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }} onClick={handleStartGame}> Get That Beach!</h1>
   );
