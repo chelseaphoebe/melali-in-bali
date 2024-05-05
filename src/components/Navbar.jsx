@@ -9,9 +9,9 @@ export default function Navbar() {
 	useEffect (() => {
 		window.addEventListener('scroll', ()=> {
 			if(window.scrollY === 0){
-				setTopPage("bg-opacity-0");
+				setTopPage("bg-opacity-0 text-white");
 			} else {
-				setTopPage("bg-black");
+				setTopPage("bg-white bg-opacity-100 text-black");
 			}
 		})}, []
 	);
