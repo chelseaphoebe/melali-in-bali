@@ -2,13 +2,22 @@ import Footer from "../components/Footer";
 import React from 'react';
 import './Inspirasi.css';
 
-
 function Navbar() {
   return (
     <h1 style={{ fontSize: '36px', background: 'transparent', marginTop: '0px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }}>
     </h1>
   )
 }
+
+const Banner = () => {
+  return (
+    <section id="banner" className="bg-[url('/src/images/banner-ins.jpg')] bg-center bg-cover bg-no-repeat min-h-[600px] px-10 flex items-center justify-center">
+      <p className="text-white text-5xl font-semibold text-center tracking-wide">
+        Temukan kebahagiaan mu di Bali!
+      </p>
+    </section>
+  );
+};
 
 const ExperienceSection = () => {
   const handleNatureClick = () => {
@@ -47,4 +56,13 @@ const ExperienceSection = () => {
   );
 };
 
-export default ExperienceSection;
+const Inspirasi = () => {
+  return (
+    <>
+      <Banner />
+      <ExperienceSection />
+    </>
+  );
+};
+
+export default Inspirasi;
