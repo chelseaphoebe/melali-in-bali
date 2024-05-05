@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Icon } from "@iconify/react";
-import React, { useState, useEffect } from "react";
 
 export default function Footer() {
     return (
