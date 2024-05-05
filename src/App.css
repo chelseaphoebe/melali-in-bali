@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-link,
+.nav-link-placeholder {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link-placeholder:hover {
+  transform: scale(1.1);
+}
+
+.logo-link {
+  transition: all 0.3s ease;
+}
+
+.logo-link:hover img {
+  transform: scale(1.1);
+}

@@ -1,19 +1,25 @@
+import Footer from "../components/Footer";
 import React, { useState, useEffect } from 'react';
 import './Game.css';
+import img1 from '../images/background1.jpg'
+import Swal from 'sweetalert2';
 
 const gridSize = 20;
 const gridCount = 20;
-const gameOverDelay = 20000;
 
-function Navbar() {
+function Navbar({ onStartGame }) {
+  const handleStartGame = () => {
+    if (onStartGame) {
+      onStartGame();
+    }
+  };
+
   return (
-    <nav style={{ height: '200px', backgroundColor: 'white', color: 'black', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <h1> Get That Beach!</h1>
-    </nav>
+    <h1 style={{ fontSize: '36px', background: 'transparent', marginTop: '150px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }} onClick={handleStartGame}> Get That Beach!</h1>
   );
 }
 
-const ColorPicker = ({ onColorChange }) => {
+function ColorPicker({ onColorChange }) {
   const [color, setColor] = useState('#00ff00');
 
   const handleColorChange = (e) => {
@@ -23,16 +29,15 @@ const ColorPicker = ({ onColorChange }) => {
 
   return (
     <div>
-     <h2><label htmlFor="color-picker">Choose Snake Color:</label></h2> 
+      <h2><label htmlFor="color-picker">Choose Color:</label></h2>
       <input
         id="color-picker"
         type="color"
         value={color}
-        onChange={handleColorChange}
-      />
+        onChange={handleColorChange} />
     </div>
   );
-};
+}
 
 function Game(props) {
   const [snake, setSnake] = useState([{ x: 2, y: 2 }]);
@@ -40,6 +45,8 @@ function Game(props) {
   const [direction, setDirection] = useState('RIGHT');
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
+  const [highestScore, setHighestScore] = useState(0);
+  const [gameStarted, setGameStarted] = useState(false);
 
   const restartGame = () => {
     setSnake([{ x: 2, y: 2 }]);
@@ -47,20 +54,22 @@ function Game(props) {
     setDirection('RIGHT');
     setGameOver(false);
     setScore(0);
+    setGameStarted(true);
   };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       switch (e.key) {
-        case 'ArrowUp':
+        case 'W','w':
           setDirection('UP');
           break;
-        case 'ArrowDown':
+        case 'S','s':
           setDirection('DOWN');
           break;
-        case 'ArrowLeft':
+        case 'A','a':
           setDirection('LEFT');
           break;
-        case 'ArrowRight':
+        case 'D','d':
           setDirection('RIGHT');
           break;
         default:
@@ -105,7 +114,21 @@ function Game(props) {
         newSnake.unshift({});
         setSnake(newSnake);
         placeFood();
-        setScore(score + 1);
+        const newScore = score + 1;
+        setScore(newScore);
+
+        if (newScore > highestScore) {
+          setHighestScore(newScore);
+        }
+
+        if (newScore === 10) {
+          Swal.fire({
+            title: 'Selamat!',
+            text: 'Anda mendapatkan voucher discount 20%!',
+            icon: 'success',
+            confirmButtonText: 'Oke'
+          });
+        }
       }
 
       if (head.x >= gridCount || head.x < 0 || head.y >= gridCount || head.y < 0) {
@@ -119,21 +142,43 @@ function Game(props) {
       setFood({ x, y });
     };
 
-    const gameLoop = setInterval(() => {
-      if (!gameOver) {
+    if (gameStarted && !gameOver) {
+      const gameLoop = setInterval(() => {
         moveSnake();
-      } else {
-        clearInterval(gameLoop);
-        setTimeout(restartGame, 2000);
-      }
-    }, 200);
+      }, 200);
 
-    return () => clearInterval(gameLoop);
-  }, [snake, direction, gameOver, food, restartGame]);
+      return () => clearInterval(gameLoop);
+    }
+  }, [snake, direction, gameOver, food, restartGame, gameStarted]);
+
+  useEffect(() => {
+    const handleStartGamePrompt = () => {
+      Swal.fire({
+        title: 'Get Ready!',
+        text: 'Do you want to start the game?',
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Start',
+        cancelButtonText: 'Cancel',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          setGameStarted(true);
+          restartGame(); 
+        }
+      });
+    };
+
+    handleStartGamePrompt();
+  }, []);
+
+  const handleStartGame = () => {
+    setGameStarted(true);
+    restartGame();
+  };
 
   return (
     <div className="Game">
-      <div className="game-area" style={{ backgroundImage: 'url(beach-background.jpg)' }}>
+      <div className={`game-area ${gameOver ? 'game-over' : ''}`} style={{ backgroundImage: `url(${img1})` }}>
         {snake.map((segment, index) => (
           <div
             key={index}
@@ -160,6 +205,7 @@ function Game(props) {
         <div className="game-over">
           <p>Game Over</p>
           <p>Score: {score}</p>
+          <p>Highest Score: {highestScore}</p>
           <button onClick={restartGame}>Play Again</button>
         </div>
       )}
@@ -175,10 +221,13 @@ function App() {
   };
 
   return (
-    <div>
-      <Navbar />
-      <ColorPicker onColorChange={handleColorChange} />
-      <Game snakeColor={snakeColor} />
+    <div className="App">
+      <Navbar onStartGame={() => { }} />
+      <div className="game-container">
+        <ColorPicker onColorChange={handleColorChange} />
+        <Game snakeColor={snakeColor} />
+      </div>
+      <Footer />
     </div>
   );
 }
