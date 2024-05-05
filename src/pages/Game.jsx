@@ -7,10 +7,16 @@ import Swal from 'sweetalert2';
 const gridSize = 20;
 const gridCount = 20;
 
-function Navbar() {
+function Navbar({ onStartGame }) {
+  const handleStartGame = () => {
+    if (onStartGame) {
+      onStartGame();
+    }
+  };
+
   return (
-      <h1 style={{fontSize: '36px', background: 'transparent',marginTop:'150px',fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }}> Get That Beach!</h1>
-  )
+    <h1 style={{ fontSize: '36px', background: 'transparent', marginTop: '150px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }} onClick={handleStartGame}> Get That Beach!</h1>
+  );
 }
 
 function ColorPicker({ onColorChange }) {
@@ -40,6 +46,7 @@ function Game(props) {
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
   const [highestScore, setHighestScore] = useState(0);
+  const [gameStarted, setGameStarted] = useState(false);
 
   const restartGame = () => {
     setSnake([{ x: 2, y: 2 }]);
@@ -47,7 +54,9 @@ function Game(props) {
     setDirection('RIGHT');
     setGameOver(false);
     setScore(0);
+    setGameStarted(true);
   };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       switch (e.key) {
@@ -112,15 +121,15 @@ function Game(props) {
           setHighestScore(newScore);
         }
 
-    if (newScore === 10) {
-      Swal.fire({
-        title: 'Selamat!',
-        text: 'Anda mendapatkan voucher discount 20%!',
-        icon: 'success',
-        confirmButtonText: 'Oke'
-      });
-    }
-  }
+        if (newScore === 10) {
+          Swal.fire({
+            title: 'Selamat!',
+            text: 'Anda mendapatkan voucher discount 20%!',
+            icon: 'success',
+            confirmButtonText: 'Oke'
+          });
+        }
+      }
 
       if (head.x >= gridCount || head.x < 0 || head.y >= gridCount || head.y < 0) {
         setGameOver(true);
@@ -133,21 +142,43 @@ function Game(props) {
       setFood({ x, y });
     };
 
-    const gameLoop = setInterval(() => {
-      if (!gameOver) {
+    if (gameStarted && !gameOver) {
+      const gameLoop = setInterval(() => {
         moveSnake();
-      } else {
-        clearInterval(gameLoop);
-        setTimeout(restartGame, 2000);
-      }
-    }, 200);
+      }, 200);
 
-    return () => clearInterval(gameLoop);
-  }, [snake, direction, gameOver, food, restartGame]);
+      return () => clearInterval(gameLoop);
+    }
+  }, [snake, direction, gameOver, food, restartGame, gameStarted]);
+
+  useEffect(() => {
+    const handleStartGamePrompt = () => {
+      Swal.fire({
+        title: 'Get Ready!',
+        text: 'Do you want to start the game?',
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Start',
+        cancelButtonText: 'Cancel',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          setGameStarted(true);
+          restartGame(); 
+        }
+      });
+    };
+
+    handleStartGamePrompt();
+  }, []);
+
+  const handleStartGame = () => {
+    setGameStarted(true);
+    restartGame();
+  };
 
   return (
     <div className="Game">
-      <div className="game-area" style={{ backgroundImage: img1 }}>
+      <div className={`game-area ${gameOver ? 'game-over' : ''}`} style={{ backgroundImage: `url(${img1})` }}>
         {snake.map((segment, index) => (
           <div
             key={index}
@@ -169,12 +200,12 @@ function Game(props) {
         >
           🏖️
         </div>
-        </div>
-    {gameOver && (
+      </div>
+      {gameOver && (
         <div className="game-over">
           <p>Game Over</p>
           <p>Score: {score}</p>
-          <p>Highest Score: {highestScore}</p> {/* Menampilkan highest score */}
+          <p>Highest Score: {highestScore}</p>
           <button onClick={restartGame}>Play Again</button>
         </div>
       )}
@@ -191,7 +222,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar onStartGame={() => { }} />
       <div className="game-container">
         <ColorPicker onColorChange={handleColorChange} />
         <Game snakeColor={snakeColor} />
