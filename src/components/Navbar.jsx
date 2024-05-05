@@ -8,8 +8,7 @@ export default function Navbar() {
 		  <a href="/hotels" className="nav-link">Book Hotels</a>
 		  <a href="/inspirasi">Inspirasi Seru</a>
 		  <a href="#" className="nav-link-placeholder">Rencanakan Perjalanan</a>
-		  <a href="#" className="nav-link-placeholder">Inspirasi Seru</a>
-		  <a href="/game" className="nav-link">Game</a>
+		  <a href="/game" className="nav-link-placeholder">Game</a>
 		  <a href="/aboutUs" className="nav-link-placeholder">Tentang Kami</a>
 		</div>
 	  </div>
