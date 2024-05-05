@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/background3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .itinerary-box, .tips-box, .weather-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #190f3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    flex: 1;
+    margin-top: 10px;
+  }
+  
+  .weather-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  h1, h2 {
+    font-size: 36px;
+    background: transparent;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  h1, h2 {
+    color: #190f3d;
+  }
+  
+  .title {
+    font-family: 'Lobster', cursive;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 50px;
+    color: #000000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: 10%;
+    background-position-x: center;
+    background-size: auto;
+  }
+  
+  .itinerary-box, .tips-box {
+    background-color: hsla(0, 0%, 95%, 0.829);
+    padding: 20px;
+    border-radius: 5px;
+    border-color: #190f3d;
+    flex: 1;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  .itinerary p {
+    margin: 0;
+  }
+  
+  .tips ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+  .weather-box {
+    background-color: hsla(0, 0%, 95%, 0.829);
+    padding: 20px;
+    border-radius: 5px;
+    border-color: #190f3d;
+    flex: 1;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+ nav h1 {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  nav {
+    height: 50px; 
+  }
+  #content {
+    margin-top: 0px;
+    padding-top: 0px; 
+  }
+  body {
+    padding-top: 0px; 
+  }
+  

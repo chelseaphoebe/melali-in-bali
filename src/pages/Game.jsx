@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 const gridSize = 20;
 const gridCount = 20;
 
-function Navbar({ onStartGame }) {
+function Navbar({ onStartGame }) { // Destructuring onStartGame from props
   const handleStartGame = () => {
     if (onStartGame) {
       onStartGame();
@@ -15,9 +15,10 @@ function Navbar({ onStartGame }) {
   };
 
   return (
-    <h1 style={{ fontSize: '36px', background: 'transparent', marginTop: '150px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }} onClick={handleStartGame}> Get That Beach!</h1>
+    <h1 className="navbar-title" onClick={handleStartGame}>Get That Beach!</h1>
   );
 }
+
 
 function ColorPicker({ onColorChange }) {
   const [color, setColor] = useState('#00ff00');
