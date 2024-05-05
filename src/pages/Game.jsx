@@ -1,16 +1,16 @@
+import Footer from "../components/Footer";
 import React, { useState, useEffect } from 'react';
 import './Game.css';
 import img1 from '../images/background1.jpg'
+import Swal from 'sweetalert2';
+
 const gridSize = 20;
 const gridCount = 20;
-const gameOverDelay = 20000;
 
 function Navbar() {
   return (
-    <nav style={{ height: '80px', backgroundColor: 'transparent', color: 'black', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'sticky', top: 0, zIndex: 1 }}>
-      <h1 style={{ fontSize: '36px', backgroundColor: 'yellow',marginTop:'150px',fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }}> Get That Beach!</h1>
-    </nav>
-  );
+      <h1 style={{fontSize: '36px', background: 'transparent',marginTop:'150px',fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }}> Get That Beach!</h1>
+  )
 }
 
 function ColorPicker({ onColorChange }) {
@@ -23,7 +23,7 @@ function ColorPicker({ onColorChange }) {
 
   return (
     <div>
-      <h2><label htmlFor="color-picker">Choose Snake Color:</label></h2>
+      <h2><label htmlFor="color-picker">Choose Color:</label></h2>
       <input
         id="color-picker"
         type="color"
@@ -39,6 +39,7 @@ function Game(props) {
   const [direction, setDirection] = useState('RIGHT');
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
+  const [highestScore, setHighestScore] = useState(0);
 
   const restartGame = () => {
     setSnake([{ x: 2, y: 2 }]);
@@ -104,8 +105,22 @@ function Game(props) {
         newSnake.unshift({});
         setSnake(newSnake);
         placeFood();
-        setScore(score + 1);
-      }
+        const newScore = score + 1;
+        setScore(newScore);
+
+        if (newScore > highestScore) {
+          setHighestScore(newScore);
+        }
+
+    if (newScore === 10) {
+      Swal.fire({
+        title: 'Selamat!',
+        text: 'Anda mendapatkan voucher discount 20%!',
+        icon: 'success',
+        confirmButtonText: 'Oke'
+      });
+    }
+  }
 
       if (head.x >= gridCount || head.x < 0 || head.y >= gridCount || head.y < 0) {
         setGameOver(true);
@@ -154,11 +169,12 @@ function Game(props) {
         >
           🏖️
         </div>
-      </div>
-      {gameOver && (
+        </div>
+    {gameOver && (
         <div className="game-over">
           <p>Game Over</p>
           <p>Score: {score}</p>
+          <p>Highest Score: {highestScore}</p> {/* Menampilkan highest score */}
           <button onClick={restartGame}>Play Again</button>
         </div>
       )}
@@ -174,10 +190,13 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="App">
       <Navbar />
-      <ColorPicker onColorChange={handleColorChange} />
-      <Game snakeColor={snakeColor} />
+      <div className="game-container">
+        <ColorPicker onColorChange={handleColorChange} />
+        <Game snakeColor={snakeColor} />
+      </div>
+      <Footer />
     </div>
   );
 }
