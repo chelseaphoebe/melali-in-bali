@@ -15,18 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  
-  .content {
-    display: flex;
-    justify-content: center;
-    background-image: url('../images/background3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    gap: 20px;
-    width: 100%;
-  }
+ 
   
   .itinerary-box, .tips-box, .weather-box {
     background-color: #f0f0f0;
@@ -61,19 +50,32 @@ body {
     color: #190f3d;
   }
   
-  .title {
-    font-family: 'Lobster', cursive;
-    text-align: left;
-    margin-left: 10px;
-    margin-top: 50px;
-    color: #000000;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: 10%;
-    background-position-x: center;
-    background-size: auto;
-  }
+.title {
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 20px;
+  width: auto;
+  margin-top: 0%;
+  height: 200px;
+  background: rgba(12, 1, 54, 0.87);
+  margin-bottom: 0%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/background3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  gap: 20px;
+  width: 100%;
+  padding: 40px 0;
+}
   
   .itinerary-box, .tips-box {
     background-color: hsla(0, 0%, 95%, 0.829);
@@ -132,3 +134,4 @@ body {
     padding-top: 0px; 
   }
   
+
