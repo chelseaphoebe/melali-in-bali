@@ -27,7 +27,7 @@ export default function Navbar() {
         <a href="/hotels" className="nav-link">
           Book Hotels
         </a>
-        <a href="#section2" className="nav-link">
+        <a href="/rencana" className="nav-link">
           Rencanakan Perjalanan
         </a>
         <a href="/inspirasi" className="nav-link">
