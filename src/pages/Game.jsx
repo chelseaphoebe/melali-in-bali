@@ -8,9 +8,6 @@ const gridSize = 20;
 const gridCount = 20;
 
 function Navbar() {
-  return (
-      <h1 style={{fontSize: '36px', background: 'transparent',marginTop:'150px',fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }}> Get That Beach!</h1>
-  )
 const handleStartGame = () => {
     if (onStartGame) {
       onStartGame();
