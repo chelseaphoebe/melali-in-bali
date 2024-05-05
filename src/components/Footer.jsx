@@ -41,16 +41,16 @@ export default function Footer() {
 						Kunjungi Situs Lainnya
 					</p>
 					<div className="flex gap-4 text-white">
-						<p className="underline font-thin text-xs text-center md:text-sm">
+						<p className="underline font-thin text-xs text-center text-white md:text-sm">
 							Kebijakan Cookie
 						</p>
-						<p className="underline font-thin text-xs text-center md:text-sm">
+						<p className="underline font-thin text-xs text-center text-white md:text-sm">
 							Kebijakan Privasi
 						</p>
-						<p className="underline font-thin text-xs text-center md:text-sm">
+						<p className="underline font-thin text-xs text-center text-white md:text-sm">
 							Syarat dan Ketentuan
 						</p>
-						<p className="underline font-thin text-xs text-center md:text-sm">
+						<p className="underline font-thin text-xs text-center text-white md:text-sm">
 							Hubungi Kami
 						</p>
 					</div>

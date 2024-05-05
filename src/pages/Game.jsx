@@ -51,16 +51,16 @@ function Game(props) {
   useEffect(() => {
     const handleKeyDown = (e) => {
       switch (e.key) {
-        case 'ArrowUp':
+        case 'W','w':
           setDirection('UP');
           break;
-        case 'ArrowDown':
+        case 'S','s':
           setDirection('DOWN');
           break;
-        case 'ArrowLeft':
+        case 'A','a':
           setDirection('LEFT');
           break;
-        case 'ArrowRight':
+        case 'D','d':
           setDirection('RIGHT');
           break;
         default:
