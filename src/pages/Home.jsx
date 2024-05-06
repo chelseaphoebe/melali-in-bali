@@ -3,6 +3,7 @@ import { DestinationCard } from "../components/DestinationCard";
 import { NewsCard } from "../components/NewsCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { WeatherCard } from "../components/WeatherCard";
 
 export default function Home() {
   const [weather, setWeather] = useState([]);
@@ -19,7 +20,7 @@ export default function Home() {
       u: "f",
     },
     headers: {
-      "X-RapidAPI-Key": "b6485c9e6dmsh6d2ef772f3088c2p1241f2jsnf5ac54c07795",
+      "X-RapidAPI-Key": "6b6820ab3amshabcae9596a9c461p194024jsn8b72f13050bb",
       "X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com",
     },
   };
@@ -61,23 +62,44 @@ export default function Home() {
       <div className="flex justify-center my-14">
         <div className="flex w-5/6">
           <div className="bg-[#fff7f7] w-2/6 p-12 rounded-l-3xl ">
-            <p>Bali</p>
+            <p>{weather.location ? weather.location.city : 0}, Bali</p>
             <div className="flex justify-center">
               <img src="/images/cloudIcon.png" alt="" className="size-36" />
             </div>
             <p className="text-4xl font-normal">
-              {Math.round(
-                (weather.current_observation.condition.temperature - 32) *
-                  (5 / 9)
-              )}
+              {weather.current_observation
+                ? Math.round(
+                    (weather.current_observation.condition.temperature - 32) *
+                      (5 / 9)
+                  )
+                : 0}
               °C
             </p>
             <p>
-              Saturday,<span className="text-[#c8cfcf]">00:23</span>
+              {weather.current_observation
+                ? weather.current_observation.condition.text
+                : 0}
+            </p>
+            <p>
+              {weather.forecasts ? weather.forecasts[0].day : 0},
+              <span className="text-[#c8cfcf]"> 00:23</span>
             </p>
           </div>
           <div className="bg-[#f5f5f5] w-4/6 p-12 rounded-r-3xl">
             <p>Weekly</p>
+            <div className="flex flex-row gap-2 mt-5 overflow-x-scroll">
+              {weather
+                ? weather.map
+                : null((data, index) => (
+                    <WeatherCard
+                      key={index}
+                      day={data.forecasts.day}
+                      high={data.forecasts.high}
+                      low={data.forecasts.low}
+                      text={data.forecasts.text}
+                    />
+                  ))}
+            </div>
           </div>
         </div>
       </div>
