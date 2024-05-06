@@ -1,6 +1,5 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import './Navbar.css';
 
 export default function Navbar() {
   const [topPage, setTopPage] = useState('') 
@@ -20,22 +19,12 @@ export default function Navbar() {
 			<a href="/"> 
         <img src="./images/logo.png" alt="" className="size-12" />
       </a>
-      <div className="nav-links w-2/4 flex justify-between">
-        <a href="/hotels" className="nav-link">
-          Book Hotels
-        </a>
-        <a href="/rencana" className="nav-link">
-          Rencanakan Perjalanan
-        </a>
-        <a href="/inspirasi" className="nav-link">
-          Inspirasi Seru
-        </a>
-        <a href="/game" className="nav-link">
-          Game
-        </a>
-        <a href="/aboutUs" className="nav-link">
-          Tentang Kami
-        </a>
+      <div className="nav-links">
+        <a href="/hotels" className="nav-link">Book Hotels</a>
+        <a href="/rencana" className="nav-link">Rencanakan Perjalanan</a>
+        <a href="/inspirasi" className="nav-link">Inspirasi Seru</a>
+        <a href="/game" className="nav-link">Game</a>
+        <a href="/aboutUs" className="nav-link">Tentang Kami</a>
       </div>
     </div>
   );

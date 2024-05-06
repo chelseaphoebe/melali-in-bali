@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import React, { useState, useEffect } from 'react';
 import './AboutUs.css';
+import progIMG from '../images/dummy2.jpg'
 
 
 
@@ -15,21 +16,44 @@ const AboutUs = () => {
 				</div>
 			</section>
 
-      <section className="bg-gray-100 py-12 px-14">
+      <section className="bg-gray-100 py-12 px-14 gap-3">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-center">Melali</h3>
-              <p>
-                Melali is a company dedicated to providing exceptional travel experiences. We are committed to helping you explore thousands of destinations in Bali with ease and convenience.
+      <p className="text-dark text-5xl font-semibold text-left tracking-wide font-bold text-center pt-11">
+              Anggota Kami
               </p>
+
+          <div className="programs">
+
+            <div className="program">
+              <img src={ progIMG } alt="" />
+              <div className="caption">
+                <p>Austin</p>
+                <p>00000096252</p>
+              </div>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-center">Founded in 2024</h3>
-              <p>
-                Established in 2024, Melali has quickly become a trusted name in the travel industry. Our team of experienced professionals is passionate about creating unforgettable journeys for our clients.
-              </p>
+            <div className="program">
+              <img src={ progIMG } alt="" />
+              <div className="caption">
+                <p>Austin</p>
+                <p>00000096252</p>
+              </div>
+            </div>
+            
+            <div className="program">
+              <img src={ progIMG } alt="" />
+              <div className="caption">
+                <p>Austin</p>
+                <p>00000096252</p>
+              </div>
+            </div>
+
+            <div className="program">
+              <img src={ progIMG } alt="" />
+              <div className="caption">
+                <p>Austin</p>
+                <p>00000096252</p>
+              </div>
             </div>
           </div>
       </section>
