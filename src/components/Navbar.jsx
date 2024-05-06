@@ -3,16 +3,16 @@ import "./Navbar.css";
 
 export default function Navbar() {
   const [topPage, setTopPage] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("./images/logo.png");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY === 0) {
         setTopPage("bg-opacity-75 bg-black text-white");
-        // image pas item
+        setImage("./images/logo.png");
       } else {
         setTopPage("bg-white bg-opacity-100 text-black shadow-lg");
-        setImage("/../../...");
+        setImage("./images/logoBlack.png");
       }
     });
   }, []);
