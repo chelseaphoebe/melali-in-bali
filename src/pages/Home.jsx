@@ -88,9 +88,17 @@ export default function Home() {
           <div className="bg-[#f5f5f5] w-4/6 p-12 rounded-r-3xl">
             <p>Weekly</p>
             <div className="flex flex-row gap-2 mt-5 overflow-x-scroll">
-              {Array.from({ length: 10 }, (_, i) => (
-                <WeatherCard key={i} imageUrl={"bali.jpeg"} />
-              ))}
+              {weather
+                ? weather.map
+                : null((data, index) => (
+                    <WeatherCard
+                      key={index}
+                      day={data.forecasts.day}
+                      high={data.forecasts.high}
+                      low={data.forecasts.low}
+                      text={data.forecasts.text}
+                    />
+                  ))}
             </div>
           </div>
         </div>
