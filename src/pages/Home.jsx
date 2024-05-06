@@ -81,19 +81,15 @@ export default function Home() {
                 : 0}
             </p>
             <p>
-              {weather.forecasts ? weather.forecasts.day : 0}
-              <span className="text-[#c8cfcf]">00:23</span>
+              {weather.forecasts ? weather.forecasts[0].day : 0},
+              <span className="text-[#c8cfcf]"> 00:23</span>
             </p>
           </div>
           <div className="bg-[#f5f5f5] w-4/6 p-12 rounded-r-3xl">
             <p>Weekly</p>
-            <div className="grid grid-cols-5 gap-7 mt-5">
+            <div className="flex flex-row gap-2 mt-5 overflow-x-scroll">
               {Array.from({ length: 10 }, (_, i) => (
-                <WeatherCard
-                  key={i}
-                  imageUrl={"bali.jpeg"}
-                  title={"Bali"}
-                />
+                <WeatherCard key={i} imageUrl={"bali.jpeg"} />
               ))}
             </div>
           </div>
