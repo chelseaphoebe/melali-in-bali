@@ -1,41 +1,50 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import './Navbar.css';
 
 export default function Navbar() {
-  const [topPage, setTopPage] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY === 0) {
-        setTopPage("bg-opacity-0 text-white");
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition > 100) {
+        setIsScrolled(true);
       } else {
-        setTopPage("bg-white bg-opacity-100 text-black");
+        setIsScrolled(false);
       }
-    });
+    };
+
+    const handleMouseMove = (event) => {
+      const cursorY = event.clientY;
+
+      if (cursorY < 50) {
+        setIsScrolled(false);
+      } else if (window.scrollY > 100) {
+        setIsScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   return (
-<div className="bg-black text-white pl-14 pr-28  flex justify-between items-center bg-opacity-75 fixed w-full py-3">
-			<a href="/"> 
+    <div className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <a href="/" className="logo-link">
         <img src="./images/logo.png" alt="" className="size-12" />
       </a>
-      <div className="nav-links w-2/4 flex justify-between">
-        <a href="/hotels" className="nav-link">
-          Book Hotels
-        </a>
-        <a href="/rencana" className="nav-link">
-          Rencanakan Perjalanan
-        </a>
-        <a href="/inspirasi" className="nav-link">
-          Inspirasi Seru
-        </a>
-        <a href="/game" className="nav-link">
-          Game
-        </a>
-        <a href="/aboutUs" className="nav-link">
-          Tentang Kami
-        </a>
+      <div className="nav-links">
+        <a href="/hotels" className="nav-link">Book Hotels</a>
+        <a href="/rencana" className="nav-link">Rencanakan Perjalanan</a>
+        <a href="/inspirasi" className="nav-link">Inspirasi Seru</a>
+        <a href="/game" className="nav-link">Game</a>
+        <a href="/aboutUs" className="nav-link">Tentang Kami</a>
       </div>
     </div>
   );
