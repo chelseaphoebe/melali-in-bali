@@ -3,6 +3,7 @@ import { DestinationCard } from "../components/DestinationCard";
 import { NewsCard } from "../components/NewsCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { WeatherCard } from "../components/WeatherCard";
 
 export default function Home() {
   const [weather, setWeather] = useState([]);
@@ -19,7 +20,7 @@ export default function Home() {
       u: "f",
     },
     headers: {
-      "X-RapidAPI-Key": "b6485c9e6dmsh6d2ef772f3088c2p1241f2jsnf5ac54c07795",
+      "X-RapidAPI-Key": "6b6820ab3amshabcae9596a9c461p194024jsn8b72f13050bb",
       "X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com",
     },
   };
@@ -61,7 +62,7 @@ export default function Home() {
       <div className="flex justify-center my-14">
         <div className="flex w-5/6">
           <div className="bg-[#fff7f7] w-2/6 p-12 rounded-l-3xl ">
-            <p>Bali</p>
+            <p>{weather.location ? weather.location.city : 0}, Bali</p>
             <div className="flex justify-center">
               <img src="/images/cloudIcon.png" alt="" className="size-36" />
             </div>
@@ -75,11 +76,26 @@ export default function Home() {
               °C
             </p>
             <p>
-              Saturday,<span className="text-[#c8cfcf]">00:23</span>
+              {weather.current_observation
+                ? weather.current_observation.condition.text
+                : 0}
+            </p>
+            <p>
+              {weather.forecasts ? weather.forecasts.day : 0}
+              <span className="text-[#c8cfcf]">00:23</span>
             </p>
           </div>
           <div className="bg-[#f5f5f5] w-4/6 p-12 rounded-r-3xl">
             <p>Weekly</p>
+            <div className="grid grid-cols-5 gap-7 mt-5">
+              {Array.from({ length: 10 }, (_, i) => (
+                <WeatherCard
+                  key={i}
+                  imageUrl={"bali.jpeg"}
+                  title={"Bali"}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
