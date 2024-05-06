@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
-  const [topPage, setTopPage] = useState("");
+  const [topPage, setTopPage] = useState("text-white");
   const [image, setImage] = useState("./images/logo.png");
 
   useEffect(() => {
