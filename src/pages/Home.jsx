@@ -13,16 +13,22 @@ export default function Home() {
   const options = {
     method: "GET",
     url: "https://yahoo-weather5.p.rapidapi.com/weather",
+    params: {
+      location: "Ubud",
+      format: "json",
+      u: "f",
+    },
     headers: {
-      "X-RapidAPI-Key": "6b6820ab3amshabcae9596a9c461p194024jsn8b72f13050bb",
+      "X-RapidAPI-Key": "b6485c9e6dmsh6d2ef772f3088c2p1241f2jsnf5ac54c07795",
       "X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com",
     },
   };
 
   async function fetchWeather() {
     try {
-      const response = await axios.request(url);
+      const response = await axios.request(options);
       console.log(response.data);
+      setWeather(response.data);
     } catch (error) {
       console.error(error);
     }
@@ -46,7 +52,7 @@ export default function Home() {
     <>
       {/* Content goes here */}
       <section id="section1">
-        <div className="bg-[url('/public/images/background.jpg')] bg-center bg-cover bg-no-repeat min-h-[600px] px-52 flex items-center justify-center">
+        <div className="bg-[url('/public/images/background.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-52 flex items-center justify-center">
           <p className="text-white text-5xl font-semibold text-center tracking-wide">
             Jelajahi Ribuan Destinasi Bali dengan Kami!
           </p>
@@ -59,7 +65,13 @@ export default function Home() {
             <div className="flex justify-center">
               <img src="/images/cloudIcon.png" alt="" className="size-36" />
             </div>
-            <p className="text-4xl font-normal">26°C</p>
+            <p className="text-4xl font-normal">
+              {Math.round(
+                (weather.current_observation.condition.temperature - 32) *
+                  (5 / 9)
+              )}
+              °C
+            </p>
             <p>
               Saturday,<span className="text-[#c8cfcf]">00:23</span>
             </p>
