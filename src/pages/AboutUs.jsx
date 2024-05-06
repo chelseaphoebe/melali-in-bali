@@ -21,38 +21,36 @@ const AboutUs = () => {
       <p className="text-dark text-5xl font-semibold text-left tracking-wide font-bold text-center pt-11">
               Anggota Kami
               </p>
-
           <div className="programs">
-
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Austin</p>
-                <p>00000096252</p>
-              </div>
-            </div>
-
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Austin</p>
-                <p>00000096252</p>
-              </div>
-            </div>
-            
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Austin</p>
-                <p>00000096252</p>
-              </div>
-            </div>
-
             <div className="program">
               <img src={ progIMG } alt="" />
               <div className="caption">
                 <p>Joshua Wijaya</p>
-                <p>00000094196</p>
+                <p>00000096818</p>
+              </div>
+            </div>
+
+            <div className="program">
+              <img src={ progIMG } alt="" />
+              <div className="caption">
+                <p>Austin Gilbert Liwanto</p>
+                <p>00000096252</p>
+              </div>
+            </div>
+
+            <div className="program">
+              <img src={ progIMG } alt="" />
+              <div className="caption">
+                <p>Felicia Annabel Ruriyanto</p>
+                <p>00000096911</p>
+              </div>
+            </div>
+
+            <div className="program">
+              <img src={ progIMG } alt="" />
+              <div className="caption">
+                <p>Chelsea Arantza Phoebe</p>
+                <p>00000096816</p>
               </div>
             </div>
           </div>
