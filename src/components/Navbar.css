@@ -1,6 +1,9 @@
 .navbar {
-    background-color: rgba(0, 0, 0, 0.75); /* Add transparency to the navbar */
+<<<<<<< HEAD
+    background-color: rgba(0, 0, 0, 0.75);
     color: white;
+=======
+>>>>>>> 5f36ef73d7af4b80756a257bbc2cd6d8172749dc
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -10,20 +13,19 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    transition: transform 0.3s ease; /* Add transition for smooth animation */
+    transition: transform 0.3s ease;
   }
   
   .nav-links {
     display: flex;
-    gap: 20px; /* Increase the gap between links for even spacing */
+    gap: 20px; 
   }
   
   .nav-link {
-    color: white;
     text-decoration: none;
   }
   
   .scrolled {
-    transform: translateY(-100%); /* Slide up the navbar when scrolled */
+    transform: translateY(-100%);
   }
   

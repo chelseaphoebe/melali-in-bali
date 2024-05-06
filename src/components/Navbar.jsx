@@ -3,13 +3,16 @@ import "./Navbar.css";
 
 export default function Navbar() {
   const [topPage, setTopPage] = useState("");
+  const [image, setImage] = useState("./images/logo.png");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY === 0) {
         setTopPage("bg-opacity-75 bg-black text-white");
+        setImage("./images/logo.png");
       } else {
         setTopPage("bg-white bg-opacity-100 text-black shadow-lg");
+        setImage("./images/logoBlack.png");
       }
     });
   }, []);
@@ -20,7 +23,7 @@ export default function Navbar() {
       className={`${topPage} pl-14 pr-28 flex justify-between items-center fixed w-full py-3`}
     >
       <a href="/">
-        <img src="./images/logo.png" alt="" className="size-12" />
+        <img src={image} alt="" className="size-12" />
       </a>
       <div className="nav-links">
         <a href="/hotels" className="nav-link">

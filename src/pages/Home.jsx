@@ -66,10 +66,12 @@ export default function Home() {
               <img src="/images/cloudIcon.png" alt="" className="size-36" />
             </div>
             <p className="text-4xl font-normal">
-              {Math.round(
-                (weather.current_observation.condition.temperature - 32) *
-                  (5 / 9)
-              )}
+              {weather.current_observation
+                ? Math.round(
+                    (weather.current_observation.condition.temperature - 32) *
+                      (5 / 9)
+                  )
+                : 0}
               °C
             </p>
             <p>
