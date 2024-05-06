@@ -51,8 +51,8 @@ const AboutUs = () => {
             <div className="program">
               <img src={ progIMG } alt="" />
               <div className="caption">
-                <p>Austin</p>
-                <p>00000096252</p>
+                <p>Joshua Wijaya</p>
+                <p>00000094196</p>
               </div>
             </div>
           </div>
