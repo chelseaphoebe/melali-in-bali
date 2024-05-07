@@ -7,6 +7,11 @@ body {
     flex-direction: column;
   }
   
+
+  .rencana {
+    z-index: -1;
+  }
+
   .container {
     flex: 1;
     padding: 20px;
@@ -26,6 +31,7 @@ body {
   .weather-box:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   }
+
   .itinerary-box {
     transition: transform 0.3s ease-in-out;
     background: url('../images/rekomendasi.jpg');
@@ -44,15 +50,12 @@ body {
       transform: translateY(0);
     }
   }
-  footer:hover {
-    background-color: #ffffff; 
-    transition: background-color 0.3s ease-in-out;
-  }
+
   .tips {
     animation: fadeIn 1s ease-out;
   }
   .itinerary-box:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
   }
   .tips-box:hover {
     transform: scale(1.05); 
