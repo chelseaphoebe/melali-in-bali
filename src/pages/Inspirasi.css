@@ -147,3 +147,37 @@ nav {
 body {
   padding-top: 0px; 
 }
+
+#banner p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#section4 button {
+  position: relative;
+}
+
+#section4 button::before {
+  content: attr(data-hover-text); 
+  position: absolute; 
+  bottom: 120%;
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: rgba(0, 0, 0, 0.8); 
+  color: white;
+  padding: 0.5rem 1.5rem; 
+  border-radius: 0.25rem; 
+  min-width: 120%;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+
+#section4 button:hover::before {
+  opacity: 1;
+}
+
+#section4 h2 {
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+

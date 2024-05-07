@@ -49,7 +49,7 @@ const ExperienceSection = () => {
         <div className="experience-card">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handleNatureClick}
+            onClick={handleNatureClick} data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
           >
             Jelajahi Aktivitas Alam
           </button>
@@ -57,7 +57,7 @@ const ExperienceSection = () => {
         <div className="experience-card1">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handleCultureClick}
+            onClick={handleCultureClick} data-hover-text="Tradisi Beserta Festival Bali Yang Tidak Bisa Dilewatkan"
           >
             Jelajahi Wisata Budaya
           </button>
@@ -65,7 +65,7 @@ const ExperienceSection = () => {
         <div className="experience-card2">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handleCulinaryClick}
+            onClick={handleCulinaryClick} data-hover-text="Kuliner Bali Yang Wajib Dicobai Minimal Sekali"
           >
             Jelajahi Kuliner
           </button>
