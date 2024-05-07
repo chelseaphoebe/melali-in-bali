@@ -45,6 +45,7 @@ h1 {
   margin-right: 5px;
   width: 400px;
   height: 400px;
+  transform: scale(1.05); 
 }
 
 .experience-card1 {
@@ -63,6 +64,7 @@ h1 {
   margin-bottom: 50px;
   margin-left: 5px;
   margin-right: 5px;
+  transform: scale(1.05); 
 }
 .experience-card2 {
   background: url('../images/kuliner.jpg');
@@ -80,6 +82,7 @@ h1 {
   margin-bottom: 50px;
   margin-left: 5px;
   margin-right: 5px;
+  transform: scale(1.05); 
 }
 .experience-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
