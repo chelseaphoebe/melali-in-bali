@@ -4,6 +4,7 @@ import { NewsCard } from "../components/NewsCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { WeatherCard } from "../components/WeatherCard";
+import './Home.css';
 
 export default function Home() {
   const [weather, setWeather] = useState([]);
@@ -52,13 +53,11 @@ export default function Home() {
   return (
     <>
       {/* Content goes here */}
-      <section id="section1">
-        <div className="bg-[url('/src/images/background2.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-52 flex items-center justify-center">
-          <p className="text-white text-5xl font-semibold text-center tracking-wide">
-            Jelajahi Ribuan Destinasi Bali dengan Kami!
-          </p>
-        </div>
-      </section>
+      <section id="section1" className="bg-parallax px-52">
+  <p className="text-white text-5xl font-semibold text-center tracking-wide">
+    Jelajahi Ribuan Destinasi Bali dengan Kami!
+  </p>
+</section>
       <div className="flex justify-center my-14">
         <div className="flex w-5/6">
           <div className="bg-[#fff7f7] w-2/6 p-12 rounded-l-3xl ">
