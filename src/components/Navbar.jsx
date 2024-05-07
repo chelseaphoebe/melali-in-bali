@@ -27,13 +27,16 @@ export default function Navbar() {
       </a>
       <div className="nav-links">
         <a href="/hotels" className="nav-link">
-          Book Hotels
+          Hotel
         </a>
         <a href="/rencana" className="nav-link">
-          Rencanakan Perjalanan
+          Rencana Perjalanan
         </a>
         <a href="/inspirasi" className="nav-link">
-          Inspirasi Seru
+          Jelajah
+        </a>
+        <a href="/HangmanGame" className="nav-link">
+          Permainan
         </a>
         <a href="/game" className="nav-link">
           Game
