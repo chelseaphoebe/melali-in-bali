@@ -53,7 +53,7 @@ export default function Home() {
     <>
       {/* Content goes here */}
       <section id="section1">
-        <div className="bg-[url('/public/images/background.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-52 flex items-center justify-center">
+        <div className="bg-[url('/src/images/background2.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-52 flex items-center justify-center">
           <p className="text-white text-5xl font-semibold text-center tracking-wide">
             Jelajahi Ribuan Destinasi Bali dengan Kami!
           </p>
