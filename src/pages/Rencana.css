@@ -7,6 +7,11 @@ body {
     flex-direction: column;
   }
   
+
+  .rencana {
+    z-index: -1;
+  }
+
   .container {
     flex: 1;
     padding: 20px;
@@ -45,12 +50,12 @@ body {
       transform: translateY(0);
     }
   }
-  
+
   .tips {
     animation: fadeIn 1s ease-out;
   }
   .itinerary-box:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
   }
   .tips-box:hover {
     transform: scale(1.05); 

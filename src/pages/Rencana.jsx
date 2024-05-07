@@ -24,7 +24,7 @@ const Rencana = () => {
   }, []);
 
   return (
-    <div>
+    <div id="rencana">
     <h1 className="title">Rencana Perjalanan ke Bali</h1>
     <div className="content">
       <div className="itinerary-box">
