@@ -38,7 +38,8 @@ export default function Home() {
   async function fetchNews() {
     try {
       const response = await axios.get(url);
-      setNews(response.data.articles);
+      let articles = response.data.articles.slice(0,5);
+      setNews(articles);
     } catch (error) {
       console.log(error);
     }
@@ -55,7 +56,8 @@ export default function Home() {
       <section id="section1">
         <div className="bg-[url('/public/images/background.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-52 flex items-center justify-center">
           <p className="text-white text-5xl font-semibold text-center tracking-wide">
-            Jelajahi Ribuan Destinasi Bali dengan Kami!
+            Jelajahi Ribuan Destinasi Bali 
+            <br /> dengan kami!
           </p>
         </div>
       </section>
@@ -88,17 +90,31 @@ export default function Home() {
           <div className="bg-[#f5f5f5] w-4/6 p-12 rounded-r-3xl">
             <p>Weekly</p>
             <div className="flex flex-row gap-2 mt-5 overflow-x-scroll">
-              {weather
-                ? weather.map
-                : null((data, index) => (
+              {/* {weather.forecasts
+                ? weather.forecasts.map((data, index) => (
                     <WeatherCard
                       key={index}
-                      day={data.forecasts.day}
-                      high={data.forecasts.high}
-                      low={data.forecasts.low}
-                      text={data.forecasts.text}
+                      day={data.day}
+                      high={data.high}
+                      low={data.low}
+                      text={data.text}
                     />
-                  ))}
+                  ))
+                : null} */}
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
             </div>
           </div>
         </div>
