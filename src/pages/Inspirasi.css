@@ -19,7 +19,7 @@ h1 {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  background-image: linear-gradient(to top,#ffffff 100%, #a3bded 0%);
   background-size:cover;
 }
 @media (min-width: 768px) {
