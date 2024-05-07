@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 const gridSize = 20;
 const gridCount = 20;
 
-function Navbar({ onStartGame }) { // Destructuring onStartGame from props
+function Navbar({ onStartGame }) { 
   const handleStartGame = () => {
     if (onStartGame) {
       onStartGame();
