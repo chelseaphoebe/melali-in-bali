@@ -118,7 +118,7 @@ h1 {
 }
 
 #section4 button {
-  background-color: #2563eb;
+  background-color: #000000ad;
   color: rgb(255, 255, 255);
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -127,7 +127,8 @@ h1 {
 }
 
 #section4 button:hover {
-  background-color: #1d4ed8;
+  background-color: #ffffffc4;
+  color: black;
 }
 nav {
   position: fixed;
