@@ -23,81 +23,42 @@ const AboutUs = () => {
     <>
 
       <section className="py-12 px-14 gap-4 pt-14">
-        <p className="text-dark text-5xl font-semibold text-left tracking-wide font-bold text-center pt-14 pb-4">
+        <p className="text-dark text-5xl font-semibold text-left tracking-wide font-bold text-center pt-14 pb-14">
           Anggota Kami
         </p>
 
-<<<<<<< HEAD
-      <p className="text-dark text-5xl font-semibold text-left tracking-wide font-bold text-center pt-11">
-              Anggota Kami
-              </p>
-          <div className="programs">
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Joshua Wijaya</p>
-                <p>00000096818</p>
-              </div>
-            </div>
-
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Austin Gilbert Liwanto</p>
-                <p>00000096252</p>
-              </div>
-            </div>
-
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Felicia Annabel Ruriyanto</p>
-                <p>00000096911</p>
-              </div>
-            </div>
-
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Chelsea Arantza Phoebe</p>
-                <p>00000096816</p>
-              </div>
-=======
         <div className="programs">
-
           <div className="program">
-            <div className="caption">
-              <p>Austin</p>
-              <p>00000096252</p>
->>>>>>> 252db5d3e542e7dc6e366ba0e7fe7cf315ae0aaa
-            </div>
             <img src={bg_AboutUS} alt="Austin" />
-          </div>
-
-          <div className="program">
             <div className="caption">
               <p>Austin</p>
               <p>00000096252</p>
             </div>
+          </div>
+
+          <div className="program">
             <img src={bg_AboutUS} alt="Austin" />
+            <div className="caption">
+              <p>Austin</p>
+              <p>00000096252</p>
+            </div>
           </div>
 
           <div className="program">
+            <img src={bg_AboutUS} alt="Austin" />
             <div className="caption">
-              <p>Joshua</p>
-              <p>00000094196</p>
+              <p>Austin</p>
+              <p>00000096252</p>
             </div>
-            <img src={bg_AboutUS} alt="Joshua Wijaya" />
           </div>
 
           <div className="program">
+            <img src={bg_AboutUS} alt="Joshua Wijaya" />
             <div className="caption">
-              <p>Joshua</p>
+              <p>Joshua Wijaya</p>
               <p>00000094196</p>
             </div>
-            <img src={bg_AboutUS} alt="Joshua Wijaya" />
           </div>
-          
         </div>
       </section>
 
