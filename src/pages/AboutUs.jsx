@@ -29,13 +29,10 @@ const AboutUs = () => {
 
         <div className="programs">
           <div className="program">
-<<<<<<< HEAD
             <div className="caption">
               <p>Austin</p>
               <p>00000096252</p>
             </div>
-=======
->>>>>>> dc3781f6ed2370f436a5a6e979c4bda21b244689
             <img src={bg_AboutUS} alt="Austin" />
             <div className="caption">
               <p>Austin</p>
