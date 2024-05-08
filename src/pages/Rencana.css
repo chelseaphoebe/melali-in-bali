@@ -116,7 +116,7 @@ h1, h2 {
 }
 
 .title {
-  color: rgb(255, 255, 255);
+  color: rgb(19, 4, 54);
   text-align: center;
   font-size: 36px;
   font-weight: bold;
@@ -217,6 +217,7 @@ footer {
   padding: 20px;
   border-radius: 5px;
   border: 1px solid #190f3d;
+  text-align: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   flex: none;
   width: 350px;
