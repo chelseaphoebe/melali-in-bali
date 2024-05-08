@@ -1,114 +1,120 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  .rencana {
-    z-index: -1;
-  }
+.rencana {
+  z-index: -1;
+}
 
-  .container {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .weather-box {
-    padding: 15px;
-    background-color: #ecf0f1;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .weather-box:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  }
+.container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .itinerary-box {
-    transition: transform 0.3s ease-in-out;
-    background: url('../images/rekomendasi.jpg');
-    width: 150px;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+.weather-box {
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
 
-  .tips {
-    animation: fadeIn 1s ease-out;
+.weather-box:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.itinerary-box {
+  transition: transform 0.3s ease-in-out;
+  background: url('../images/rekomendasi.jpg');
+  width: 350px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .itinerary-box:hover {
-    transform: scale(1.05);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .tips-box:hover {
-    transform: scale(1.05); 
-  }
-  .weather-box:hover {
-    transform: scale(1.05); 
-  }
-  .title:hover {
-    color: #3498db; 
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .tips li:hover {
-    background-color: #f8f9fa; 
-    transition: background-color 0.3s ease-in-out;
-  }
-  .itinerary-box, .tips-box, .weather-box {
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #190f3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    flex: 1;
-    margin-top: 10px;
-  }
-  
-  .weather-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    background: url('../images/cuaca.png');
-    background-size: cover;
-    background-position: center;
-  }
-  
-  h1, h2 {
-    font-size: 36px;
-    background: transparent;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-  
-  h1, h2 {
-    color: #fff9f0;
-    text-shadow: 2px 2px 4px rgba(17, 17, 17, 0.747);
-    font-display:initial;
-  }
-  
+}
+
+.tips {
+  animation: fadeIn 1s ease-out;
+}
+
+.itinerary-box:hover {
+  transform: scale(1.05);
+}
+
+.tips-box:hover {
+  transform: scale(1.05); 
+}
+
+.weather-box:hover {
+  transform: scale(1.05); 
+}
+
+.title:hover {
+  color: #3498db; 
+  transition: color 0.3s ease-in-out;
+}
+
+.tips li:hover {
+  background-color: #f8f9fa; 
+  transition: background-color 0.3s ease-in-out;
+}
+
+.itinerary-box, .tips-box, .weather-box {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #190f3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.weather-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  background: url('../images/cuaca.png');
+  background-size: cover;
+  background-position: center;
+}
+
+h1, h2 {
+  font-size: 36px;
+  background: transparent;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+h1, h2 {
+  color: #fff9f0;
+  text-shadow: 2px 2px 4px rgba(17, 17, 17, 0.747);
+  font-display:initial;
+}
+
 .title {
   color: rgb(27, 13, 53);
   text-align: center;
@@ -124,19 +130,19 @@ body {
 
 .content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   background-color: #f0f0f0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  flex-direction:column;
   gap: 20px;
   width: 100%;
   padding: 40px 0;
 }
-.itinerary-box, .tips-box {
+
+.itinerary-box, .tips-box, .weather-box {
   background-size: cover;
   background-position: center;
   padding: 20px;
@@ -145,84 +151,96 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-top: 10px;
   margin-bottom: 20px;
-  flex: none; /* Menghilangkan flex untuk menghindari perubahan ukuran */
-}
-.itinerary, .tips {
-  list-style-type: none; 
-  padding: 0;
-}
-  .itinerary-box, .tips-box {
-    background-color: hsla(0, 0%, 95%, 0.829);
-    padding: 20px;
-    border-radius: 5px;
-    border-color: #190f3d;
-    flex: none;
-    margin-right: 20px;
-    margin-left: 20px;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #000000;
-    width: 350px;
-    height: 500px;
-  }
-  
-.itinerary-box{
+  flex: none;
   width: 350px;
   height: 500px;
 }
-  .itinerary p {
-    margin: 0;
-  }
-  
-  .tips ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  .tips-box{
-    background: url('../images/tips.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  footer {
-    margin-top: auto;
-  }
-  .weather-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    background: url('../images/cuaca.png');
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #190f3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    flex: none;
-    width: 350px;
-    height:280px;
-  }
 
- nav h1 {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  nav {
-    height: 50px; 
-  }
-  #content {
-    margin-top: 0px;
-    padding-top: 0px; 
-  }
-  body {
-    padding-top: 0px; 
-  }
-  
+.itinerary-box{
+  width: 350px;
+  height: 500px;
+  margin-left: 90px;
+}
 
+.itinerary p {
+  margin: 0;
+}
+
+.tips ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.map-box h2 {
+  color: #190f3d;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  margin-top: 20px;
+}
+
+.tips-box{
+  background: url('../images/tips.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.tips-and-map-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.map-box {
+  flex: 1;
+  color: rgb(27, 13, 53);
+  margin-left: 20px; 
+}
+
+.weather-box {
+  margin-left:90px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  background: url('../images/cuaca.png');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #190f3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  flex: none;
+  width: 350px;
+  height:280px;
+}
+
+nav h1 {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav {
+  height: 50px; 
+}
+
+#content {
+  margin-top: 0px;
+  padding-top: 0px; 
+}
+
+body {
+  padding-top: 0px; 
+}
