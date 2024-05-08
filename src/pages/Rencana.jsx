@@ -103,6 +103,7 @@ const Rencana = () => {
     <div id="rencana">
       <h1 className="title">Rencana Perjalanan ke Bali</h1>
       <div className="content">
+      <div className="tips-and-itinerary-box">
         <div className="itinerary-box">
           <div className="itinerary">
             {itinerary.map((item, index) => (
@@ -110,6 +111,16 @@ const Rencana = () => {
             ))}
           </div>
         </div>
+        <div className="tips-box">
+            <div className="tips">
+              <ul>
+                {tips.map((tip, index) => (
+                  <li key={index}>{tip}</li>
+                ))}
+              </ul>
+            </div>
+            </div>
+            </div>
         <div className="tips-and-map-box">
           <div className="tips-box">
             <div className="tips">
