@@ -3,43 +3,24 @@ import Footer from "../components/Footer";
 import './Rencana.css';
 import { WeatherBox } from '../components/Footer';
 
-function Navbar() {
-    return (
-      <h1 style={{ fontSize: '36px', background: 'transparent', marginTop: '0px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold' }}>
-      </h1>
-    )
-  }
 const Rencana = () => {
   const [itinerary, setItinerary] = useState([]);
   const [tips, setTips] = useState([]);
 
   useEffect(() => {
     setItinerary([
-      "Hari 1: Tiba di Bali, check-in di hotel di Seminyak",
-      "Hari 2: Mengunjungi Pura Tanah Lot dan Pantai Kuta",
-      "Hari 3: Tur ke Ubud, melihat Tegalalang Rice Terraces",
-      "Hari 4: Mengunjungi Pura Besakih dan Air Terjun Gitgit",
-      "Hari 5: Berbelanja di Pasar Seni Ubud dan menikmati matahari terbenam di Pantai Seminyak",
-      "Hari 6: Tur ke Nusa Penida",
-      "Hari 7: Pulang ke rumah"
     ]);
 
     setTips([
-      "Belajar beberapa kata dalam Bahasa Indonesia untuk berinteraksi dengan penduduk lokal",
-      "Selalu tawar harga saat berbelanja di pasar tradisional",
-      "Jangan lupa membawa sunscreen dan topi untuk melindungi diri dari sinar matahari",
-      "Coba makanan lokal seperti nasi campur, sate, dan bakso",
-      "Jangan lupa membawa uang tunai dalam Rupiah untuk membayar di tempat-tempat tertentu",
-      "Bersikap sopan saat mengunjungi tempat-tempat suci dan ikuti aturan berpakaian yang berlaku"
+
     ]);
   }, []);
 
   return (
-    <div>
+    <div id="rencana">
     <h1 className="title">Rencana Perjalanan ke Bali</h1>
     <div className="content">
       <div className="itinerary-box">
-        <h2>Rekomendasi Rencana Liburan</h2>
         <div className="itinerary">
           {itinerary.map((item, index) => (
             <p key={index}>{item}</p>
@@ -47,7 +28,6 @@ const Rencana = () => {
         </div>
         </div>
         <div className="tips-box">
-          <h2>Tips & Trik Berwisata di Bali</h2>
           <div className="tips">
             <ul>
               {tips.map((tip, index) => (
@@ -65,5 +45,3 @@ const Rencana = () => {
 };
 
 export default Rencana;
-
-

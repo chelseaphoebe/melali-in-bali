@@ -38,7 +38,8 @@ export default function Home() {
   async function fetchNews() {
     try {
       const response = await axios.get(url);
-      setNews(response.data.articles);
+      let articles = response.data.articles.slice(0, 5);
+      setNews(articles);
     } catch (error) {
       console.log(error);
     }
@@ -55,14 +56,15 @@ export default function Home() {
       <section id="section1">
         <div className="bg-[url('/public/images/background.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-52 flex items-center justify-center">
           <p className="text-white text-5xl font-semibold text-center tracking-wide">
-            Jelajahi Ribuan Destinasi Bali dengan Kami!
+            Jelajahi Ribuan Destinasi Bali
+            <br /> dengan kami!
           </p>
         </div>
       </section>
       <div className="flex justify-center my-14">
         <div className="flex w-5/6">
           <div className="bg-[#fff7f7] w-2/6 p-12 rounded-l-3xl ">
-            <p>{weather.location ? weather.location.city : 0}, Bali</p>
+            <p className="text-3xl">{weather.location ? weather.location.city : 0}, Bali</p>
             <div className="flex justify-center">
               <img src="/images/cloudIcon.png" alt="" className="size-36" />
             </div>
@@ -82,29 +84,43 @@ export default function Home() {
             </p>
             <p>
               {weather.forecasts ? weather.forecasts[0].day : 0},
-              <span className="text-[#c8cfcf]"> 00:23</span>
+              <span className="text-gray-400"> 00:23</span>
             </p>
           </div>
           <div className="bg-[#f5f5f5] w-4/6 p-12 rounded-r-3xl">
-            <p>Weekly</p>
+            <p className="text-3xl">Weekly</p>
             <div className="flex flex-row gap-2 mt-5 overflow-x-scroll">
-              {weather
-                ? weather.map
-                : null((data, index) => (
+              {/* {weather.forecasts
+                ? weather.forecasts.map((data, index) => (
                     <WeatherCard
                       key={index}
-                      day={data.forecasts.day}
-                      high={data.forecasts.high}
-                      low={data.forecasts.low}
-                      text={data.forecasts.text}
+                      day={data.day}
+                      high={data.high}
+                      low={data.low}
+                      text={data.text}
                     />
-                  ))}
+                  ))
+                : null} */}
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
             </div>
           </div>
         </div>
       </div>
       <section id="section2" className="max-w-xs md:max-w-6xl mx-auto my-16">
-        <p className="text-4xl font-bold">Destionation Choices</p>
+        <p className="text-4xl font-bold">Destination Choices</p>
         <div className="grid grid-cols-5 gap-7 mt-5">
           {Array.from({ length: 10 }, (_, i) => (
             <DestinationCard key={i} imageUrl={"bali.jpeg"} title={"Bali"} />
