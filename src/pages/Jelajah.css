@@ -1,0 +1,71 @@
+.card {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.card:hover {
+    color: black;
+}
+
+.card-img {
+    width: 300px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 8px solid black;
+    position: relative;
+}
+
+.card-img:hover+.card-body {
+    right: 40%
+}
+
+.card-body {
+    width: 300px;
+    height: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: -50;
+    right: -100%;
+    /* Atur posisi awal di luar layar */
+    overflow: hidden;
+    /* Gunakan overflow: hidden */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    transition: right 0.3s ease;
+    /* Tambahkan transisi untuk perubahan posisi saat hover */
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: -50px;
+    margin-left: -85px;
+    margin-bottom: -3px;
+}
+
+.card-sub-title {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+}
+
+.card-info {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 20px 0;
+    font-weight: 400;
+    color: white;
+}
