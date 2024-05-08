@@ -22,11 +22,13 @@ h1 {
   background-image: linear-gradient(to top,#ffffff 100%, #a3bded 0%);
   background-size:cover;
 }
+
 @media (min-width: 768px) {
   #section4 {
     max-width: 96rem;
   }
 }
+
 .experience-card {
   background: url('../images/background3.jpg');
   background-size: cover;
@@ -42,7 +44,6 @@ h1 {
   margin-right: 20px;
   width: 300px;
   height: 400px;
-  transform: scale(1.05); 
 }
 
 .experience-card1 {
@@ -60,7 +61,6 @@ h1 {
   margin-right: 20px;
   width: 300px;
   height: 400px;
-  transform: scale(1.05);
 }
 .experience-card2 {
   background: url('../images/kuliner.jpg');
@@ -77,7 +77,6 @@ h1 {
   margin-right: 20px;
   width: 300px;
   height: 400px;
-  transform: scale(1.05);
 }
 .experience-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

@@ -9,24 +9,22 @@ import bg_AboutUS3 from '../images/background3.jpg';
 
 const AboutUs = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [bg_AboutUS1, bg_AboutUS2, bg_AboutUS3]; // Array of image URLs
+  const images = [bg_AboutUS1, bg_AboutUS2, bg_AboutUS3];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex(currentImageIndex => (currentImageIndex + 1) % images.length);
-    }, 5000); // Change image every 3 seconds
+    }, 5000);
 
-    return () => clearInterval(interval); // Clean up the interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <>
-
       <section className="py-12 px-14 gap-4 pt-14">
         <p className="text-dark text-5xl font-semibold text-left tracking-wide font-bold text-center pt-14 pb-14">
           Anggota Kami
         </p>
-
         <div className="programs">
           <div className="program">
             <img src={bg_AboutUS} alt="Austin" />

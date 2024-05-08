@@ -43,7 +43,7 @@ const ExperienceSection = () => {
       id="section4"
       className="max-w-6xl mx-auto my-16 flex flex-col min-h-screen"
     >
-      <h2 className="text-4xl font-bold text-center text-black">
+      <h2 className="text-4xl font-bold text-center text-black" style={{ paddingTop: '100px' }}> 
         What To Do in Bali?
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-15 mb-auto">

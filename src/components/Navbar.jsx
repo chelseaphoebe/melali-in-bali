@@ -23,7 +23,7 @@ export default function Navbar() {
       className={`${topPage} pl-14 pr-28 flex justify-between items-center fixed w-full py-3`}
     >
       <a href="/">
-        <img src={image} alt="" className="size-12 logo" /> {/* Add the "logo" class */}
+        <img src={image} alt="" className="size-12 logo" /> {}
       </a>
       <div className="nav-links">
         <a href="/hotels" className="nav-link">
