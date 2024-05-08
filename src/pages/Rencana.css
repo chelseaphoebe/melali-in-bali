@@ -177,8 +177,8 @@ h1, h2 {
 }
 
 .map-box iframe {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 300px;
   border: none;
   margin-top: 20px;
   margin-left: 120px;
@@ -194,7 +194,7 @@ footer {
   margin-top: auto;
 }
 
-.tips-and-map-box {
+.map-box {
   display: flex;
   flex-direction: row;
 }
