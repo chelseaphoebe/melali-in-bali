@@ -35,9 +35,6 @@ export default function Navbar() {
         <a href="/inspirasi" className="nav-link">
           Jelajah
         </a>
-        <a href="/HangmanGame" className="nav-link">
-          Permainan
-        </a>
         <a href="/game" className="nav-link">
           Game
         </a>

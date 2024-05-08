@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -81,7 +81,7 @@ body {
 .itinerary-box, .tips-box, .weather-box {
   padding: 20px;
   border-radius: 5px;
-  border: 1px solid #190f3d;
+  border: 1px solid #26175e;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-top: 10px;
   align-self: flex-start;
@@ -110,13 +110,13 @@ h1, h2 {
 }
 
 h1, h2 {
-  color: #fff9f0;
+  color: #ffffff;
   text-shadow: 2px 2px 4px rgba(17, 17, 17, 0.747);
   font-display:initial;
 }
 
 .title {
-  color: rgb(27, 13, 53);
+  color: rgb(26, 13, 71);
   text-align: center;
   font-size: 36px;
   font-weight: bold;
@@ -171,7 +171,7 @@ h1, h2 {
   padding-left: 20px;
 }
 .map-box h2 {
-  color: #190f3d;
+  color: #190f3d; 
 }
 
 .map-box iframe {
