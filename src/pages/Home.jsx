@@ -4,6 +4,7 @@ import { NewsCard } from "../components/NewsCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { WeatherCard } from "../components/WeatherCard";
+import "./Home.css";
 
 export default function Home() {
   const [weather, setWeather] = useState([]);
