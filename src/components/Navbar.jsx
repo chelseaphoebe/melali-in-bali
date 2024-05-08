@@ -30,16 +30,13 @@ export default function Navbar() {
           Hotel
         </a>
         <a href="/rencana" className="nav-link">
-          Rencana Perjalanan
+          Rekomendasi
         </a>
         <a href="/jelajah" className="nav-link">
           Jelajah
         </a>
-        <a href="/HangmanGame" className="nav-link">
-          Permainan
-        </a>
         <a href="/game" className="nav-link">
-          Game
+          Permainan
         </a>
         <a href="/aboutUs" className="nav-link">
           Tentang Kami
