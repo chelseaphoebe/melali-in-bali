@@ -26,4 +26,14 @@
   .scrolled {
     transform: translateY(-100%);
   }
+
+  .logo {
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  
   

@@ -23,44 +23,49 @@ const AboutUs = () => {
     <>
 
       <section className="py-12 px-14 gap-4 pt-14">
-        <p className="text-dark text-5xl font-semibold text-left tracking-wide font-bold text-center pt-14 pb-4">
+        <p className="text-dark text-5xl font-semibold text-left tracking-wide font-bold text-center pt-14 pb-14">
           Anggota Kami
         </p>
 
         <div className="programs">
-
           <div className="program">
+<<<<<<< HEAD
             <div className="caption">
               <p>Austin</p>
               <p>00000096252</p>
             </div>
+=======
+>>>>>>> dc3781f6ed2370f436a5a6e979c4bda21b244689
             <img src={bg_AboutUS} alt="Austin" />
-          </div>
-
-          <div className="program">
             <div className="caption">
               <p>Austin</p>
               <p>00000096252</p>
             </div>
+          </div>
+
+          <div className="program">
             <img src={bg_AboutUS} alt="Austin" />
+            <div className="caption">
+              <p>Austin</p>
+              <p>00000096252</p>
+            </div>
           </div>
 
           <div className="program">
+            <img src={bg_AboutUS} alt="Austin" />
             <div className="caption">
-              <p>Joshua</p>
-              <p>00000094196</p>
+              <p>Austin</p>
+              <p>00000096252</p>
             </div>
-            <img src={bg_AboutUS} alt="Joshua Wijaya" />
           </div>
 
           <div className="program">
+            <img src={bg_AboutUS} alt="Joshua Wijaya" />
             <div className="caption">
-              <p>Joshua</p>
+              <p>Joshua Wijaya</p>
               <p>00000094196</p>
             </div>
-            <img src={bg_AboutUS} alt="Joshua Wijaya" />
           </div>
-          
         </div>
       </section>
 

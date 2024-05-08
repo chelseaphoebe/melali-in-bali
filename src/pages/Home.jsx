@@ -54,8 +54,13 @@ export default function Home() {
     <>
       {/* Content goes here */}
       <section id="section1">
+<<<<<<< HEAD
         <div className="bg-[url('/src/images/background2.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-52 flex items-center justify-center">
           <p className="text-white text-5xl font-semibold text-center tracking-wide">
+=======
+        <div className="bg-[url('/public/images/background.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-52 flex items-center justify-center">
+          <p className="text-white text-5xl font-semibold text-center tracking-wide banner-text" style={{ transform: 'translateY(-20px)', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+>>>>>>> dc3781f6ed2370f436a5a6e979c4bda21b244689
             Jelajahi Ribuan Destinasi Bali
             <br /> dengan kami!
           </p>
