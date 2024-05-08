@@ -32,7 +32,7 @@ export default function Navbar() {
         <a href="/rencana" className="nav-link">
           Rencana Perjalanan
         </a>
-        <a href="/inspirasi" className="nav-link">
+        <a href="/jelajah" className="nav-link">
           Jelajah
         </a>
         <a href="/HangmanGame" className="nav-link">
