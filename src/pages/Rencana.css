@@ -4,7 +4,6 @@ body {
   padding: 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
 }
 
 .rencana {
@@ -15,11 +14,13 @@ body {
   flex: 1;
   padding: 20px;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-
+.tips-box-and-itinerary-box{
+  display: flex;
+  flex-direction: row;
+}
 .weather-box {
   padding: 15px;
   background-color: #ecf0f1;
@@ -39,6 +40,7 @@ body {
   height: 500px;
   background-size: cover;
   background-position: center;
+  margin-right:120px;
 }
 
 @keyframes fadeIn {
@@ -89,8 +91,6 @@ body {
 
 .weather-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 10px;
   background: url('../images/cuaca.png');
   background-size: cover;
@@ -116,7 +116,7 @@ h1, h2 {
 }
 
 .title {
-  color: rgb(26, 13, 71);
+  color: rgb(255, 255, 255);
   text-align: center;
   font-size: 36px;
   font-weight: bold;
@@ -173,15 +173,16 @@ h1, h2 {
 .map-box h2 {
   color: #1d104b9f; 
   font-size: medium;
-  margin-left: 120px;
+  margin-left: 10px;
 }
 
 .map-box iframe {
-  width: 100px;
+  width:350px;
   height: 300px;
   border: none;
-  margin-top: 20px;
-  margin-left: 120px;
+  margin-top: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .tips-box{
@@ -194,7 +195,7 @@ footer {
   margin-top: auto;
 }
 
-.map-box {
+.weather-box-and-map-box {
   display: flex;
   flex-direction: row;
 }
@@ -206,11 +207,10 @@ footer {
 }
 
 .weather-box {
-  margin-left:90px; 
+  margin-left:70px; 
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 80px;
   background: url('../images/cuaca.png');
   background-size: cover;
   background-position: center;

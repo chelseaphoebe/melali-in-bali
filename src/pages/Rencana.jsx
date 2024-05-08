@@ -103,7 +103,7 @@ const Rencana = () => {
     <div id="rencana">
       <h1 className="title">Rencana Perjalanan ke Bali</h1>
       <div className="content">
-      <div className="tips-and-itinerary-box">
+      <div className="tips-box-and-itinerary-box">
         <div className="itinerary-box">
           <div className="itinerary">
             {itinerary.map((item, index) => (
@@ -121,16 +121,7 @@ const Rencana = () => {
             </div>
             </div>
             </div>
-        <div className="tips-and-map-box">
-          <div className="tips-box">
-            <div className="tips">
-              <ul>
-                {tips.map((tip, index) => (
-                  <li key={index}>{tip}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        <div className="weather-box-and-map-box">
           <div className="map-box">
             <h2>One of the Favorite Destinastion in Bali</h2>
             {mapData.geometry && (
@@ -147,8 +138,8 @@ const Rencana = () => {
               src={`https://maps.google.com/maps?q=Ubud+Bali&t=&z=13&ie=UTF8&iwloc=&output=embed`}
             />
           </div>
-        </div>
         <WeatherBox /> {/* Using the WeatherBox component */}
+      </div>
       </div>
 
       <Footer />
