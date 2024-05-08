@@ -6,10 +6,11 @@ const Banner = () => {
   return (
     <section
       id="banner"
-      className="bg-[url('/src/images/banner-ins.jpg')] bg-center bg-cover bg-no-repeat min-h-[600px] px-10 flex items-center justify-center"
+      className="bg-[url('/public/images/banner-jelajah.jpg')] bg-center bg-cover bg-no-repeat min-h-[740px] px-10 flex items-center justify-center"
     >
       <p className="text-white text-5xl font-semibold text-center tracking-wide">
-        Temukan kebahagiaan mu di Bali!
+        Temukan kebahagiaan-mu di Bali
+        <br /> dengan jelajah!
       </p>
     </section>
   );
@@ -42,33 +43,46 @@ const ExperienceSection = () => {
       id="section4"
       className="max-w-6xl mx-auto my-16 flex flex-col min-h-screen"
     >
-      <h2 className="text-4xl font-bold mb-8 text-center">
+      <h2 className="text-4xl font-bold text-center text-black">
         What To Do in Bali?
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-15 mb-auto">
         <div className="experience-card">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handleNatureClick} data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
+          <p
+            className="text-white font-bold"
+            onClick={handleNatureClick}
+            data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
           >
-            Jelajahi Aktivitas Alam
-          </button>
+            Jelajah
+            <br />
+            Aktivitas
+            <br />
+            Alam
+          </p>
         </div>
         <div className="experience-card1">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handleCultureClick} data-hover-text="Tradisi Beserta Festival Bali Yang Tidak Bisa Dilewatkan"
+          <p
+            className="text-white font-bold"
+            onClick={handleNatureClick}
+            data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
           >
-            Jelajahi Wisata Budaya
-          </button>
+            Jelajah
+            <br />
+            Wisata
+            <br />
+            Budaya
+          </p>
         </div>
         <div className="experience-card2">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handleCulinaryClick} data-hover-text="Kuliner Bali Yang Wajib Dicobai Minimal Sekali"
+          <p
+            className="text-white font-bold"
+            onClick={handleNatureClick}
+            data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
           >
-            Jelajahi Kuliner
-          </button>
+            Jelajah
+            <br />
+            Kuliner
+          </p>
         </div>
       </div>
       <Footer className="mt-auto" />
