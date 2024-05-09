@@ -23,23 +23,20 @@ export default function Navbar() {
       className={`${topPage} pl-14 pr-28 flex justify-between items-center fixed w-full py-3`}
     >
       <a href="/">
-        <img src={image} alt="" className="size-12" />
+        <img src={image} alt="" className="size-12 logo" /> {}
       </a>
       <div className="nav-links">
         <a href="/hotels" className="nav-link">
           Hotel
         </a>
         <a href="/rencana" className="nav-link">
-          Rencana Perjalanan
+          Rekomendasi
         </a>
-        <a href="/inspirasi" className="nav-link">
+        <a href="/jelajah" className="nav-link">
           Jelajah
         </a>
-        <a href="/HangmanGame" className="nav-link">
-          Permainan
-        </a>
         <a href="/game" className="nav-link">
-          Game
+          Permainan
         </a>
         <a href="/aboutUs" className="nav-link">
           Tentang Kami

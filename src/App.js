@@ -7,6 +7,7 @@ import Game from "./pages/Game";
 import AboutUs from "./pages/AboutUs";
 import Inspirasi from "./pages/Inspirasi"
 import Rencana from "./pages/Rencana";
+import Jelajah from "./pages/Jelajah";
 
 function App() {
   return (
@@ -15,10 +16,11 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/hotels" element={<Hotels />} />
-        <Route path="/game" element={<Game/>} />
-        <Route path="/aboutUs" element={<AboutUs/>} />
-        <Route path="/inspirasi" element={<Inspirasi/>} />
-        <Route path="/rencana" element={<Rencana/>} />
+        <Route path="/game" element={<Game />} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/jelajah" element={<Jelajah />} />
+        <Route path="/inspirasi" element={<Inspirasi />} />
+        <Route path="/rencana" element={<Rencana />} />
       </Routes>
     </Router>
   );
