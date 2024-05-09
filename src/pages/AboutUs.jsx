@@ -34,18 +34,19 @@ const AboutUs = () => {
       </p>
   
     </section>
+    <section className="py-12 px-10 gap-4  pt-14">
+    <div className="programs">
 
-        <div className="programs">
+
           <div className="program">
-            <img src={card_AboutUS1} alt="Austin" />
             <div className="caption">
               <p>Austin</p>
               <p>00000096252</p>
             </div>
+            <img src={card_AboutUS1} alt="Austin" />
           </div>
 
           <div className="program">
-            <img src={card_AboutUS2} alt="Austin" />
             <div className="caption">
               <p>Felicia</p>
               <p>00000096911</p>
@@ -54,7 +55,6 @@ const AboutUs = () => {
           </div>
 
           <div className="program">
-            <img src={bg_AboutUS} alt="Joshua Wijaya" />
             <div className="caption">
               <p>Joshua Wijaya</p>
               <p>00000094196</p>
@@ -64,14 +64,12 @@ const AboutUs = () => {
 
           <div className="program">
             <div className="caption">
-              <p>Chelsea</p>
+              <p>Joshua Wijaya</p>
               <p>00000094196</p>
             </div>
-            <img src={card_AboutUS4} alt="Joshua Wijaya" />
+            <img src={card_AboutUS3} alt="Josh" />
           </div>
-          
-        </div>
-
+    </div>
         <div className="carousel px-14 mt-4 ">
           <TransitionGroup className="carousel">
             <CSSTransition
@@ -83,8 +81,10 @@ const AboutUs = () => {
             </CSSTransition>
           </TransitionGroup>
         </div>
+    </section>
+          
 
-      </section>
+
 
 
       <Footer />
