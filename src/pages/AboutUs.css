@@ -38,12 +38,12 @@
 }
 
 .program:hover img{
-    border-radius: 0px 0px 10px 10px; /* New border-radius on hover */
+    border-radius: 0px 0px 10px 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
 
 .program:hover .caption{
-    border-radius: 10px 10px 0px 0px; /* New border-radius on hover */
+    border-radius: 10px 10px 0px 0px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
     opacity: 1;
     padding-top: 1vh;
@@ -59,13 +59,11 @@
 .carousel {
     border-radius: 10px;
     width: 100%;
-    height: 600px; /* Fixed height for the carousel */
-    overflow: hidden; /* Hide anything outside the carousel bounds */
+    height: 600px;
+    overflow: hidden;
     padding-bottom: 80px;
-    position: relative; /* Add this */
 }
 
-/* Container for the sliding and fading element */
 .container {
     width: 100%;
     height: 100%;
@@ -75,22 +73,22 @@
 
 .slide-enter {
     opacity: 0;
-    transform: translateX(100%); /* Start from the right side */
+    left: 100%;
 }
 
 .slide-enter-active {
     opacity: 1;
-    transform: translateX(0); /* Slide in from the right */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add transition for transform */
+    left: 0;
+    transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
 }
 
 .slide-exit {
     opacity: 1;
-    transform: translateX(0); /* Start from the current position */
+    left: 0;
 }
 
 .slide-exit-active {
     opacity: 0;
-    transform: translateX(-100%); /* Slide out to the left */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add transition for transform */
+    left: -100%;
+    transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
 }
