@@ -18,25 +18,37 @@ const Banner = () => {
 
 const ExperienceSection = () => {
   const [carRentals, setCarRentals] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchCarRentals = async () => {
       const options = {
         method: "GET",
         url: "https://booking-com15.p.rapidapi.com/api/v1/cars/searchDestination",
-        params: { query: "Bali" },
+        params: {
+          query: "Bali",
+          languagecode: "ENG",
+        },
         headers: {
-          "X-RapidAPI-Key": "106bc77095mshcce3050c4c1bdf1p1b0407jsndef937fbf790",
+          "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
           "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
         },
       };
 
       try {
         const response = await axios.request(options);
-        setCarRentals(response.data.result);
+        console.log("API Response:", response.data);
+        if (response.data.result) {
+          setCarRentals(response.data.result);
+        } else {
+          setError("No car rentals found.");
+        }
       } catch (error) {
-        console.error(error);
+        console.error("API Error:", error.response);
+        setError("Failed to fetch car rentals.");
       }
+      setLoading(false);
     };
 
     fetchCarRentals();
@@ -101,21 +113,25 @@ const ExperienceSection = () => {
         </div>
       </div>
       <div className="mt-8">
-  <h3 className="text-2xl font-bold mb-4">Car Rentals in Bali</h3>
-  {carRentals ? (
-    <ul>
-      {carRentals.map((rental) => (
-        <li key={rental.id}>
-          <a href={rental.website} target="_blank" rel="noopener noreferrer">
-            {rental.name}
-          </a>
-        </li>
-      ))}
-    </ul>
-  ) : (
-    <p>Loading car rentals...</p>
-  )}
-</div>
+        <h3 className="text-2xl font-bold mb-4">Rental Mobil di Bali</h3>
+        {loading ? (
+          <p>Memuat rental mobil...</p>
+        ) : error ? (
+          <p>{error}</p>
+        ) : carRentals && carRentals.length > 0 ? (
+          <ul>
+            {carRentals.map((rental) => (
+              <li key={rental.id}>
+                <a href={rental.website} target="_blank" rel="noopener noreferrer">
+                  {rental.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>Tidak ada rental mobil yang tersedia.</p>
+        )}
+      </div>
 
       <Footer className="mt-auto" />
     </section>
@@ -132,5 +148,3 @@ const Inspirasi = () => {
 };
 
 export default Inspirasi;
-
-

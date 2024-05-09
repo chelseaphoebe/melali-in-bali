@@ -21,7 +21,7 @@ export default function Home() {
       u: "f",
     },
     headers: {
-      "X-RapidAPI-Key": "6b6820ab3amshabcae9596a9c461p194024jsn8b72f13050bb",
+      "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
       "X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com",
     },
   };
