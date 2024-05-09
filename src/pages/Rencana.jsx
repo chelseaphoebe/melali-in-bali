@@ -134,7 +134,7 @@ const Rencana = () => {
             <iframe
               width="100%"
               height="300"
-              frameborder="0"
+              frameborder="5"
               src={`https://maps.google.com/maps?q=Ubud+Bali&t=&z=13&ie=UTF8&iwloc=&output=embed`}
             />
           </div>
