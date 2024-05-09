@@ -6,8 +6,8 @@ import card_AboutUS1 from '../images/3.png';
 import card_AboutUS2 from '../images/2.png';
 import card_AboutUS3 from '../images/1.png';
 import card_AboutUS4 from '../images/3.png';
-import bg_AboutUS1 from '../images/background2.jpg';
-import bg_AboutUS3 from '../images/background3.jpg';
+import bg_AboutUS1 from '../images/visi.png';
+import bg_AboutUS3 from '../images/misi.png';
 
 const AboutUs = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
