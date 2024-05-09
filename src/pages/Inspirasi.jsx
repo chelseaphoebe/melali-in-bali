@@ -43,46 +43,36 @@ const ExperienceSection = () => {
       id="section4"
       className="max-w-6xl mx-auto my-16 flex flex-col min-h-screen"
     >
-      <h2 className="text-4xl font-bold text-center text-black">
+      <h2 className="text-4xl font-bold mb-8 text-center text-black">
         What To Do in Bali?
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-15 mb-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-auto">
         <div className="experience-card">
-          <p
-            className="text-white font-bold"
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={handleNatureClick}
             data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
           >
-            Jelajah
-            <br />
-            Aktivitas
-            <br />
-            Alam
-          </p>
+            Jelajahi Aktivitas Alam
+          </button>
         </div>
         <div className="experience-card1">
-          <p
-            className="text-white font-bold"
-            onClick={handleNatureClick}
-            data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={handleCultureClick}
+            data-hover-text="Tradisi Beserta Festival Bali Yang Tidak Bisa Dilewatkan"
           >
-            Jelajah
-            <br />
-            Wisata
-            <br />
-            Budaya
-          </p>
+            Jelajahi Wisata Budaya
+          </button>
         </div>
         <div className="experience-card2">
-          <p
-            className="text-white font-bold"
-            onClick={handleNatureClick}
-            data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={handleCulinaryClick}
+            data-hover-text="Kuliner Bali Yang Wajib Dicobai Minimal Sekali"
           >
-            Jelajah
-            <br />
-            Kuliner
-          </p>
+            Jelajahi Kuliner
+          </button>
         </div>
       </div>
       <Footer className="mt-auto" />
@@ -98,5 +88,6 @@ const Inspirasi = () => {
     </>
   );
 };
+
 
 export default Inspirasi;
