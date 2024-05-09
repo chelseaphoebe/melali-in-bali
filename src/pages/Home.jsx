@@ -126,6 +126,7 @@ export default function Home() {
         </div>
       </div>
       <div>
+        
         <div className="flex flex-wrap justify-center gap-6">
           <JelajahCard
             imageFile="lempuyang.jpg"
@@ -208,6 +209,7 @@ export default function Home() {
           />
         </div>
       </div>
+
       {/* <section id="section2" className="max-w-xs md:max-w-6xl mx-auto my-16">
         <p className="text-4xl font-bold">Destination Choices</p>
         <div className="grid grid-cols-5 gap-7 mt-5">
@@ -216,6 +218,7 @@ export default function Home() {
           ))}
         </div>
       </section> */}
+
       <section id="section3" className="max-w-xs md:max-w-6xl mx-auto my-10">
         {news.map((data, index) => (
           <NewsCard

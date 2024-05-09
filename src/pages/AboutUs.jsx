@@ -16,7 +16,7 @@ const AboutUs = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex(currentImageIndex => (currentImageIndex + 1) % images.length);
-    }, 5000); // Change image every 3 seconds
+    }, 10000); // Change image every 3 seconds
 
     return () => clearInterval(interval); // Clean up the interval on component unmount
   }, []);
