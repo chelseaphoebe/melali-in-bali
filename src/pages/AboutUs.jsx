@@ -2,14 +2,16 @@ import React, { useState, useEffect } from 'react';
 import './AboutUs.css';
 import Footer from "../components/Footer";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import bg_AboutUS from '../images/dummy2.jpg';
+import card_AboutUS1 from '../images/3.png';
+import card_AboutUS2 from '../images/2.png';
+import card_AboutUS3 from '../images/1.png';
+import card_AboutUS4 from '../images/3.png';
 import bg_AboutUS1 from '../images/background2.jpg';
-import bg_AboutUS2 from '../images/baliwisata.jpg';
 import bg_AboutUS3 from '../images/background3.jpg';
 
 const AboutUs = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [bg_AboutUS1, bg_AboutUS2, bg_AboutUS3]; // Array of image URLs
+  const images = [bg_AboutUS1, bg_AboutUS3]; // Array of image URLs
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,73 +23,36 @@ const AboutUs = () => {
 
   return (
     <>
+  
+    <section
+      id="banner"
+      className="bg-[url('/public/images/banner-aboutUS.jpg')] bg-center bg-cover bg-no-repeat min-h-[700px] px-10 flex items-center justify-center"
+    >
+      <p className="text-white text-8xl font-semibold text-center tracking-wide">
+        <span className="text-4xl">We Are</span> 
+        <br />Mela<span className="text-yellow-300">li.</span>
+      </p>
+  
+    </section>
 
-      <section className="py-12 px-14 gap-4 pt-14">
-        <p className="text-dark text-5xl font-semibold text-left tracking-wide font-bold text-center pt-14 pb-4">
-          Anggota Kami
-        </p>
+      <section className="py-12 px-10 gap-4  pt-14">
 
-<<<<<<< HEAD
-      <p className="text-dark text-5xl font-semibold text-left tracking-wide font-bold text-center pt-11">
-              Anggota Kami
-              </p>
-          <div className="programs">
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Joshua Wijaya</p>
-                <p>00000096818</p>
-              </div>
-            </div>
-
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Austin Gilbert Liwanto</p>
-                <p>00000096252</p>
-              </div>
-            </div>
-
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Felicia Annabel Ruriyanto</p>
-                <p>00000096911</p>
-              </div>
-            </div>
-
-            <div className="program">
-              <img src={ progIMG } alt="" />
-              <div className="caption">
-                <p>Chelsea Arantza Phoebe</p>
-                <p>00000096816</p>
-              </div>
-=======
         <div className="programs">
 
           <div className="program">
             <div className="caption">
               <p>Austin</p>
               <p>00000096252</p>
->>>>>>> 252db5d3e542e7dc6e366ba0e7fe7cf315ae0aaa
             </div>
-            <img src={bg_AboutUS} alt="Austin" />
+            <img src={card_AboutUS1} alt="Austin" />
           </div>
 
           <div className="program">
             <div className="caption">
-              <p>Austin</p>
-              <p>00000096252</p>
+              <p>Felicia</p>
+              <p>00000096911</p>
             </div>
-            <img src={bg_AboutUS} alt="Austin" />
-          </div>
-
-          <div className="program">
-            <div className="caption">
-              <p>Joshua</p>
-              <p>00000094196</p>
-            </div>
-            <img src={bg_AboutUS} alt="Joshua Wijaya" />
+            <img src={card_AboutUS2} alt="Feli" />
           </div>
 
           <div className="program">
@@ -95,16 +60,20 @@ const AboutUs = () => {
               <p>Joshua</p>
               <p>00000094196</p>
             </div>
-            <img src={bg_AboutUS} alt="Joshua Wijaya" />
+            <img src={card_AboutUS3} alt="Josh" />
+          </div>
+
+          <div className="program">
+            <div className="caption">
+              <p>Chelsea</p>
+              <p>00000094196</p>
+            </div>
+            <img src={card_AboutUS4} alt="Joshua Wijaya" />
           </div>
           
         </div>
-      </section>
 
-
-      <section className="py-13 gap-4 pt-14 mt-4">
-
-        <div className="carousel px-14 mb-4 ">
+        <div className="carousel px-14 mt-4 ">
           <TransitionGroup className="carousel">
             <CSSTransition
               key={currentImageIndex}
@@ -115,7 +84,9 @@ const AboutUs = () => {
             </CSSTransition>
           </TransitionGroup>
         </div>
+
       </section>
+
 
       <Footer />
     </>
