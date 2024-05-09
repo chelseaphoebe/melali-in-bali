@@ -1,5 +1,4 @@
 import Footer from "../components/Footer";
-import { DestinationCard } from "../components/DestinationCard";
 import { NewsCard } from "../components/NewsCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
