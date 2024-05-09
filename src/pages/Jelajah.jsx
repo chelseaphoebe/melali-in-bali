@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Footer from "../components/Footer";
 import React from "react";
 import "./Inspirasi.css";
@@ -86,3 +87,14 @@ const Inspirasi = () => {
 };
 
 export default Inspirasi;
+=======
+import JelajahCard from "../components/JelajahCard"
+
+function Jelajah() {
+  return (
+    <JelajahCard judul="aku tatang" subjudul="aku suka sisdig" desc="duar nmax" link=""/>
+  )
+}
+
+export default Jelajah;
+>>>>>>> 4db393bc654adb08181310ea9dc50a296e8cdd08
