@@ -3,7 +3,6 @@ import { NewsCard } from "../components/NewsCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { WeatherCard } from "../components/WeatherCard";
-import "./Home.css";
 import JelajahCard from "../components/JelajahCard";
 
 export default function Home() {
@@ -127,7 +126,7 @@ export default function Home() {
       </div>
       <div>
         
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6 overflow-hidden">
           <JelajahCard
             imageFile="lempuyang.jpg"
             judul="Lempuyang Temple"
