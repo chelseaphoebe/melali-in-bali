@@ -15,7 +15,7 @@ function Navbar({ onStartGame }) {
   };
 
   return (
-    <h1 className="navbar-title" onClick={handleStartGame}>Get That Beach!</h1>
+    <h1 className="pt-24 pb-10" onClick={handleStartGame}>Get That Beach!</h1>
   );
 }
 
