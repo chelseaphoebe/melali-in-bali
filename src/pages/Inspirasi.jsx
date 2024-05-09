@@ -1,12 +1,13 @@
 import Footer from "../components/Footer";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Inspirasi.css";
 
 const Banner = () => {
   return (
     <section
       id="banner"
-      className="bg-[url('/src/images/banner-ins.jpg')] bg-center bg-cover bg-no-repeat min-h-[600px] px-10 flex items-center justify-center"
+      className="bg-[url('/public/images/banner-jelajah.jpg')] bg-center bg-cover bg-no-repeat min-h-[740px] px-10 flex items-center justify-center"
     >
       <p className="text-white text-5xl font-semibold text-center tracking-wide">
         Temukan kebahagiaan mu di Bali!
@@ -16,6 +17,31 @@ const Banner = () => {
 };
 
 const ExperienceSection = () => {
+  const [carRentals, setCarRentals] = useState([]);
+
+  useEffect(() => {
+    const fetchCarRentals = async () => {
+      const options = {
+        method: "GET",
+        url: "https://booking-com15.p.rapidapi.com/api/v1/cars/searchDestination",
+        params: { query: "Bali" },
+        headers: {
+          "X-RapidAPI-Key": "106bc77095mshcce3050c4c1bdf1p1b0407jsndef937fbf790",
+          "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
+        },
+      };
+
+      try {
+        const response = await axios.request(options);
+        setCarRentals(response.data.result);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchCarRentals();
+  }, []);
+
   const handleNatureClick = () => {
     window.open(
       "https://www.bing.com/ck/a?!&&p=475c31dddcc73f65JmltdHM9MTcxNDc4MDgwMCZpZ3VpZD0xNzZmYTI4OS01ZDBmLTYwZGItMWVhNy1iMWVkNWM5MzYxZTUmaW5zaWQ9NTE5Ng&ptn=3&ver=2&hsh=3&fclid=176fa289-5d0f-60db-1ea7-b1ed5c9361e5&psq=Nikmati+keindahan+alam+Bali+dengan+melakukan+aktivitas+seperti+hiking+di+pegunungan%2c+snorkeling+di+pantai+yang+indah%2c+atau+mengeksplorasi+hutan+hujan+tropis.&u=a1aHR0cHM6Ly93d3cuZGlzY292YWJhbGkuY29tL2lkLzE1LWhpa2luZy1kYW4tdHJla2tpbmctdGVyYmFpay1kaS1iYWxpLXlhbmctYmVyc2VudHVoYW4tZGVuZ2FuLWFsYW0v&ntb=1",
@@ -74,6 +100,23 @@ const ExperienceSection = () => {
           </button>
         </div>
       </div>
+      <div className="mt-8">
+  <h3 className="text-2xl font-bold mb-4">Car Rentals in Bali</h3>
+  {carRentals ? (
+    <ul>
+      {carRentals.map((rental) => (
+        <li key={rental.id}>
+          <a href={rental.website} target="_blank" rel="noopener noreferrer">
+            {rental.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p>Loading car rentals...</p>
+  )}
+</div>
+
       <Footer className="mt-auto" />
     </section>
   );
@@ -88,6 +131,6 @@ const Inspirasi = () => {
   );
 };
 
-
 export default Inspirasi;
+
 
