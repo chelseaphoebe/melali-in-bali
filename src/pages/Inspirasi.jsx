@@ -25,14 +25,15 @@ const ExperienceSection = () => {
     const fetchCarRentals = async () => {
       const options = {
         method: "GET",
-        url: "https://booking-com15.p.rapidapi.com/api/v1/cars/searchDestination",
+        url: "https://tripadvisor16.p.rapidapi.com/api/v1/rentals/searchLocation",
         params: {
           query: "Bali",
           languagecode: "ENG",
         },
         headers: {
+          "content-type": "application/json",
           "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
-          "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
+          "X-RapidAPI-Host": "tripadvisor16.p.rapidapi.com",
         },
       };
 
@@ -148,3 +149,4 @@ const Inspirasi = () => {
 };
 
 export default Inspirasi;
+
