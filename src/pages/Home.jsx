@@ -92,9 +92,9 @@ export default function Home() {
               <span className="text-gray-400"> 00:23</span>
             </p>
           </div>
-          <div className="bg-[#f5f5f5] w-4/6 p-12 rounded-r-3xl">
+          <div className="bg-[#f5f5f5] p-12 rounded-r-3xl">
             <p className="text-3xl">Weekly</p>
-            <div className="flex flex-row gap-2 mt-5 overflow-x-scroll">
+            <div className="flex flex-row max-w-2xl gap-2 mt-5 overflow-x-scroll">
               {/* {weather.forecasts
                 ? weather.forecasts.map((data, index) => (
                     <WeatherCard
@@ -125,7 +125,6 @@ export default function Home() {
         </div>
       </div>
       <div>
-        
         <div className="flex flex-wrap justify-center gap-6 overflow-hidden">
           <JelajahCard
             imageFile="lempuyang.jpg"

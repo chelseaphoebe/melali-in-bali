@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <div
       id="navBar"
-      className={`${topPage} pl-14 pr-28 flex justify-between items-center fixed w-full py-3`}
+      className={`${topPage} pl-14 pr-28 flex justify-between items-center fixed w-full py-3 z-20`}
     >
       <a href="/">
         <img src={image} alt="" className="size-12 logo" /> {}
