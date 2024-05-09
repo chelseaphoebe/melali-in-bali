@@ -7,7 +7,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  background: url('../images/background1.jpg');
+  background: url('../images/game.jpg');
   background-size: cover;
 }
 .snake-segment {
@@ -146,7 +146,7 @@ h1, p {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url('../images/background2.jpg');
+  background: url('../images/background3.jpg');
   background-size: cover;
 }
 

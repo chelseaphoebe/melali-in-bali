@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import React, { useState, useEffect } from 'react';
 import './Game.css';
-import img1 from '../images/background1.jpg'
+import img1 from '../images/game.jpg'
 import Swal from 'sweetalert2';
 
 const gridSize = 20;
