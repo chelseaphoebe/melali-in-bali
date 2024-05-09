@@ -204,9 +204,9 @@ function Game(props) {
       </div>
       {gameOver && (
         <div className="game-over">
-          <p>Game Over</p>
-          <p>Score: {score}</p>
-          <p>Highest Score: {highestScore}</p>
+          <p className="text-3xl">Game Over</p>
+          <p className="font-normal">Score: {score}</p>
+          <p className="font-normal">Highest Score: {highestScore}</p>
           <button onClick={restartGame}>Play Again</button>
         </div>
       )}
