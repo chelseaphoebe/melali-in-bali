@@ -43,14 +43,18 @@ const ExperienceSection = () => {
       id="section4"
       className="max-w-6xl mx-auto my-16 flex flex-col min-h-screen"
     >
-      <h2 className="text-4xl font-bold text-center text-black">
+      <h2 className="text-4xl font-bold mb-8 text-center">
         What To Do in Bali?
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-auto">
         <div className="experience-card">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+<<<<<<< Updated upstream
             onClick={handleNatureClick} data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
+=======
+            onClick={handleNatureClick}
+>>>>>>> Stashed changes
           >
             Jelajahi Aktivitas Alam
           </button>
@@ -58,7 +62,11 @@ const ExperienceSection = () => {
         <div className="experience-card1">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+<<<<<<< Updated upstream
             onClick={handleCultureClick} data-hover-text="Tradisi Beserta Festival Bali Yang Tidak Bisa Dilewatkan"
+=======
+            onClick={handleCultureClick}
+>>>>>>> Stashed changes
           >
             Jelajahi Wisata Budaya
           </button>
@@ -66,7 +74,11 @@ const ExperienceSection = () => {
         <div className="experience-card2">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+<<<<<<< Updated upstream
              onClick={handleCulinaryClick} data-hover-text="Kuliner Bali Yang Wajib Dicobai Minimal Sekali"
+=======
+            onClick={handleCulinaryClick}
+>>>>>>> Stashed changes
           >
             Jelajahi Kuliner
           </button>
