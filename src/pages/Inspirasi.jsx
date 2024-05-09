@@ -6,11 +6,10 @@ const Banner = () => {
   return (
     <section
       id="banner"
-      className="bg-[url('/public/images/banner-jelajah.jpg')] bg-center bg-cover bg-no-repeat min-h-[740px] px-10 flex items-center justify-center"
+      className="bg-[url('/src/images/banner-ins.jpg')] bg-center bg-cover bg-no-repeat min-h-[600px] px-10 flex items-center justify-center"
     >
       <p className="text-white text-5xl font-semibold text-center tracking-wide">
-        Temukan kebahagiaan-mu di Bali
-        <br /> dengan jelajah!
+        Temukan kebahagiaan mu di Bali!
       </p>
     </section>
   );
@@ -50,11 +49,7 @@ const ExperienceSection = () => {
         <div className="experience-card">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-<<<<<<< Updated upstream
-            onClick={handleNatureClick} data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
-=======
             onClick={handleNatureClick}
->>>>>>> Stashed changes
           >
             Jelajahi Aktivitas Alam
           </button>
@@ -62,11 +57,7 @@ const ExperienceSection = () => {
         <div className="experience-card1">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-<<<<<<< Updated upstream
-            onClick={handleCultureClick} data-hover-text="Tradisi Beserta Festival Bali Yang Tidak Bisa Dilewatkan"
-=======
             onClick={handleCultureClick}
->>>>>>> Stashed changes
           >
             Jelajahi Wisata Budaya
           </button>
@@ -74,11 +65,7 @@ const ExperienceSection = () => {
         <div className="experience-card2">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-<<<<<<< Updated upstream
-             onClick={handleCulinaryClick} data-hover-text="Kuliner Bali Yang Wajib Dicobai Minimal Sekali"
-=======
             onClick={handleCulinaryClick}
->>>>>>> Stashed changes
           >
             Jelajahi Kuliner
           </button>
@@ -99,3 +86,4 @@ const Inspirasi = () => {
 };
 
 export default Inspirasi;
+
