@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import card_AboutUS1 from '../images/3.png';
 import card_AboutUS2 from '../images/2.png';
 import card_AboutUS3 from '../images/1.png';
-import card_AboutUS4 from '../images/3.png';
+import card_AboutUS4 from '../images/4.jpeg';
 import bg_AboutUS1 from '../images/visi.png';
 import bg_AboutUS3 from '../images/misi.png';
 
@@ -16,7 +16,7 @@ const AboutUs = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex(currentImageIndex => (currentImageIndex + 1) % images.length);
-    }, 10000); // Change image every 3 seconds
+    }, 10000); // Change image every 10 seconds
 
     return () => clearInterval(interval); // Clean up the interval on component unmount
   }, []);
@@ -64,10 +64,10 @@ const AboutUs = () => {
 
           <div className="program">
             <div className="caption">
-              <p>Joshua Wijaya</p>
-              <p>00000094196</p>
+              <p>Chelsea</p>
+              <p>00000096816</p>
             </div>
-            <img src={card_AboutUS3} alt="Josh" />
+            <img src={card_AboutUS4} alt="Chelsea" />
           </div>
     </div>
         <div className="carousel px-14 mt-4 ">
