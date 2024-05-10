@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import card_AboutUS1 from '../images/3.png';
 import card_AboutUS2 from '../images/2.png';
 import card_AboutUS3 from '../images/1.png';
-import card_AboutUS4 from '../images/4.png';
+import card_AboutUS4 from '../images/4.jpeg';
 import bg_AboutUS1 from '../images/visi.png';
 import bg_AboutUS3 from '../images/misi.png';
 
