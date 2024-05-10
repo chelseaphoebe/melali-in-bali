@@ -15,11 +15,11 @@ const Destination = () => {
       method: "POST",
       url: "https://google-api31.p.rapidapi.com/map",
       headers: {
-        "content-type": "application/json",
-        "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
+       "content-type": "application/json",
+       // "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
         "X-RapidAPI-Host": "google-api31.p.rapidapi.com",
         "content-type": "application/json",
-        "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
+      //  "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
         "X-RapidAPI-Host": "google-api31.p.rapidapi.com",
       },
       data: {
@@ -97,8 +97,7 @@ const Flights = () => {
           currency_code: "AED",
         },
         headers: {
-          "X-RapidAPI-Key":
-            "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+         // "X-RapidAPI-Key":"ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
           "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
         },
       });
@@ -214,7 +213,7 @@ const Taxi = () => {
           currency_code: 'EUR'
         },
         headers: {
-          'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
+          //'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
           'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
         }
       });
@@ -395,7 +394,7 @@ const Rencana = () => {
       url: "https://google-api31.p.rapidapi.com/map",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
+      //  "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
         "X-RapidAPI-Host": "google-api31.p.rapidapi.com",
       },
       data: {
