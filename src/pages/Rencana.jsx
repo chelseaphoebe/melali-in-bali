@@ -481,7 +481,8 @@ const Rencana = () => {
             <WeatherBox /> {/* Using the WeatherBox component */}
           </div>
         </div>
-
+        <Flights />
+        <Taxi />
         <Footer />
       </div>
     </>
