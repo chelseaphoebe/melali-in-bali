@@ -415,7 +415,7 @@ const Rencana = () => {
   return (
     <>
       <section>
-        <div className="bg-[url('/public/images/nusaPenida.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-52 flex items-center justify-center">
+        <div className="bg-[url('/public/images/bggrencana.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-52 flex items-center justify-center">
           <p
             className="text-white text-5xl font-semibold text-center tracking-wide banner-text"
             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
@@ -429,7 +429,7 @@ const Rencana = () => {
         <div className="grid grid-cols-4 relative gap-8 mr-8 mt-8">
           <div className="col-span-3">
             <div
-              className="w-full h-screen top-0 sticky bg-[url('/public/images/background2.jpg')] bg-cover flex justify-center items-center flex-col"
+              className="w-full h-screen top-0 sticky bg-[url('/public/images/bgrencana.jpg')] bg-cover flex justify-center items-center flex-col"
               alt=""
             >
               <h1 className="text-white text-3xl text-center mb-2">
@@ -437,50 +437,51 @@ const Rencana = () => {
               </h1>
               <p className="text-white texl-xl text-center font-normal">
                 Temukan petualangan dan keindahan alam Bali di halaman
-                rekomendasi wisata kami. <br />Dari pantai-pantai berpasir putih
-                hingga kuil-kuil suci, eksplorasi tak terbatas.
+                rekomendasi wisata kami. <br />
+                Dari pantai-pantai berpasir putih hingga kuil-kuil suci,
+                eksplorasi tak terbatas.
               </p>
             </div>
           </div>
           <div className="justify-center flex-wrap gap-6">
             <RencanaCard
-              imageUrl="background4.jpg"
+              imageUrl="monkey.png"
               day="01"
               title="Selamat Datang di Bali"
               desc="Mulai dengan mengunjungi Ubud, menikmati Monkey Forest, eksplorasi pasar tradisional, dan berinteraksi lokal."
             />
             <RencanaCard
-              imageUrl="background4.jpg"
+              imageUrl="pura.jpg"
               day="02"
               title="Menyelami Budaya Bali"
               desc="Hari kedua, telusuri kekayaan budaya Bali. Kunjungi Pura Tirta Empul, kuil suci dengan mata air penyembuhan. Nikmati pertunjukan tari di Pura Saraswati, Ubud."
             />
             <RencanaCard
-              imageUrl="background4.jpg"
+              imageUrl="menjangan.jpg"
               day="03"
               title="Petualangan di Bali Barat"
               desc="Nikmati petualangan di Taman Nasional Bali Barat: trekking, snorkeling di Pulau Menjangan, dan kunjungi Pura Pulaki."
             />
             <RencanaCard
-              imageUrl="background4.jpg"
+              imageUrl="virgin.jpg"
               day="04"
               title="Pantai Timur Bali"
               desc="Ke Pantai Timur Bali, Pantai Virgin dan Desa Tenganan: pasir putih, air laut jernih, dan tradisi Bali."
             />
             <RencanaCard
-              imageUrl="background4.jpg"
+              imageUrl="lembongan.jpg"
               day="05"
               title="Jelajahi Nusa Lembongan"
               desc="Jelajahi keindahan Nusa Lembongan, snorkeling di Pantai Dream atau Mushroom, renang di Blue Lagoon, dan selancar di Devil's Tear."
             />
             <RencanaCard
-              imageUrl="background4.jpg"
+              imageUrl="kintamani.png"
               day="06"
               title="Petualangan di Kintamani dan Tegalalang"
               desc="Nikmati Gunung Batur di Kintamani, Tegalalang: Sawah terasering, desa tradisional, dan Tirta Empul."
             />
             <RencanaCard
-              imageUrl="background4.jpg"
+              imageUrl="seminyak.jpg"
               day="07"
               title="Menikmati Santai di Pantai Seminyak"
               desc="Santai di Pantai Seminyak, nikmati matahari terbenam, jelajahi toko butik, dan makan malam di restoran pantai."
