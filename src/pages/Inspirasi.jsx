@@ -71,6 +71,7 @@ const ActivitiesSection = () => {
             Jelajahi Kuliner
           </button>
         </div>
+        
       </div>
     </section>
   );
