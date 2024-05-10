@@ -54,6 +54,78 @@ const Destination = () => {
   );
 };
 
+const Flights = () => {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const options = {
+    method: 'GET',
+    url: 'https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights',
+    params: {
+      fromId: 'CGK.AIRPORT',
+      toId: 'DPS.AIRPORT',
+      departDate: '2024-05-11',
+      pageNo: '1',
+      adults: '1',
+      children: '0,17',
+      currency_code: 'AED'
+    },
+    headers: {
+      'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
+      'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
+    }
+  };
+
+  const searchFlights = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.request(options);
+      setData(response.data.data.aggregation.airlines || []);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching flights:", error);
+      setError("An error occurred while fetching flights. Please try again later.");
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    searchFlights();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error || !data || data.length === 0) {
+    return <div>No flights found.</div>;
+  }
+
+  return (
+    <div className="flex flex-col">
+      <h2 className="text-4xl font-bold mb-8 text-center text-black">Flights</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        {data.map((airline) => (
+          <div
+          key={airline.iataCode}
+  className="flex flex-col justify-end shadow-lg min-h-[350px] rounded-lg bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: `url(${airline.logoUrl})`,
+  }}
+>
+            <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
+              <div className="flex flex-col">
+                <p className="text-xs font-semibold">{airline.name}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Rencana = () => {
   const [itinerary, setItinerary] = useState([]);
   const [tips, setTips] = useState([]);
@@ -73,7 +145,7 @@ const Rencana = () => {
       url: 'https://google-api31.p.rapidapi.com/map',
       headers: {
         'content-type': 'application/json',
-        'X-RapidAPI-Key': '3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa',
+        'X-RapidAPI-Key': 'b3afcf9d58msha73daee51b1a2d3p19e46bjsn06e3eae5268a',
         'X-RapidAPI-Host': 'google-api31.p.rapidapi.com'
       },
       data: {
@@ -132,16 +204,17 @@ const Rencana = () => {
             )}
             {/* tambahkan komponen map disini */}
             <iframe
-              width="100%"
-              height="300"
-              frameborder="5"
-              src={`https://maps.google.com/maps?q=Ubud+Bali&t=&z=13&ie=UTF8&iwloc=&output=embed`}
-            />
-          </div>
+    width="100%"
+    height="300"
+    frameBorder="0"
+    src="https://maps.google.com/maps?q=Ubud+Bali&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    title="Ubud Bali Map"
+  />
+</div>
         <WeatherBox /> {/* Using the WeatherBox component */}
       </div>
       </div>
-
+      <Flights />
       <Footer />
     </div>
   );

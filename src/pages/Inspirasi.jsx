@@ -92,7 +92,7 @@ const Attractions = () => {
       languagecode: 'en-us'
     },
     headers: {
-      'X-RapidAPI-Key': '4b6cfbae27msh88821b4c6ef0655p12cc04jsnde1b6770d1c5',
+      'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
       'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
     }
   };
@@ -113,7 +113,7 @@ const Attractions = () => {
         } else if (error.response.status === 403) {
           setError("Access forbidden. Please check your API key and permissions.");
         } else {
-          setError(An error occurred: ${error.response.status});
+          setError(`An error occurred: ${error.response.status}`);
         }
       } else if (error.request) {
         // The request was made but no response was received
@@ -150,10 +150,10 @@ const Attractions = () => {
             key={product.id}
             className="flex flex-col justify-end shadow-lg min-h-[350px] rounded-lg bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: url(${product.primaryPhoto.small}),
+              backgroundImage: `url(${product.primaryPhoto.small})`,
             }}
           >
-            <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
+            <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-[6rem]">
               <div className="flex flex-col">
                 <p className="text-xs font-semibold">{product.name}</p>
                 <p className="text-md font-semibold">
