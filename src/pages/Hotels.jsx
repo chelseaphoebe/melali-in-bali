@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 
 export default function Hotels() {
   const [hotels, setHotels] = useState([]);
@@ -17,7 +18,7 @@ export default function Hotels() {
       currency_code: "idr",
     },
     headers: {
-      "X-RapidAPI-Key": "460949832bmshd0c1aa23bac549dp15fef7jsn0b3bd45d545b",
+      "X-RapidAPI-Key": "bbe31a32d3msh85a8234b4400fddp184f95jsn98d6474cdb69",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -105,5 +106,5 @@ export default function Hotels() {
         <div>No hotels found.</div>
       )}
     </div>
-  );
+     );
 }
