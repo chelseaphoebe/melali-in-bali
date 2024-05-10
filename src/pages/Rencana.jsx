@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import "./Rencana.css";
 import { WeatherBox } from "../components/Footer";
@@ -35,28 +34,13 @@ const Destination = () => {
         longitude: "",
         radius: "",
       },
-        text: "Ubud",
-        place: "Bali",
-        street: "",
-        city: "",
-        country: "",
-        state: "",
-        postalcode: "",
-        latitude: "",
-        longitude: "",
-        radius: "",
-      },
     };
 
     axios
       .request(options)
       .then((response) => {
-    axios
-      .request(options)
-      .then((response) => {
         setDestinationData(response.data);
       })
-      .catch((error) => {
       .catch((error) => {
         console.error(error);
       });
