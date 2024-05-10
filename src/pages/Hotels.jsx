@@ -13,12 +13,12 @@ export default function Hotels() {
     params: {
       dest_id: "835",
       search_type: "region",
-      arrival_date: "2024-05-09",
-      departure_date: "2024-05-10",
+      arrival_date: "2024-05-10",
+      departure_date: "2024-05-11",
       currency_code: "idr",
     },
     headers: {
-      "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
+      "X-RapidAPI-Key": "bbe31a32d3msh85a8234b4400fddp184f95jsn98d6474cdb69",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -31,7 +31,23 @@ export default function Hotels() {
       setLoading(false);
     } catch (error) {
       console.error("Error fetching hotels:", error);
-      setError(error.message);
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        if (error.response.status === 429) {
+          setError("Too many requests. Please try again later.");
+        } else if (error.response.status === 403) {
+          setError("Access forbidden. Please check your API key and permissions.");
+        } else {
+          setError(`An error occurred: ${error.response.status}`);
+        }
+      } else if (error.request) {
+        // The request was made but no response was received
+        setError("No response from the server. Please try again later.");
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        setError("An error occurred. Please try again.");
+      }
       setLoading(false);
     }
   };
@@ -57,9 +73,7 @@ export default function Hotels() {
               key={hotel.property.id}
               className="flex flex-col justify-end shadow-lg min-h-[350px] rounded-lg bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: `url(https://cf.bstatic.com/xdata/images/hotel/square500/${
-                  hotel.property.photoUrls[0]?.split("square60/")[1] || ""
-                })`,
+                backgroundImage: `url(https://cf.bstatic.com/xdata/images/hotel/square500/${hotel.property.photoUrls[0]?.split("square60/")[1] || ""})`,
               }}
             >
               <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
@@ -91,7 +105,6 @@ export default function Hotels() {
       ) : (
         <div>No hotels found.</div>
       )}
-	      <Footer />
     </div>
-  );
+     );
 }
