@@ -95,9 +95,9 @@ const Attractions = () => {
       languagecode: "en-us",
     },
     headers: {
-      'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
-      'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
-    }
+      "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+      "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
+    },
   };
 
   const searchAttractions = async () => {
@@ -121,7 +121,7 @@ const Attractions = () => {
           setError(`An error occurred: ${error.response.status}`);
           setError(`An error occurred: ${error.response.status}`);
         }
-        } else if (error.request) {
+      } else if (error.request) {
         // The request was made but no response was received
         setError("No response from the server. Please try again later.");
       } else {
@@ -146,42 +146,48 @@ const Attractions = () => {
 
   return (
     <div className="flex flex-col py-24 px-20">
-    <h2 className="text-4xl font-bold mb-8 text-center text-black">
-      Attractions
-    </h2>
-    {products.length > 0 ? (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        {products.map((product) => (
-          <div
-            key={product.id}
-            className="flex flex-col justify-end shadow-lg min-h-[350px] rounded-lg bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${product.primaryPhoto.small})`,
-            }}
+      <h2 className="text-4xl font-bold mb-8 text-center text-black">
+        Attractions
+      </h2>
+      {products.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="flex flex-col justify-end shadow-lg min-h-[350px] rounded-lg bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: `url(${product.primaryPhoto.small})`,
+              }}
             >
-            <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
-              <div className="flex flex-col">
-                <p className="text-xs font-semibold">{product.name}</p>
-                <p className="text-md font-semibold">
-                  IDR{' '}
-                  {new Intl.NumberFormat('id-ID').format(product.representativePrice.chargeAmount)}{' '}
+              <div className="bg-white rounded-b-lg py-3 px-5 flex flex-col justify-between min-h-32">
+                <div className="flex flex-col min-w-24 flex-grow">
+                  <p className="text-xs font-semibold">{product.name}</p>
+                  <p className="text-md font-semibold">
+                    IDR{" "}
+                    {new Intl.NumberFormat("id-ID").format(
+                      product.representativePrice.chargeAmount
+                    )}{" "}
+                  </p>
+                </div>
+                <p className="text-xs font-medium text-gray-500">
+                  {product.cityName}
                 </p>
-
+                <div className="flex gap-2">
+                  <p className="text-xs font-normal uppercase text-gray-500">
+                    <span className="font-bold">
+                      {product.reviewsStats.combinedNumericStats.average}
+                    </span>{" "}
+                    ({product.reviewsStats.combinedNumericStats.total} reviews)
+                  </p>
+                </div>
               </div>
-              <p className="text-xs font-medium text-gray-500">{product.cityName}</p>
-              <div className="flex gap-2">
-                <p>
-                  {product.reviewsStats.combinedNumericStats.average} ({product.reviewsStats.combinedNumericStats.total} reviews)
-                </p>
             </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    ) : (
-      <div>No attractions found.</div>
-    )}
-  </div>
+          ))}
+        </div>
+      ) : (
+        <div>No attractions found.</div>
+      )}
+    </div>
   );
 };
 
