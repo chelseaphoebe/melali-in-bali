@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Footer from "../components/Footer";
 import "./Inspirasi.css";
+import { useEffect, useState } from "react";
 
 const Banner = () => {
   return (
@@ -71,17 +72,120 @@ const ActivitiesSection = () => {
             Jelajahi Kuliner
           </button>
         </div>
-        
       </div>
     </section>
   );
 };
 
+const Attractions = () => {
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const options = {
+    method: 'GET',
+    url: 'https://booking-com15.p.rapidapi.com/api/v1/attraction/searchAttractions',
+    params: {
+      id: 'eyJ1ZmkiOi0yNzAxNzU3fQ==',
+      page: '1',
+      currency_code: 'INR',
+      languagecode: 'en-us'
+    },
+    headers: {
+      'X-RapidAPI-Key': '4b6cfbae27msh88821b4c6ef0655p12cc04jsnde1b6770d1c5',
+      'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
+    }
+  };
+
+  const searchAttractions = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.request(options);
+      setProducts(response.data.data.products);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching attractions:", error);
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        if (error.response.status === 429) {
+          setError("Too many requests. Please try again later.");
+        } else if (error.response.status === 403) {
+          setError("Access forbidden. Please check your API key and permissions.");
+        } else {
+          setError(An error occurred: ${error.response.status});
+        }
+      } else if (error.request) {
+        // The request was made but no response was received
+        setError("No response from the server. Please try again later.");
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        setError("An error occurred. Please try again.");
+      }
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    searchAttractions();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  return (
+    <div className="flex flex-col">
+    <h2 className="text-4xl font-bold mb-8 text-center text-black">
+      Attractions
+    </h2>
+    {products.length > 0 ? (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        {products.map((product) => (
+          <div
+            key={product.id}
+            className="flex flex-col justify-end shadow-lg min-h-[350px] rounded-lg bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: url(${product.primaryPhoto.small}),
+            }}
+          >
+            <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
+              <div className="flex flex-col">
+                <p className="text-xs font-semibold">{product.name}</p>
+                <p className="text-md font-semibold">
+                  IDR{' '}
+                  {new Intl.NumberFormat('id-ID').format(product.representativePrice.chargeAmount)}{' '}
+                </p>
+
+              </div>
+              <p className="text-xs font-medium text-gray-500">{product.cityName}</p>
+              <div className="flex gap-2">
+                <p>
+                  {product.reviewsStats.combinedNumericStats.average} ({product.reviewsStats.combinedNumericStats.total} reviews)
+                </p>
+            </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div>No attractions found.</div>
+    )}
+  </div>
+  );
+};
+
 const Inspirasi = () => {
+  
   return (
     <>
       <Banner />
       <ActivitiesSection />
+      <Attractions />
       <Footer />
     </>
   );
