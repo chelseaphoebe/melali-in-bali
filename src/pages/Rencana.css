@@ -69,11 +69,6 @@ body {
   transform: scale(1.05); 
 }
 
-.title:hover {
-  color: #ffffff; 
-  transition: color 0.3s ease-in-out;
-}
-
 .tips li:hover {
   transition: background-color 0.3s ease-in-out;
 }

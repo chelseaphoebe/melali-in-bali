@@ -5,62 +5,6 @@ import { WeatherBox } from "../components/Footer";
 import axios from "axios";
 import RencanaCard from "../components/RencanaCard";
 
-const Destination = () => {
-  const [destinationData, setDestinationData] = useState({});
-
-  useEffect(() => {
-    const options = {
-      method: "POST",
-      url: "https://google-api31.p.rapidapi.com/map",
-      method: "POST",
-      url: "https://google-api31.p.rapidapi.com/map",
-      headers: {
-       "content-type": "application/json",
-       // "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
-        "X-RapidAPI-Host": "google-api31.p.rapidapi.com",
-        "content-type": "application/json",
-      //  "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
-        "X-RapidAPI-Host": "google-api31.p.rapidapi.com",
-      },
-      data: {
-        text: "Ubud",
-        place: "Bali",
-        street: "",
-        city: "",
-        country: "",
-        state: "",
-        postalcode: "",
-        latitude: "",
-        longitude: "",
-        radius: "",
-      },
-    };
-
-    axios
-      .request(options)
-      .then((response) => {
-        setDestinationData(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
-
-  return (
-    <div>
-      <h1>Recommended Destination in Bali</h1>
-      {destinationData.geometry && (
-        <>
-          <h2>{destinationData.name}</h2>
-          <p>Address: {destinationData.formatted_address}</p>
-          <p>Latitude: {destinationData.geometry.location.lat}</p>
-          <p>Longitude: {destinationData.geometry.location.lng}</p>
-        </>
-      )}
-    </div>
-  );
-};
-
 const Flights = () => {
   const [fromId, setFromId] = useState("CGK.AIRPORT"); // State untuk menyimpan nilai fromId yang dipilih
   const [departDate, setDepartDate] = useState(() => {
@@ -97,7 +41,7 @@ const Flights = () => {
           currency_code: "AED",
         },
         headers: {
-         // "X-RapidAPI-Key":"ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+          // "X-RapidAPI-Key":"ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
           "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
         },
       });
@@ -118,7 +62,10 @@ const Flights = () => {
         Flights
       </h2>
       <div className="mb-4">
-        <label htmlFor="fromId" className="mr-2 block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="fromId"
+          className="mr-2 block text-sm font-medium text-gray-700"
+        >
           From:
         </label>
         <select
@@ -145,7 +92,10 @@ const Flights = () => {
         </select>
       </div>
       <div className="mb-8">
-        <label htmlFor="departDate" className="mr-2 block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="departDate"
+          className="mr-2 block text-sm font-medium text-gray-700"
+        >
           Departure Date:
         </label>
         <input
@@ -157,9 +107,12 @@ const Flights = () => {
         />
       </div>
       <div>
-        <button onClick={searchFlights} className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+        <button
+          onClick={searchFlights}
+          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+        >
           Search
-        </button> 
+        </button>
       </div>
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}
@@ -191,7 +144,9 @@ const Flights = () => {
 };
 
 const Taxi = () => {
-  const [pickUpPlaceId, setPickUpPlaceId] = useState("ChIJM2khUBZE0i0RH8x73W3acd8");
+  const [pickUpPlaceId, setPickUpPlaceId] = useState(
+    "ChIJM2khUBZE0i0RH8x73W3acd8"
+  );
   const [dropOffPlaceId, setDropOffPlaceId] = useState("");
   const [pickUpDate, setPickUpDate] = useState("");
   const [pickUpTime, setPickUpTime] = useState("");
@@ -203,21 +158,21 @@ const Taxi = () => {
     try {
       setLoading(true);
       const response = await axios.request({
-        method: 'GET',
-        url: 'https://booking-com15.p.rapidapi.com/api/v1/taxi/searchTaxi',
+        method: "GET",
+        url: "https://booking-com15.p.rapidapi.com/api/v1/taxi/searchTaxi",
         params: {
           pick_up_place_id: pickUpPlaceId,
           drop_off_place_id: dropOffPlaceId,
           pick_up_date: pickUpDate,
           pick_up_time: pickUpTime,
-          currency_code: 'EUR'
+          currency_code: "EUR",
         },
         headers: {
           //'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
-          'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
-        }
+          "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
+        },
       });
-  
+
       if (response.data && response.data.data && response.data.data.results) {
         setTaxiData(response.data.data.results);
         setError(null);
@@ -229,13 +184,14 @@ const Taxi = () => {
       if (error.response) {
         setError(error.response.data.data.message);
       } else {
-        setError("An error occurred while fetching taxi data. Please try again later.");
+        setError(
+          "An error occurred while fetching taxi data. Please try again later."
+        );
       }
       setTaxiData([]);
       setLoading(false);
     }
   };
-  
 
   const handlePickUpPlaceIdChange = (e) => {
     setPickUpPlaceId(e.target.value);
@@ -257,16 +213,18 @@ const Taxi = () => {
     searchTaxi();
   };
 
-
   return (
     <div className="flex flex-col py-24 px-20">
-      <h2 className="text-4xl font-bold mb-8 text-center text-black">
-        Taxi
-      </h2>
+      <h2 className="text-4xl font-bold mb-8 text-center text-black">Taxi</h2>
       <div className="mb-4">
         {/* Pick up place */}
         <div>
-          <label htmlFor="pickUpPlaceId" className="block text-sm font-medium text-gray-700">Pick Up Place:</label>
+          <label
+            htmlFor="pickUpPlaceId"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Pick Up Place:
+          </label>
           <select
             id="pickUpPlaceId"
             value={pickUpPlaceId}
@@ -274,22 +232,37 @@ const Taxi = () => {
             className="mb-8 block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm"
           >
             {/* Pilihan tempat penjemputan */}
-            <option value="ChIJ6xifn-ch0i0RtMkTgYxo5mw">Padma Resort Ubud</option>
-            <option value="ChIJZ5sY9kM90i0RVsPvSxZD7LY">Monkey Forest Ubud</option>
-            <option value="ChIJ7xaZgWM90i0RLUx0ltCQZxg">Maya Ubud Resort & Spa</option>
+            <option value="ChIJ6xifn-ch0i0RtMkTgYxo5mw">
+              Padma Resort Ubud
+            </option>
+            <option value="ChIJZ5sY9kM90i0RVsPvSxZD7LY">
+              Monkey Forest Ubud
+            </option>
+            <option value="ChIJ7xaZgWM90i0RLUx0ltCQZxg">
+              Maya Ubud Resort & Spa
+            </option>
             <option value="ChIJS7J-82o90i0RMj8cKJr2zUs">Ubud Palace</option>
-            <option value="ChIJM2khUBZE0i0RH8x73W3acd8">Ngurah Rai International Airport</option>
-            <option value="ChIJzcxjwRpH0i0RkCvrbJ5wmL8">The Seminyak Beach Resort & Spa</option>
+            <option value="ChIJM2khUBZE0i0RH8x73W3acd8">
+              Ngurah Rai International Airport
+            </option>
+            <option value="ChIJzcxjwRpH0i0RkCvrbJ5wmL8">
+              The Seminyak Beach Resort & Spa
+            </option>
             <option value="ChIJKxEUpjxH0i0Rfsxhl00d0Xw">Seminyak Villa</option>
             <option value="ChIJDZSYfQ5H0i0Riwqx0-tnf6w">Alila Seminyak</option>
-            <option value="ChIJT3_dVB5H0i0Ri71kc4BUQ8A">Courtyard by Marriott Bali Seminyak Resort</option>
+            <option value="ChIJT3_dVB5H0i0Ri71kc4BUQ8A">
+              Courtyard by Marriott Bali Seminyak Resort
+            </option>
           </select>
-
         </div>
 
-        
         <div>
-          <label htmlFor="dropOffPlaceId" className="block text-sm font-medium text-gray-700">Drop Off Place:</label>
+          <label
+            htmlFor="dropOffPlaceId"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Drop Off Place:
+          </label>
           <select
             id="dropOffPlaceId"
             value={dropOffPlaceId}
@@ -297,20 +270,35 @@ const Taxi = () => {
             className="mb-8 block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm"
           >
             {/* Pilihan tempat tujuan */}
-            <option value="ChIJ6xifn-ch0i0RtMkTgYxo5mw">Padma Resort Ubud</option>
-            <option value="ChIJZ5sY9kM90i0RVsPvSxZD7LY">Monkey Forest Ubud</option>
-            <option value="ChIJ7xaZgWM90i0RLUx0ltCQZxg">Maya Ubud Resort & Spa</option>
+            <option value="ChIJ6xifn-ch0i0RtMkTgYxo5mw">
+              Padma Resort Ubud
+            </option>
+            <option value="ChIJZ5sY9kM90i0RVsPvSxZD7LY">
+              Monkey Forest Ubud
+            </option>
+            <option value="ChIJ7xaZgWM90i0RLUx0ltCQZxg">
+              Maya Ubud Resort & Spa
+            </option>
             <option value="ChIJS7J-82o90i0RMj8cKJr2zUs">Ubud Palace</option>
             <option value="ChIJM2khUBZE0i0RH8x73W3acd8">Airport DPS</option>
-            <option value="ChIJzcxjwRpH0i0RkCvrbJ5wmL8">The Seminyak Beach Resort & Spa</option>
+            <option value="ChIJzcxjwRpH0i0RkCvrbJ5wmL8">
+              The Seminyak Beach Resort & Spa
+            </option>
             <option value="ChIJKxEUpjxH0i0Rfsxhl00d0Xw">Seminyak Villa</option>
             <option value="ChIJDZSYfQ5H0i0Riwqx0-tnf6w">Alila Seminyak</option>
-            <option value="ChIJT3_dVB5H0i0Ri71kc4BUQ8A">Courtyard by Marriott Bali Seminyak Resort</option>
+            <option value="ChIJT3_dVB5H0i0Ri71kc4BUQ8A">
+              Courtyard by Marriott Bali Seminyak Resort
+            </option>
           </select>
         </div>
-        
+
         <div className="relative">
-          <label htmlFor="pickUpDate" className="block text-sm font-medium text-gray-700">Pick Up Date:</label>
+          <label
+            htmlFor="pickUpDate"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Pick Up Date:
+          </label>
           <input
             type="date"
             id="pickUpDate"
@@ -321,7 +309,12 @@ const Taxi = () => {
         </div>
 
         <div className="relative">
-          <label htmlFor="pickUpTime" className="block text-sm font-medium text-gray-700">Pick Up Time:</label>
+          <label
+            htmlFor="pickUpTime"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Pick Up Time:
+          </label>
           <input
             type="time"
             id="pickUpTime"
@@ -337,7 +330,6 @@ const Taxi = () => {
         >
           Search
         </button>
-
       </div>
       {loading && <div>Loading...</div>}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
@@ -372,7 +364,6 @@ const Taxi = () => {
   );
 };
 
-
 const Rencana = () => {
   const [itinerary, setItinerary] = useState([]);
   const [tips, setTips] = useState([]);
@@ -394,7 +385,7 @@ const Rencana = () => {
       url: "https://google-api31.p.rapidapi.com/map",
       headers: {
         "content-type": "application/json",
-      //  "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
+        //  "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
         "X-RapidAPI-Host": "google-api31.p.rapidapi.com",
       },
       data: {
@@ -435,31 +426,68 @@ const Rencana = () => {
         </div>
       </section>
       <div>
-        <h1 className="title">Rencana Perjalanan ke Bali</h1>
-        <div className="content">
-          <div className="flex flex-wrap gap-6 justify-center">
-            <RencanaCard
-            imageUrl="background4.jpg"
-            day="01"
-            title="Tiba di Bali"
-            desc="Check in Hotel"
-             />
-            <RencanaCard />
-            <RencanaCard />
-            <RencanaCard />
-            <RencanaCard />
-            <RencanaCard />
-            <RencanaCard />
-            <div className="tips-box">
-              <div className="tips">
-                <ul>
-                  {tips.map((tip, index) => (
-                    <li key={index}>{tip}</li>
-                  ))}
-                </ul>
-              </div>
+        <div className="grid grid-cols-4 relative gap-8 mr-8 mt-8">
+          <div className="col-span-3">
+            <div
+              className="w-full h-screen top-0 sticky bg-[url('/public/images/background2.jpg')] bg-cover flex justify-center items-center flex-col"
+              alt=""
+            >
+              <h1 className="text-white text-3xl text-center mb-2">
+                Rekomendasi Perjalanan di Bali
+              </h1>
+              <p className="text-white texl-xl text-center font-normal">
+                Temukan petualangan dan keindahan alam Bali di halaman
+                rekomendasi wisata kami. <br />Dari pantai-pantai berpasir putih
+                hingga kuil-kuil suci, eksplorasi tak terbatas.
+              </p>
             </div>
           </div>
+          <div className="justify-center flex-wrap gap-6">
+            <RencanaCard
+              imageUrl="background4.jpg"
+              day="01"
+              title="Selamat Datang di Bali"
+              desc="Mulai dengan mengunjungi Ubud, menikmati Monkey Forest, eksplorasi pasar tradisional, dan berinteraksi lokal."
+            />
+            <RencanaCard
+              imageUrl="background4.jpg"
+              day="02"
+              title="Menyelami Budaya Bali"
+              desc="Hari kedua, telusuri kekayaan budaya Bali. Kunjungi Pura Tirta Empul, kuil suci dengan mata air penyembuhan. Nikmati pertunjukan tari di Pura Saraswati, Ubud."
+            />
+            <RencanaCard
+              imageUrl="background4.jpg"
+              day="03"
+              title="Petualangan di Bali Barat"
+              desc="Nikmati petualangan di Taman Nasional Bali Barat: trekking, snorkeling di Pulau Menjangan, dan kunjungi Pura Pulaki."
+            />
+            <RencanaCard
+              imageUrl="background4.jpg"
+              day="04"
+              title="Pantai Timur Bali"
+              desc="Ke Pantai Timur Bali, Pantai Virgin dan Desa Tenganan: pasir putih, air laut jernih, dan tradisi Bali."
+            />
+            <RencanaCard
+              imageUrl="background4.jpg"
+              day="05"
+              title="Jelajahi Nusa Lembongan"
+              desc="Jelajahi keindahan Nusa Lembongan, snorkeling di Pantai Dream atau Mushroom, renang di Blue Lagoon, dan selancar di Devil's Tear."
+            />
+            <RencanaCard
+              imageUrl="background4.jpg"
+              day="06"
+              title="Petualangan di Kintamani dan Tegalalang"
+              desc="Nikmati Gunung Batur di Kintamani, Tegalalang: Sawah terasering, desa tradisional, dan Tirta Empul."
+            />
+            <RencanaCard
+              imageUrl="background4.jpg"
+              day="07"
+              title="Menikmati Santai di Pantai Seminyak"
+              desc="Santai di Pantai Seminyak, nikmati matahari terbenam, jelajahi toko butik, dan makan malam di restoran pantai."
+            />
+          </div>
+        </div>
+        <div className="content">
           <div className="weather-box-and-map-box">
             <div className="map-box">
               <h2>One of the Favorite Destinastion in Bali</h2>
