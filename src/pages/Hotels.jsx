@@ -1,6 +1,6 @@
+import Footer from "../components/Footer";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Footer from "../components/Footer";
 
 export default function Hotels() {
   const [hotels, setHotels] = useState([]);
@@ -65,46 +65,49 @@ export default function Hotels() {
   }
 
   return (
-    <div className="flex flex-col py-24 px-20">
-      {hotels.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {hotels.map((hotel) => (
-            <div
-              key={hotel.property.id}
-              className="flex flex-col justify-end shadow-lg min-h-[350px] rounded-lg bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: `url(https://cf.bstatic.com/xdata/images/hotel/square500/${hotel.property.photoUrls[0]?.split("square60/")[1] || ""})`,
-              }}
-            >
-              <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
-                <div className="flex flex-col justify-between">
-                  <div className="flex flex-col">
-                    <p className="text-xs font-semibold">
-                      {hotel.property.name}
-                    </p>
-                    <p className="text-md font-semibold">
-                      IDR{" "}
-                      {new Intl.NumberFormat("id-ID").format(
-                        hotel.property.priceBreakdown.grossPrice.value
-                      )}{" "}
-                      / night
-                    </p>
+    <div>
+      <div className="flex flex-col py-24 px-20">
+        {hotels.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {hotels.map((hotel) => (
+              <div
+                key={hotel.property.id}
+                className="flex flex-col justify-end shadow-lg min-h-[350px] rounded-lg bg-cover bg-center bg-no-repeat"
+                style={{
+                  backgroundImage: `url(https://cf.bstatic.com/xdata/images/hotel/square500/${hotel.property.photoUrls[0]?.split("square60/")[1] || ""})`,
+                }}
+              >
+                <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
+                  <div className="flex flex-col justify-between">
+                    <div className="flex flex-col">
+                      <p className="text-xs font-semibold">
+                        {hotel.property.name}
+                      </p>
+                      <p className="text-md font-semibold">
+                        IDR{" "}
+                        {new Intl.NumberFormat("id-ID").format(
+                          hotel.property.priceBreakdown.grossPrice.value
+                        )}{" "}
+                        / night
+                      </p>
+                    </div>
+                    <div className="flex gap-2">
+                      <p className="text-xs font-semibold">2 Adults</p>
+                      <p className="text-xs font-semibold">
+                        Rating {hotel.property.reviewScore}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex gap-2">
-                    <p className="text-xs font-semibold">2 Adults</p>
-                    <p className="text-xs font-semibold">
-                      Rating {hotel.property.reviewScore}
-                    </p>
-                  </div>
+                  <p className="text-xs font-medium text-gray-500">Bali</p>
                 </div>
-                <p className="text-xs font-medium text-gray-500">Bali</p>
               </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div>No hotels found.</div>
-      )}
+            ))}
+          </div>
+        ) : (
+          <div>No hotels found.</div>
+        )}
+      </div>
+      <Footer />
     </div>
-     );
+  );
 }

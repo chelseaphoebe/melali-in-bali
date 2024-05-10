@@ -86,7 +86,7 @@ const Attractions = () => {
     method: 'GET',
     url: 'https://booking-com15.p.rapidapi.com/api/v1/attraction/searchAttractions',
     params: {
-      id: 'eyJ1ZmkiOi0yNzAxNzU3fQ==',
+      id: 'eyJ1ZmkiOjkwMDA0MDEzNH0=',
       page: '1',
       currency_code: 'INR',
       languagecode: 'en-us'
@@ -115,7 +115,7 @@ const Attractions = () => {
         } else {
           setError(`An error occurred: ${error.response.status}`);
         }
-      } else if (error.request) {
+        } else if (error.request) {
         // The request was made but no response was received
         setError("No response from the server. Please try again later.");
       } else {
@@ -139,7 +139,7 @@ const Attractions = () => {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col py-24 px-20">
     <h2 className="text-4xl font-bold mb-8 text-center text-black">
       Attractions
     </h2>
@@ -152,8 +152,8 @@ const Attractions = () => {
             style={{
               backgroundImage: `url(${product.primaryPhoto.small})`,
             }}
-          >
-            <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-[6rem]">
+            >
+            <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
               <div className="flex flex-col">
                 <p className="text-xs font-semibold">{product.name}</p>
                 <p className="text-md font-semibold">
