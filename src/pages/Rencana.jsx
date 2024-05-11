@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import "./Rencana.css";
-import { WeatherBox } from "../components/Footer";
 import axios from "axios";
 import RencanaCard from "../components/RencanaCard";
 
@@ -506,7 +505,6 @@ const Rencana = () => {
                 src={`https://maps.google.com/maps?q=Ubud+Bali&t=&z=13&ie=UTF8&iwloc=&output=embed`}
               />
             </div>
-            <WeatherBox /> {/* Using the WeatherBox component */}
           </div>
         </div>
         <Flights />
