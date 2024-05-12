@@ -160,7 +160,7 @@ function Game(props) {
         icon: 'info',
         showCancelButton: true,
         confirmButtonText: 'Start',
-        cancelButtonText: 'Cancel',
+        cancelButtonText: 'Maybe next time',
       }).then((result) => {
         if (result.isConfirmed) {
           setGameStarted(true);

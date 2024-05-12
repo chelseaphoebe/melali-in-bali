@@ -6,7 +6,24 @@ export default function Hotels() {
   const [hotels, setHotels] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [score, setScore] = useState(0); // Define the score state
 
+  const applyDiscount = (price) => {
+    if (score === 10) {
+      return price * 0.8; // Apply 20% discount for score 10
+    }
+    return price; // No discount applied
+  };
+  
+  useEffect(() => {
+    searchHotels();
+  }, [score]); // Add score as a dependency to reapply discount when score changes
+  
+  
+  useEffect(() => {
+    searchHotels();
+  }, []);
+  
   const options = {
     method: "GET",
     url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels",
@@ -28,6 +45,11 @@ export default function Hotels() {
       setLoading(true);
       const response = await axios.request(options);
       setHotels(response.data.data.hotels);
+      const hotelsWithDiscount = response.data.data.hotels.map((hotel) => ({
+        ...hotel,
+        price: applyDiscount(hotel.property.priceBreakdown.grossPrice.value),
+      }));
+      setHotels(hotelsWithDiscount);
       setLoading(false);
     } catch (error) {
       console.error("Error fetching hotels:", error);

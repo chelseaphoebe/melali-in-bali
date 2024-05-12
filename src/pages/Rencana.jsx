@@ -4,7 +4,15 @@ import "./Rencana.css";
 import axios from "axios";
 import RencanaCard from "../components/RencanaCard";
 
-const Flights = () => {
+const Flights = ({ score }) => {
+  const [totalPrice, setTotalPrice] = useState(0);
+  useEffect(() => {
+    if (score === 10) {
+      // Apply 20% discount
+      const discountedPrice = totalPrice * 0.8;
+      setTotalPrice(discountedPrice);
+    }
+  }, [score, totalPrice]);
   const [fromId, setFromId] = useState("CGK.AIRPORT"); // State untuk menyimpan nilai fromId yang dipilih
   const [departDate, setDepartDate] = useState(() => {
     const tomorrow = new Date();
@@ -142,7 +150,14 @@ const Flights = () => {
   );
 };
 
-const Taxi = () => {
+const Taxi = ({ score }) => {
+  const [totalPrice, setTotalPrice] = useState(0);
+  useEffect(() => {
+    if (score === 10) {
+      const discountedPrice = totalPrice * 0.8;
+      setTotalPrice(discountedPrice);
+    }
+  }, [score, totalPrice]);
   const [pickUpPlaceId, setPickUpPlaceId] = useState(
     "ChIJM2khUBZE0i0RH8x73W3acd8"
   );
