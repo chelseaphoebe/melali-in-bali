@@ -95,7 +95,7 @@ const Attractions = () => {
       languagecode: "en-us",
     },
     headers: {
-      //"X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+      // "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -194,19 +194,19 @@ const NearbyAttractions = () => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [hotelId, setHotelId] = useState('10624997'); // Default hotel_id
+  const [hotelId, setHotelId] = useState("10624997"); // Default hotel_id
 
   const options = {
-    method: 'GET',
-    url: 'https://booking-com15.p.rapidapi.com/api/v1/hotels/getPopularAttractionNearBy',
+    method: "GET",
+    url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/getPopularAttractionNearBy",
     params: {
       hotel_id: hotelId, // Gunakan nilai hotelId dari state
-      languagecode: 'en-us'
+      languagecode: "en-us",
     },
     headers: {
-      //'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
-      'X-RapidAPI-Host': 'booking-com15.p.rapidapi.com'
-    }
+      // "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+      "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
+    },
   };
 
   const searchAttractions = async () => {
@@ -215,10 +215,10 @@ const NearbyAttractions = () => {
       const response = await axios.request(options);
       const popularLandmarks = response.data.data.popular_landmarks;
       const closestLandmarks = response.data.data.closest_landmarks;
-  
+
       // Menggabungkan popularLandmarks dan closestLandmarks menjadi satu array
       const attractions = [...popularLandmarks, ...closestLandmarks];
-  
+
       setProducts(attractions);
       setLoading(false);
     } catch (error) {
@@ -228,11 +228,11 @@ const NearbyAttractions = () => {
       setError("Failed to fetch attractions data.");
     }
   };
-  
+
   useEffect(() => {
     searchAttractions();
   }, [hotelId]); // Jalankan useEffect setiap kali nilai hotelId berubah
-  
+
   const handleHotelIdChange = (event) => {
     setHotelId(event.target.value);
   };
@@ -240,11 +240,11 @@ const NearbyAttractions = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-  
+
   if (error) {
     return <div>Error: {error}</div>;
   }
-  
+
   return (
     <div className="flex flex-col py-24 px-20">
       <h2 className="text-4xl font-bold mb-8 text-center text-black">
@@ -277,21 +277,29 @@ const NearbyAttractions = () => {
           <option value="1294421">The Royal Purnama - Adults Only</option>
           <option value="10079827">Villa Lembah Damai by Pramana Villas</option>
           <option value="413008">Desa Swan Villas & SPA, Keramas</option>
-
         </select>
       </div>
       {products.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {products.map((attraction, index) => (
-            <div key={index} className="flex flex-col justify-end shadow-lg rounded-lg bg-cover bg-center bg-no-repeat">
+            <div
+              key={index}
+              className="flex flex-col justify-end shadow-lg rounded-lg bg-cover bg-center bg-no-repeat"
+            >
               <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
-                <div className="flex flex-col">
-                  <p className="text-md font-semibold">{attraction.tag}</p>
-                  <p className="text-xs font-semibold">Average Rating: {attraction.average_out_of_10}</p>
+                <div className="flex flex-col gap-4">
+                  <p className="text-md font-semibold leading-tight">{attraction.tag}</p>
+                  <p className="text-xs font-normal">
+                    Distance: {Math.round(attraction.distance)} km
+                  </p>
                 </div>
-                <div className="flex flex-col">
-                  <p className="text-xs font-semibold">Total Votes: {attraction.total_votes}</p>
-                  <p className="text-xs font-semibold">Distance: {attraction.distance} km</p>
+                <div className="flex gap-2">
+                  <p className="text-xs font-normal uppercase text-gray-500 text-right">
+                    <span className="font-bold">
+                      {attraction.average_out_of_10}
+                    </span>{" "}
+                    ({attraction.total_votes} votes)
+                  </p>
                 </div>
               </div>
             </div>
@@ -304,9 +312,7 @@ const NearbyAttractions = () => {
   );
 };
 
-
 const Inspirasi = () => {
-  
   return (
     <>
       <Banner />
