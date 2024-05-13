@@ -13,17 +13,19 @@ export default function Home() {
 
   const options = {
     method: "GET",
-    url: "https://yahoo-weather5.p.rapidapi.com/weather",
+    url: "https://api.openweathermap.org/data/2.5/weather",
     params: {
-      location: "Ubud",
-      format: "json",
-      u: "f",
-    },
-    headers: {
-      "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
-      "X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com",
+      lat: "8.4095",
+      lon: "115.1889",
+      units: "metric",
+      lang: "id",
+      appid: "9d73156923533bd41a4b3fcc9c7f8925",
     },
   };
+
+  const d = new Date();
+  let day = d.toLocaleDateString("id-ID", { weekday: "long" });
+  var time = d.toLocaleTimeString();
 
   async function fetchWeather() {
     try {
@@ -50,6 +52,12 @@ export default function Home() {
     fetchWeather();
   }, []);
 
+  function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  }
+
   return (
     <>
       {/* Content goes here */}
@@ -65,61 +73,60 @@ export default function Home() {
         </div>
       </section>
       <div className="flex justify-center my-14">
-        <div className="flex w-5/6">
-          <div className="bg-[#fff7f7] w-2/6 p-12 rounded-l-3xl ">
-            <p className="text-3xl">
-              {weather.location ? weather.location.city : 0}, Bali
-            </p>
-            <div className="flex justify-center">
-              <img src="/images/cloudIcon.png" alt="" className="size-36" />
+        <div className="flex">
+          <div className="bg-[#091426] p-10 gap-20 rounded-3xl flex justify-center">
+            <div>
+              <p className="text-3xl text-white">Bali,</p>
+              {weather.weather && (
+                <img
+                  src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                  alt=""
+                  className="size-36"
+                />
+              )}
             </div>
-            <p className="text-4xl font-normal">
-              {weather.current_observation
-                ? Math.round(
-                    (weather.current_observation.condition.temperature - 32) *
-                      (5 / 9)
-                  )
-                : 0}
-              °C
-            </p>
-            <p>
-              {weather.current_observation
-                ? weather.current_observation.condition.text
-                : 0}
-            </p>
-            <p>
-              {weather.forecasts ? weather.forecasts[0].day : 0},
-              <span className="text-gray-400"> 00:23</span>
-            </p>
-          </div>
-          <div className="bg-[#f5f5f5] p-12 rounded-r-3xl">
-            <p className="text-3xl">Weekly</p>
-            <div className="flex flex-row max-w-2xl gap-2 mt-5 overflow-x-scroll">
-              {/* {weather.forecasts
-                ? weather.forecasts.map((data, index) => (
-                    <WeatherCard
-                      key={index}
-                      day={data.day}
-                      high={data.high}
-                      low={data.low}
-                      text={data.text}
-                    />
-                  ))
-                : null} */}
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
-              <WeatherCard day="Mon" high="23" low="21" text="Sunny" />
+            <div className="flex">
+              <div className="flex flex-col justify-center gap-2">
+                <p className="text-7xl font-normal text-white">
+                  {weather.main ? Math.round(weather.main.temp) : 0}°
+                  <span className="font-light text-gray-400">c</span>
+                </p>
+                <p className="text-white">
+                  {weather.weather
+                    ? toTitleCase(weather.weather[0].description)
+                    : 0}
+                </p>
+                <p className="font-normal text-white">
+                  {day},
+                  <span className="text-gray-400 font-normal"> {time}</span>
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center gap-3">
+              <div className="flex justify-between gap-16">
+                <p className="text-white font-normal">Temperatur Terendah</p>
+                <p className="text-white">
+                  {weather.main ? weather.main.temp_min : ""}
+                </p>
+              </div>
+              <div className="flex justify-between">
+                <hr class="w-72 h-1 mx-auto bg-gray-100 border-0 rounded md-10 dark:bg-gray-700"></hr>
+              </div>
+              <div className="flex justify-between gap-16">
+                <p className="text-white font-normal">Temperatur Tertinggi</p>
+                <p className="text-white">
+                  {weather.main ? weather.main.temp_max : ""}
+                </p>
+              </div>
+              <div className="flex justify-between">
+                <hr class="w-72 h-1 mx-auto bg-gray-100 border-0 rounded md-10 dark:bg-gray-700"></hr>
+              </div>
+              <div className="flex justify-between gap-16">
+                <p className="text-white font-normal">Angin</p>
+                <p className="text-white">
+                  {weather.wind ? weather.wind.speed : ""}
+                </p>
+              </div>
             </div>
           </div>
         </div>
