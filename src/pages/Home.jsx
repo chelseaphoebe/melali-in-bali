@@ -110,7 +110,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex justify-between">
-                <hr class="w-72 h-1 mx-auto bg-gray-100 border-0 rounded md-10 dark:bg-gray-700"></hr>
+                <hr class="w-72 h-[1px] mx-auto bg-gray-100 border-0 rounded md-10 dark:bg-gray-700"></hr>
               </div>
               <div className="flex justify-between gap-16">
                 <p className="text-white font-normal">Temperatur Tertinggi</p>
@@ -119,7 +119,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex justify-between">
-                <hr class="w-72 h-1 mx-auto bg-gray-100 border-0 rounded md-10 dark:bg-gray-700"></hr>
+                <hr class="w-72 h-[1px] mx-auto bg-gray-100 border-0 rounded md-10 dark:bg-gray-700"></hr>
               </div>
               <div className="flex justify-between gap-16">
                 <p className="text-white font-normal">Angin</p>
