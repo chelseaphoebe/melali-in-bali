@@ -23,7 +23,7 @@ const AboutUs = () => {
     <>
       <section
         id="banner"
-        className="bg-[url('/public/images/banner-aboutUS.jpg')] bg-center bg-cover bg-no-repeat min-h-[700px] px-10 flex items-center justify-center"
+        className="bg-[url('/public/images/banner-aboutUS.jpg')] bg-center bg-cover bg-no-repeat min-h-[750px] px-10 flex items-center justify-center"
       >
         <p className="text-white text-8xl font-semibold text-center tracking-wide">
           <span className="text-4xl">We Are</span>
