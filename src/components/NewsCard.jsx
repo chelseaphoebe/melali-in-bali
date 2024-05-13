@@ -1,14 +1,11 @@
 export const NewsCard = ({imageUrl, title, description, link}) => {
     return(
-         <div className="border-2 rounded-lg flex justify-between gap-12 items-center mb-5">
-          <img src={imageUrl} className="size-60 object-cover object-center" alt="" />
-          <div className="flex flex-col w-3/4 gap-3">
-            <p className="text-2xl font-bold">{title}</p>
-            <p className="font-normal text-base">{description}</p>
-          </div>
-          <div className="flex flex-col w-1/4 gap-5">
-            <p className="font-bold text-sm">Anda bisa baca pada tautan berikut</p>
-            <a className="" href={link} target="_blank" rel="noreferrer">Click Here</a>
+         <div className="w-[400px] rounded-lg flex flex-col justify-between items-center mb-5">
+          <img src={imageUrl} className="w-full h-[200px] object-cover object-center rounded-xl" alt="" />
+          <div className="flex flex-col gap-3 m-2 mt-6">
+            <p className="text-xl font-bold">{title}</p>
+            <p className="font-normal text-sm text-gray-600">{description}</p>
+            <a className="font-bold uppercase text-sm text-blue-500" href={link} target="_blank" rel="noreferrer">Baca selengkapnya</a>
           </div>
         </div>
     );
