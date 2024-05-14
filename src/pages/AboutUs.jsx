@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import { Icon } from "@iconify/react";
 
 const AboutUs = () => {
-  
   return (
     <>
       <section
@@ -16,23 +15,47 @@ const AboutUs = () => {
           Mela<span className="text-yellow-300">li.</span>
         </p>
       </section>
-      
-      {/* <div className="carousel px-14 mt-4 ">
-        <TransitionGroup className="carousel">
-          <CSSTransition
-            key={currentImageIndex}
-            timeout={500}
-            classNames="slide"
-          >
-            <img
-              src={images[currentImageIndex]}
-              alt="Carousel Image"
-              className="carousel-image opacity-50"
-            />
-          </CSSTransition>
-        </TransitionGroup>
-      </div> */}
-      <section className="py-12 px-10 gap-4 pt-14 grid grid-cols-4">
+      <div className="">
+        <div className="flex flex-col justify-center items-center">
+          <div className="bg-slate-900 w-full min-h-36 py-16 px-24">
+            <div className="flex justify-center items-center gap-8 max-w-screen-md mx-auto">
+              <div className="text-white font-medium text-7xl">VISI</div>
+              <div className="flex flex-col gap-4">
+                <p className="text-white text-2xl">
+                  Menjadi portal informasi wisata terpercaya dan inspiratif
+                  untuk pengguna.
+                </p>
+                <hr class="w-full h-[1px] mx-auto bg-gray-600 border-0 rounded md-1"></hr>
+                <p className="text-white font-light text-base">
+                  Menjadi portal informasi wisata terpercaya yang menginspirasi
+                  dan memudahkan pengguna dalam menjelajahi berbagai destinasi
+                  wisata di seluruh dunia dengan informasi akurat, rekomendasi
+                  menarik, dan panduan perjalanan yang bermanfaat.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-slate-800 w-full min-h-36 py-16 px-24">
+            <div className="flex justify-center items-center gap-8 max-w-screen-md mx-auto">
+              <div className="flex flex-col gap-4">
+                <p className="text-white text-right text-2xl">
+                  Informasi wisata lengkap dan fitur perencanaan interaktif.
+                </p>
+                <hr class="w-full h-[1px] mx-auto bg-gray-600 border-0 rounded md-1"></hr>
+                <p className="text-white font-light text-base text-right">
+                  Menyediakan informasi lengkap dan akurat tentang destinasi
+                  wisata, meliputi atraksi, akomodasi, transportasi, dan tips
+                  perjalanan. Menawarkan fitur perencanaan perjalanan yang
+                  intuitif dan interaktif, membantu pengguna merencanakan
+                  liburan dengan mudah dan menyenangkan.
+                </p>
+              </div>
+              <div className="text-white font-medium text-7xl">MISI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section className="py-20 px-10 gap-4 pt-14 grid grid-cols-4">
         <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
           <div className="bg-[url('/public/images/austin.png')] bg-cover flex items-end group bg-center">
             <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
