@@ -26,6 +26,9 @@ export default function Navbar() {
         <img src={image} alt="" className="size-12 logo" /> {}
       </a>
       <div className="nav-links">
+        <a href="/" className="nav-link">
+          Home
+        </a>
         <a href="/hotels" className="nav-link">
           Hotel
         </a>
