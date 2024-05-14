@@ -288,7 +288,9 @@ const NearbyAttractions = () => {
             >
               <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
                 <div className="flex flex-col gap-4">
-                  <p className="text-md font-semibold leading-tight">{attraction.tag}</p>
+                  <p className="text-md font-semibold leading-tight">
+                    {attraction.tag}
+                  </p>
                   <p className="text-xs font-normal">
                     Distance: {Math.round(attraction.distance)} km
                   </p>

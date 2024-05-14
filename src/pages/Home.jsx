@@ -72,7 +72,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <div className="flex justify-center my-14">
+      <div className="flex justify-center my-14 p-10">
         <div className="flex">
           <div className="bg-[#091426] p-10 gap-20 rounded-3xl flex justify-center">
             <div>
@@ -216,7 +216,7 @@ export default function Home() {
       </div>
       <div id="section3" className="flex mt-20">
         <div className="w-2/3">
-          <div className="max-w-xs md:max-w-6xl mx-auto my-10 px-10 flex flex-wrap gap-16">
+          <div className="max-w-xs md:max-w-6xl mx-auto my-10 lg:px-10 px-28 flex flex-wrap gap-16">
             {news.map((data, index) => (
               <NewsCard
                 key={index}
@@ -237,8 +237,9 @@ export default function Home() {
           </h1>
           <p className="text-white text-base text-center font-normal mx-10">
             Dapatkan update terbaru tentang destinasi, acara, tren perjalanan,
-            dan kebijakan pariwisata. <br />Informasi terkini dan terpercaya untuk
-            menjaga Anda selalu terinformasi.
+            dan kebijakan pariwisata. <br />
+            Informasi terkini dan terpercaya untuk menjaga Anda selalu
+            terinformasi.
           </p>
         </div>
       </div>
