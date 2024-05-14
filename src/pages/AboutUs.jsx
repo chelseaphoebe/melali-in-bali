@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import './AboutUs.css';
+import React, { useState, useEffect } from "react";
+import "./AboutUs.css";
 import Footer from "../components/Footer";
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import bg_AboutUS1 from '../images/visi.png';
-import bg_AboutUS3 from '../images/misi.png';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import bg_AboutUS1 from "../images/visi.png";
+import bg_AboutUS3 from "../images/misi.png";
 import { Icon } from "@iconify/react";
-
 
 const AboutUs = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -13,7 +12,9 @@ const AboutUs = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex(currentImageIndex => (currentImageIndex + 1) % images.length);
+      setCurrentImageIndex(
+        (currentImageIndex) => (currentImageIndex + 1) % images.length
+      );
     }, 10000); // Change image every 10 seconds
 
     return () => clearInterval(interval); // Clean up the interval on component unmount
@@ -31,13 +32,13 @@ const AboutUs = () => {
           Mela<span className="text-yellow-300">li.</span>
         </p>
       </section>
-      <section className="py-12 px-10 gap-4  pt-14 flex">
+      <section className="py-12 px-10 gap-4 pt-14 grid grid-cols-4">
         <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
-          <div className="bg-[url('/public/images/austin.png')] bg-cover flex items-end">
+          <div className="bg-[url('/public/images/austin.png')] bg-cover flex items-end group bg-center">
             <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
               <p className="text-3xl text-white">Austin</p>
               <p className="text-xl font-semibold text-white">00000096252</p>
-              <p className="text-sm font-normal text-white">
+              <p className="text-sm font-normal text-white line-clamp-2 group-hover:line-clamp-none">
                 Austin Gilbert Liwanto adalah seorang mahasiswa semester 2
                 jurusan Informatika di Universitas Multimedia Nusantara. Dia
                 merupakan orang yang penuh semangat dan ketertarikan dalam
@@ -60,11 +61,11 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
-          <div className="bg-[url('/public/images/chelsea.jpeg')] bg-cover flex items-end">
+          <div className="bg-[url('/public/images/chelsea.jpeg')] bg-cover flex items-end group bg-center">
             <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
               <p className="text-3xl text-white">Chelsea</p>
               <p className="text-xl font-semibold text-white">00000096816</p>
-              <p className="text-sm font-normal text-white">
+              <p className="text-sm font-normal text-white line-clamp-2 group-hover:line-clamp-none">
                 Chelsea Arantza Phoebe adalah seorang mahasiswa semester 2 di
                 Universitas Multimedia Nusantara, jurusan Informatika. Dia
                 adalah seorang perempuan yang berbakat dalam bermain musik dan
@@ -109,11 +110,11 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
-          <div className="bg-[url('/public/images/feli.png')] bg-cover flex items-end">
+          <div className="bg-[url('/public/images/feli.png')] bg-cover flex items-end group bg-center">
             <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
               <p className="text-3xl text-white">Felicia</p>
               <p className="text-xl font-semibold text-white">00000096911</p>
-              <p className="text-sm font-normal text-white">
+              <p className="text-sm font-normal text-white line-clamp-2 group-hover:line-clamp-none">
                 Felicia Annabel adalah seorang mahasiswi semester 2 jurusan
                 Informatika di Universitas Multimedia Nusantara, di dalam waktu
                 yang bersamaan menjalani karirnya dalam Marketing yaitu Social
@@ -154,11 +155,11 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
-          <div className="bg-[url('/public/images/josh.png')] bg-cover flex items-end">
+          <div className="bg-[url('/public/images/josh.png')] bg-cover flex items-end group bg-center">
             <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
               <p className="text-3xl text-white">Joshua</p>
               <p className="text-xl font-semibold text-white">00000094196</p>
-              <p className="text-sm font-normal text-white">
+              <p className="text-sm font-normal text-white line-clamp-2 group-hover:line-clamp-none">
                 Joshua wijaya adalah seorang mahasiswa semester 2 jurusan
                 Informatika di Universitas Multimedia Nusantara. Dia merupakan
                 orang yang suka berolahraga dan beraktivitas fisik.
