@@ -1,25 +1,9 @@
-import React, { useState, useEffect } from "react";
 import "./AboutUs.css";
 import Footer from "../components/Footer";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import bg_AboutUS1 from "../images/visi.png";
-import bg_AboutUS3 from "../images/misi.png";
 import { Icon } from "@iconify/react";
 
 const AboutUs = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [bg_AboutUS1, bg_AboutUS3]; // Array of image URLs
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (currentImageIndex) => (currentImageIndex + 1) % images.length
-      );
-    }, 10000); // Change image every 10 seconds
-
-    return () => clearInterval(interval); // Clean up the interval on component unmount
-  }, []);
-
+  
   return (
     <>
       <section
@@ -32,6 +16,22 @@ const AboutUs = () => {
           Mela<span className="text-yellow-300">li.</span>
         </p>
       </section>
+      
+      {/* <div className="carousel px-14 mt-4 ">
+        <TransitionGroup className="carousel">
+          <CSSTransition
+            key={currentImageIndex}
+            timeout={500}
+            classNames="slide"
+          >
+            <img
+              src={images[currentImageIndex]}
+              alt="Carousel Image"
+              className="carousel-image opacity-50"
+            />
+          </CSSTransition>
+        </TransitionGroup>
+      </div> */}
       <section className="py-12 px-10 gap-4 pt-14 grid grid-cols-4">
         <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
           <div className="bg-[url('/public/images/austin.png')] bg-cover flex items-end group bg-center">
@@ -200,39 +200,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        {/* 
-
-          <div className="program">
-            <div className="caption">
-              <p>Joshua Wijaya</p>
-              <p>00000094196</p>
-            </div>
-            <img src={card_AboutUS3} alt="Josh" />
-          </div>
-
-          <div className="program">
-            <div className="caption">
-              <p>Chelsea</p>
-              <p>00000096816</p>
-            </div>
-            <img src={card_AboutUS4} alt="Chelsea" />
-          </div> */}
       </section>
-      <div className="carousel px-14 mt-4 ">
-        <TransitionGroup className="carousel">
-          <CSSTransition
-            key={currentImageIndex}
-            timeout={500}
-            classNames="slide"
-          >
-            <img
-              src={images[currentImageIndex]}
-              alt="Carousel Image"
-              className="carousel-image"
-            />
-          </CSSTransition>
-        </TransitionGroup>
-      </div>
 
       <Footer />
     </>
