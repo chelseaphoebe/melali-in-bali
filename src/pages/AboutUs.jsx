@@ -57,33 +57,6 @@ const AboutUs = () => {
       </div>
       <section className="py-20 px-10 gap-4 pt-14 grid grid-cols-4">
         <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
-          <div className="bg-[url('/public/images/austin.png')] bg-cover flex items-end group bg-center">
-            <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
-              <p className="text-3xl text-white">Austin</p>
-              <p className="text-xl font-semibold text-white">00000096252</p>
-              <p className="text-sm font-normal text-white line-clamp-2 group-hover:line-clamp-none">
-                Austin Gilbert Liwanto adalah seorang mahasiswa semester 2
-                jurusan Informatika di Universitas Multimedia Nusantara. Dia
-                merupakan orang yang penuh semangat dan ketertarikan dalam
-                menjelajahi pengalaman baru baik itu hal akademik maupun
-                non-akademik.
-              </p>
-              <div className="flex gap-6 md:gap-4 mt-4">
-                <a
-                  href="https://www.instagram.com/austingilbert.l/"
-                  target="_blank"
-                >
-                  <Icon
-                    icon="mdi:instagram"
-                    className="w-[30px] h-[30px]"
-                    style={{ color: "white" }}
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
           <div className="bg-[url('/public/images/chelsea.jpeg')] bg-cover flex items-end group bg-center">
             <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
               <p className="text-3xl text-white">Chelsea</p>
@@ -124,6 +97,33 @@ const AboutUs = () => {
                 >
                   <Icon
                     icon="ic:baseline-tiktok"
+                    className="w-[30px] h-[30px]"
+                    style={{ color: "white" }}
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
+          <div className="bg-[url('/public/images/austin.png')] bg-cover flex items-end group bg-center">
+            <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
+              <p className="text-3xl text-white">Austin</p>
+              <p className="text-xl font-semibold text-white">00000096252</p>
+              <p className="text-sm font-normal text-white line-clamp-2 group-hover:line-clamp-none">
+                Austin Gilbert Liwanto adalah seorang mahasiswa semester 2
+                jurusan Informatika di Universitas Multimedia Nusantara. Dia
+                merupakan orang yang penuh semangat dan ketertarikan dalam
+                menjelajahi pengalaman baru baik itu hal akademik maupun
+                non-akademik.
+              </p>
+              <div className="flex gap-6 md:gap-4 mt-4">
+                <a
+                  href="https://www.instagram.com/austingilbert.l/"
+                  target="_blank"
+                >
+                  <Icon
+                    icon="mdi:instagram"
                     className="w-[30px] h-[30px]"
                     style={{ color: "white" }}
                   />
