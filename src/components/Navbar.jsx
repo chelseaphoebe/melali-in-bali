@@ -66,6 +66,16 @@ export default function Navbar() {
                 Jelajah
               </a>
             </li>
+            <li>
+              <a href="/game" className="nav-link">
+                Permainan
+              </a>
+            </li>
+            <li>
+              <a href="/aboutUs" className="nav-link">
+                Tentang Kami
+              </a>
+            </li>
           </ul>
         </div>
         <ul className="menu menu-horizontal hidden px-1 lg:flex">
@@ -87,6 +97,16 @@ export default function Navbar() {
           <li>
             <a href="/inspirasi" className="nav-link">
               Jelajah
+            </a>
+          </li>
+          <li>
+            <a href="/game" className="nav-link">
+              Permainan
+            </a>
+          </li>
+          <li>
+            <a href="/aboutUs" className="nav-link">
+              Tentang Kami
             </a>
           </li>
         </ul>
