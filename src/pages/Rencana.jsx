@@ -37,7 +37,7 @@ const Flights = ({ score }) => {
       setLoading(true); // Mulai loading
       const response = await axios.request({
         method: "GET",
-        url: "https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights",
+        // url: "https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights",
         params: {
           fromId: fromId, // Menggunakan nilai fromId yang dipilih
           toId: "DPS.AIRPORT",
@@ -123,7 +123,7 @@ const Flights = ({ score }) => {
       </div>
       {loading && <div>Loading...</div>}
       {error && <div>{error}</div>}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
         {data.map((airline) => (
           <div
             key={airline.iataCode}
@@ -134,11 +134,11 @@ const Flights = ({ score }) => {
               <img
                 src={airline.logoUrl}
                 alt={airline.name}
-                className="w-full object-cover h-48" // Sesuaikan tinggi gambar di sini
+                className="w-full object-contain h-48 px-6" // Sesuaikan tinggi gambar di sini
               />
             </div>
             <div className="p-4">
-              <h3 className="mt-2 text-xl font-bold text-black">
+              <h3 className="mt-1 text-lg text-black">
                 {airline.name}
               </h3>
             </div>
@@ -182,7 +182,7 @@ const Taxi = ({ score }) => {
           currency_code: "EUR",
         },
         headers: {
-          //'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
+          // 'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
           "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
         },
       });
@@ -447,7 +447,7 @@ const Rencana = () => {
               alt=""
             >
               <h1 className="text-white text-3xl text-center mb-2">
-                Rekomendasi Perjalanan di Bali
+                Rencana Perjalanan selama 7 hari
               </h1>
               <p className="text-white texl-xl text-center font-normal">
                 Temukan petualangan dan keindahan alam Bali di halaman
@@ -521,9 +521,11 @@ const Rencana = () => {
               />
             </div>
           </div>
-        </div>
+        </div >
+        <div className="grid mx-auto grid-cols-2">
         <Flights />
         <Taxi />
+        </div>
         <Footer />
       </div>
     </>
