@@ -40,7 +40,7 @@ export default function Home() {
   async function fetchNews() {
     try {
       const response = await axios.get(url);
-      let articles = response.data.articles.slice(0, 5);
+      let articles = response.data.articles.slice(0, 10);
       setNews(articles);
     } catch (error) {
       console.log(error);
@@ -214,27 +214,34 @@ export default function Home() {
           />
         </div>
       </div>
-
-      {/* <section id="section2" className="max-w-xs md:max-w-6xl mx-auto my-16">
-        <p className="text-4xl font-bold">Destination Choices</p>
-        <div className="grid grid-cols-5 gap-7 mt-5">
-          {Array.from({ length: 10 }, (_, i) => (
-            <DestinationCard key={i} imageUrl={"bali.jpeg"} title={"Bali"} />
-          ))}
+      <div id="section3" className="flex mt-20">
+        <div className="w-2/3">
+          <div className="max-w-xs md:max-w-6xl mx-auto my-10 px-10 flex flex-wrap gap-16">
+            {news.map((data, index) => (
+              <NewsCard
+                key={index}
+                imageUrl={data.urlToImage}
+                title={data.title}
+                description={data.description}
+                link={data.url}
+              />
+            ))}
+          </div>
         </div>
-      </section> */}
-
-      <section id="section3" className="max-w-xs md:max-w-6xl mx-auto my-10">
-        {news.map((data, index) => (
-          <NewsCard
-            key={index}
-            imageUrl={data.urlToImage}
-            title={data.title}
-            description={data.description}
-            link={data.url}
-          />
-        ))}
-      </section>
+        <div
+          className="w-1/3 h-screen top-0 sticky bg-[url('/public/images/bgNews1.png')] bg-cover bg-blend-darken flex justify-center items-center flex-col"
+          alt=""
+        >
+          <h1 className="text-white text-3xl text-center mb-2 mx-12">
+            Berita Terkini
+          </h1>
+          <p className="text-white text-base text-center font-normal mx-10">
+            Dapatkan update terbaru tentang destinasi, acara, tren perjalanan,
+            dan kebijakan pariwisata. <br />Informasi terkini dan terpercaya untuk
+            menjaga Anda selalu terinformasi.
+          </p>
+        </div>
+      </div>
       <Footer />
     </>
   );
