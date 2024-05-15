@@ -30,12 +30,12 @@ export default function Hotels() {
     params: {
       dest_id: "835",
       search_type: "region",
-      arrival_date: "2024-05-10",
-      departure_date: "2024-05-11",
+      arrival_date: "2024-05-15",
+      departure_date: "2024-05-16",
       currency_code: "idr",
     },
     headers: {
-      // "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+      //X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
