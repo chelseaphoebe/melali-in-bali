@@ -48,7 +48,7 @@ const Flights = ({ score }) => {
           currency_code: "AED",
         },
         headers: {
-          "X-RapidAPI-Key":"ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+         // "X-RapidAPI-Key":"ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
           "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
         },
       });
@@ -182,7 +182,7 @@ const Taxi = ({ score }) => {
           currency_code: "EUR",
         },
         headers: {
-          'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
+         // 'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
           "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
         },
       });
