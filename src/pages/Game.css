@@ -132,12 +132,6 @@ h2 label {
   font-size: 20px;
 }
 
-h1, p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  color: black;
-}
 .App {
   position: relative;
   display: flex;
