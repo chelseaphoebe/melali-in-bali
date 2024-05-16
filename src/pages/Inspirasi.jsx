@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     <section
       id="banner"
-      className="bg-[url('/public/images/banner-jelajah.jpg')] bg-center bg-cover bg-no-repeat min-h-[740px] px-10 flex items-center justify-center"
+      className="bg-[url('/public/images/banner-jelajah.jpg')] bg-center bg-cover bg-no-repeat min-h-screen px-10 flex items-center justify-center"
     >
       <p className="text-white text-5xl font-semibold text-center tracking-wide">
         Temukan kebahagiaan mu di Bali!
