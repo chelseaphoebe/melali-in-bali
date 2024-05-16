@@ -37,7 +37,7 @@ const Flights = ({ score }) => {
       setLoading(true); // Mulai loading
       const response = await axios.request({
         method: "GET",
-        // url: "https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights",
+        url: "https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights",
         params: {
           fromId: fromId, // Menggunakan nilai fromId yang dipilih
           toId: "DPS.AIRPORT",
@@ -48,7 +48,7 @@ const Flights = ({ score }) => {
           currency_code: "AED",
         },
         headers: {
-         // "X-RapidAPI-Key":"ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+          //"X-RapidAPI-Key":"ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
           "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
         },
       });
@@ -182,7 +182,7 @@ const Taxi = ({ score }) => {
           currency_code: "EUR",
         },
         headers: {
-          'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
+//'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
           "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
         },
       });
