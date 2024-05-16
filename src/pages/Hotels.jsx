@@ -14,28 +14,27 @@ export default function Hotels() {
     }
     return price; // No discount applied
   };
-  
+
   useEffect(() => {
     searchHotels();
-  }, [score]); // Add score as a dependency to reapply discount when score changes
-  
-  
+  }, [score]);
+
   useEffect(() => {
     searchHotels();
   }, []);
-  
+
   const options = {
     method: "GET",
-    url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels",
+    // url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels",
     params: {
       dest_id: "835",
       search_type: "region",
-      arrival_date: "2024-05-15",
-      departure_date: "2024-05-16",
+      arrival_date: "2024-05-16",
+      departure_date: "2024-05-18",
       currency_code: "idr",
     },
     headers: {
-      //"X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+      "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -49,34 +48,28 @@ export default function Hotels() {
         ...hotel,
         price: applyDiscount(hotel.property.priceBreakdown.grossPrice.value),
       }));
-      setHotels(hotelsWithDiscount);
+      setHotels(hotelsWithDiscount.splice(0, 15));
       setLoading(false);
     } catch (error) {
       console.error("Error fetching hotels:", error);
       if (error.response) {
-        // The request was made and the server responded with a status code
-        // that falls out of the range of 2xx
         if (error.response.status === 429) {
           setError("Too many requests. Please try again later.");
         } else if (error.response.status === 403) {
-          setError("Access forbidden. Please check your API key and permissions.");
+          setError(
+            "Access forbidden. Please check your API key and permissions."
+          );
         } else {
           setError(`An error occurred: ${error.response.status}`);
         }
       } else if (error.request) {
-        // The request was made but no response was received
         setError("No response from the server. Please try again later.");
       } else {
-        // Something happened in setting up the request that triggered an Error
         setError("An error occurred. Please try again.");
       }
       setLoading(false);
     }
   };
-
-  useEffect(() => {
-    searchHotels();
-  }, []);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -88,39 +81,51 @@ export default function Hotels() {
 
   return (
     <div>
+      <section
+        id="banner"
+        className="bg-[url('/public/images/banner-jelajah.jpg')] bg-center bg-cover bg-no-repeat min-h-[50vh] px-10 pt-10 flex items-center justify-center"
+      >
+        <p className="text-white text-5xl font-semibold text-center tracking-wide">
+          Temukan kebahagiaan mu di Bali!
+        </p>
+      </section>
       <div className="flex flex-col py-24 px-20">
         {hotels.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {hotels.map((hotel) => (
               <div
                 key={hotel.property.id}
-                className="flex flex-col justify-end shadow-lg min-h-[350px] rounded-lg bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage: `url(https://cf.bstatic.com/xdata/images/hotel/square500/${hotel.property.photoUrls[0]?.split("square60/")[1] || ""})`,
-                }}
+                className="flex flex-col min-h-[350px] bg-cover bg-center bg-no-repeat h-full"
               >
-                <div className="bg-white rounded-b-lg py-3 px-5 flex justify-between min-h-24">
-                  <div className="flex flex-col justify-between">
-                    <div className="flex flex-col">
-                      <p className="text-xs font-semibold">
-                        {hotel.property.name}
-                      </p>
-                      <p className="text-md font-semibold">
-                        IDR{" "}
-                        {new Intl.NumberFormat("id-ID").format(
+                <div className="object-cover rounded-xl overflow-hidden">
+                  <img
+                    src={`https://cf.bstatic.com/xdata/images/hotel/square500/${
+                      hotel.property.photoUrls[0]?.split("square60/")[1] || ""
+                    }`}
+                    alt=""
+                    className="w-full h-full"
+                  />
+                </div>
+                <div className="bg-white py-4 flex flex-col justify-between flex-grow">
+                  <div className="mb-2">
+                    <p className="text-xs line-clamp-1">
+                      {hotel.property.name}
+                    </p>
+                    <p className="text-2xl font-semibold leading-tight">
+                      Rp{" "}
+                      {Intl.NumberFormat("id-ID").format(
+                        Math.trunc(
                           hotel.property.priceBreakdown.grossPrice.value
-                        )}{" "}
-                        / night
-                      </p>
-                    </div>
-                    <div className="flex gap-2">
-                      <p className="text-xs font-semibold">2 Adults</p>
-                      <p className="text-xs font-semibold">
-                        Rating {hotel.property.reviewScore}
-                      </p>
-                    </div>
+                        )
+                      )}{" "}
+                      <span className="text-xs font-normal">/ night</span>
+                    </p>
                   </div>
-                  <p className="text-xs font-medium text-gray-500">Bali</p>
+                  <div className="flex gap-2 text-xs font-semibold uppercase text-gray-500">
+                    <p>2 Adults</p>
+                    <p>•</p>
+                    <p>Rating {hotel.property.reviewScore}</p>
+                  </div>
                 </div>
               </div>
             ))}
