@@ -30,8 +30,8 @@ export default function Hotels() {
     params: {
       dest_id: "835",
       search_type: "region",
-      arrival_date: "2024-05-15",
-      departure_date: "2024-05-16",
+      arrival_date: "2024-05-18",
+      departure_date: "2024-05-19",
       currency_code: "idr",
     },
     headers: {
