@@ -95,7 +95,7 @@ const Attractions = () => {
       languagecode: "en-us",
     },
     headers: {
-      //"X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+      // "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -169,17 +169,21 @@ const Attractions = () => {
                     )}{" "}
                   </p>
                 </div>
-                <p className="text-xs font-medium text-gray-500">
+                <p className="text-xs font-medium text-gray-499">
                   {product.cityName}
                 </p>
-                <div className="flex gap-2">
-                  <p className="text-xs font-normal uppercase text-gray-500">
-                    <span className="font-bold">
-                      {product.reviewsStats.combinedNumericStats.average}
-                    </span>{" "}
-                    ({product.reviewsStats.combinedNumericStats.total} reviews)
-                  </p>
-                </div>
+                {product.reviewsStats &&
+                  product.reviewsStats.combinedNumericStats && (
+                    <div className="flex gap-2">
+                      <p className="text-xs font-normal uppercase text-gray-500">
+                        <span className="font-bold">
+                          {product.reviewsStats.combinedNumericStats.average}
+                        </span>{" "}
+                        ({product.reviewsStats.combinedNumericStats.total}{" "}
+                        ulasan)
+                      </p>
+                    </div>
+                  )}
               </div>
             </div>
           ))}
@@ -204,7 +208,7 @@ const NearbyAttractions = () => {
       languagecode: "en-us",
     },
     headers: {
-     // "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+    //  "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
