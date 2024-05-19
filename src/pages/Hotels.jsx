@@ -81,10 +81,10 @@ export default function Hotels() {
     <div>
       <section
         id="banner"
-        className="bg-[url('/public/images/banner-jelajah.jpg')] bg-center bg-cover bg-no-repeat min-h-[50vh] px-10 pt-10 flex items-center justify-center"
+        className="bg-[url('/public/images/hotelss.png')] bg-center bg-cover bg-no-repeat min-h-[50vh] px-10 pt-10 flex items-center justify-center"
       >
         <p className="text-white text-5xl font-semibold text-center tracking-wide">
-          Temukan kebahagiaan mu di Bali!
+          Penginapan Terbaik di Bali!
         </p>
       </section>
       <div className="flex flex-col p-8 md:py-24 md:px-20">
