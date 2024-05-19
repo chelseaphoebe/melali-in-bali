@@ -3,6 +3,8 @@ import axios from "axios";
 import Footer from "../components/Footer";
 import "./Inspirasi.css";
 import { useEffect, useState } from "react";
+import nearbyData from "./NearbyAttractions.json";
+import dataAttractions from "./Attractions.json";
 
 const Banner = () => {
   return (
@@ -81,9 +83,10 @@ const ActivitiesSection = () => {
 };
 
 const Attractions = () => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(dataAttractions);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false); // true-false 
 
   const options = {
     method: "GET",
@@ -129,7 +132,7 @@ const Attractions = () => {
   };
 
   useEffect(() => {
-    searchAttractions();
+    // searchAttractions();
   }, []);
 
   if (loading) {
@@ -141,7 +144,7 @@ const Attractions = () => {
   }
 
   return (
-    <div className="flex flex-col py-24 px-20">
+    <div className="flex flex-col px-20">
       <h2 className="text-4xl font-bold mb-8 text-center text-black">
         Attractions
       </h2>
@@ -191,9 +194,9 @@ const Attractions = () => {
   );
 };
 const NearbyAttractions = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(nearbyData);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false); // true-false
   const [hotelId, setHotelId] = useState("10624997"); 
 
   const options = {
@@ -228,7 +231,7 @@ const NearbyAttractions = () => {
   };
 
   useEffect(() => {
-    searchAttractions();
+    // searchAttractions();
   }, [hotelId]); 
 
   const handleHotelIdChange = (event) => {

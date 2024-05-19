@@ -1,0 +1,863 @@
+[
+  {
+    "hotel_id": 354640,
+    "accessibilityLabel": "Mimpi Resort Tulamben.\n3 out of 5 stars.\n8.8 Fabulous 195 reviews.\n‎Tulamben‬.\n Entire villa – 28 m² : 1 bed • 1 bedroom • 1 living room • 1 bathroom.\nOriginal price 3800000 IDR. Current price 1178000 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "mainPhotoId": 266372009,
+      "reviewScoreWord": "Fabulous",
+      "position": 0,
+      "priceBreakdown": {
+        "strikethroughPrice": {
+          "value": 3800000,
+          "currency": "IDR"
+        },
+        "taxExceptions": [],
+        "benefitBadges": [
+          {
+            "explanation": "Limited-time Deal",
+            "text": "Limited-time Deal",
+            "identifier": "Limited Time Deal",
+            "variant": "constructive"
+          }
+        ],
+        "grossPrice": {
+          "value": 1178000,
+          "currency": "IDR"
+        }
+      },
+      "propertyClass": 3,
+      "countryCode": "id",
+      "ufi": 900049205,
+      "currency": "IDR",
+      "checkoutDate": "2024-05-20",
+      "name": "Mimpi Resort Tulamben",
+      "reviewCount": 195,
+      "optOutFromGalleryChanges": 0,
+      "isPreferred": true,
+      "id": 354640,
+      "accuratePropertyClass": 3,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/266372009.jpg?k=29558548431ac8264f1225af0123f3a3ceed26e192d1eaf86351b914b878a05d&o="
+      ],
+      "isFirstPage": true,
+      "checkout": {
+        "untilTime": "12:00",
+        "fromTime": "05:00"
+      },
+      "blockIds": ["35464051_393080269_0_42_0"],
+      "qualityClass": 0,
+      "latitude": -8.27854261905931,
+      "wishlistName": "Tulamben",
+      "checkin": {
+        "untilTime": "00:00",
+        "fromTime": "14:00"
+      },
+      "longitude": 115.593756437302,
+      "checkinDate": "2024-05-19",
+      "reviewScore": 8.8,
+      "rankingPosition": 0
+    },
+    "price": 1178000
+  },
+  {
+    "hotel_id": 10798095,
+    "accessibilityLabel": "City of Aventus Hotel - Denpasar.\n4 out of 5 stars.\n7.1 Good 50 reviews.\n‎Teuku Umar, Denpasar‬.\n Hotel room : Beds: 1 double or 2 singles.\nOriginal price 887500 IDR. Current price 449066 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "checkoutDate": "2024-05-20",
+      "accuratePropertyClass": 4,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/524125088.jpg?k=a726d28bf23bd07d97b9b2200b055b4c9cc5aee80f6a4b254288c9a8cdb96f5b&o="
+      ],
+      "id": 10798095,
+      "reviewCount": 50,
+      "name": "City of Aventus Hotel - Denpasar",
+      "optOutFromGalleryChanges": 0,
+      "position": 1,
+      "priceBreakdown": {
+        "benefitBadges": [
+          {
+            "identifier": "Getaway 2021 Deals",
+            "variant": "constructive",
+            "text": "Getaway Deal",
+            "explanation": "Getaway Deal"
+          }
+        ],
+        "grossPrice": {
+          "currency": "IDR",
+          "value": 449066
+        },
+        "strikethroughPrice": {
+          "currency": "IDR",
+          "value": 887500
+        },
+        "taxExceptions": []
+      },
+      "mainPhotoId": 524125088,
+      "reviewScoreWord": "Good",
+      "ufi": -2676772,
+      "countryCode": "id",
+      "currency": "IDR",
+      "propertyClass": 4,
+      "checkinDate": "2024-05-19",
+      "longitude": 115.203762355591,
+      "rankingPosition": 1,
+      "reviewScore": 7.1,
+      "blockIds": ["1079809501_380575110_0_2_0"],
+      "checkout": {
+        "fromTime": "00:00",
+        "untilTime": "12:00"
+      },
+      "isFirstPage": true,
+      "checkin": {
+        "fromTime": "14:00",
+        "untilTime": "00:00"
+      },
+      "qualityClass": 0,
+      "latitude": -8.679754401106,
+      "wishlistName": "Denpasar"
+    },
+    "price": 449066
+  },
+  {
+    "hotel_id": 8655686,
+    "accessibilityLabel": "Sumberkima Hill Retreat 2.\n9.1 Superb 157 reviews.\n‎Pemuteran‬.\n Room with shared bathroom : 1 bed.\nOriginal price 635000 IDR. Current price 571500 IDR..\nIncludes taxes and charges.\nNo prepayment needed.",
+    "property": {
+      "checkout": {
+        "untilTime": "11:00",
+        "fromTime": "01:00"
+      },
+      "isFirstPage": true,
+      "blockIds": ["865568623_355335448_2_42_0"],
+      "latitude": -8.151263029015,
+      "wishlistName": "Pemuteran",
+      "qualityClass": 0,
+      "checkin": {
+        "untilTime": "00:00",
+        "fromTime": "15:00"
+      },
+      "longitude": 114.608828780457,
+      "checkinDate": "2024-05-19",
+      "reviewScore": 9.1,
+      "rankingPosition": 2,
+      "reviewScoreWord": "Superb",
+      "mainPhotoId": 546467814,
+      "priceBreakdown": {
+        "taxExceptions": [],
+        "strikethroughPrice": {
+          "value": 635000,
+          "currency": "IDR"
+        },
+        "grossPrice": {
+          "value": 571500,
+          "currency": "IDR"
+        },
+        "benefitBadges": [
+          {
+            "explanation": "Mobile-only price",
+            "text": "Mobile-only price",
+            "variant": "constructive",
+            "identifier": "Mobile Rate"
+          }
+        ]
+      },
+      "position": 2,
+      "propertyClass": 0,
+      "currency": "IDR",
+      "ufi": 900048175,
+      "countryCode": "id",
+      "checkoutDate": "2024-05-20",
+      "optOutFromGalleryChanges": 0,
+      "name": "Sumberkima Hill Retreat 2",
+      "reviewCount": 157,
+      "id": 8655686,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/546467814.jpg?k=d1ffd22d71cbc539450c9c737b794cb73ec8cc4c070555d385f5cb87b319b6bc&o="
+      ],
+      "accuratePropertyClass": 0
+    },
+    "price": 571500
+  },
+  {
+    "hotel_id": 1071666,
+    "accessibilityLabel": "The Swaha Ubud Hotel.\n7.9 Good 17 reviews.\n‎Sukawati‬.\n Entire studio – 30 m² : 2 beds • 1 bedroom • 1 bathroom.\nOriginal price 890511 IDR. Current price 552117 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "position": 3,
+      "priceBreakdown": {
+        "benefitBadges": [],
+        "grossPrice": {
+          "currency": "IDR",
+          "value": 552117
+        },
+        "strikethroughPrice": {
+          "value": 890511,
+          "currency": "IDR"
+        },
+        "taxExceptions": []
+      },
+      "mainPhotoId": 31887164,
+      "reviewScoreWord": "Good",
+      "currency": "IDR",
+      "countryCode": "id",
+      "ufi": 900051297,
+      "propertyClass": 0,
+      "checkoutDate": "2024-05-20",
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/31887164.jpg?k=d96b4698d72cd55392944181d58cb688335d5b81c07e09d19f1b080de57e5bcd&o="
+      ],
+      "accuratePropertyClass": 0,
+      "id": 1071666,
+      "isPreferred": true,
+      "optOutFromGalleryChanges": 0,
+      "reviewCount": 17,
+      "name": "The Swaha Ubud Hotel",
+      "blockIds": ["107166601_88840262_0_2_0"],
+      "checkout": {
+        "untilTime": "12:00",
+        "fromTime": "00:00"
+      },
+      "isFirstPage": true,
+      "checkin": {
+        "untilTime": "00:00",
+        "fromTime": "14:00"
+      },
+      "wishlistName": "Sukawati",
+      "latitude": -8.61938983465659,
+      "qualityClass": 0,
+      "checkinDate": "2024-05-19",
+      "longitude": 115.256050229073,
+      "rankingPosition": 3,
+      "reviewScore": 7.9
+    },
+    "price": 552117
+  },
+  {
+    "hotel_id": 9443404,
+    "accessibilityLabel": "Mere Sea View Resort & Spa.\n4 out of 5 stars.\n8.4 Very good 118 reviews.\n‎Batununggul‬.\n Private suite : 1 bed.\nOriginal price 2200000 IDR. Current price 1650000 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "accuratePropertyClass": 4,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/532713643.jpg?k=1b7b0df901cbb15b1a439e6cd5cf11009113006b62e07ea94e177a2f8c36b139&o="
+      ],
+      "isPreferred": true,
+      "id": 9443404,
+      "reviewCount": 118,
+      "name": "Mere Sea View Resort & Spa",
+      "optOutFromGalleryChanges": 1,
+      "checkoutDate": "2024-05-20",
+      "ufi": -2672369,
+      "countryCode": "id",
+      "currency": "IDR",
+      "propertyClass": 4,
+      "position": 4,
+      "priceBreakdown": {
+        "taxExceptions": [],
+        "strikethroughPrice": {
+          "value": 2200000,
+          "currency": "IDR"
+        },
+        "grossPrice": {
+          "currency": "IDR",
+          "value": 1650000
+        },
+        "benefitBadges": [
+          {
+            "identifier": "Getaway 2021 Deals",
+            "variant": "constructive",
+            "text": "Getaway Deal",
+            "explanation": "Getaway Deal"
+          }
+        ]
+      },
+      "reviewScoreWord": "Very good",
+      "mainPhotoId": 532713643,
+      "rankingPosition": 4,
+      "reviewScore": 8.4,
+      "checkinDate": "2024-05-19",
+      "longitude": 115.552865,
+      "checkin": {
+        "fromTime": "14:00",
+        "untilTime": "00:00"
+      },
+      "qualityClass": 0,
+      "wishlistName": "Batununggul",
+      "latitude": -8.692285,
+      "isPreferredPlus": true,
+      "blockIds": ["944340401_366581575_0_2_0"],
+      "checkout": {
+        "fromTime": "02:00",
+        "untilTime": "12:00"
+      },
+      "isFirstPage": true
+    },
+    "price": 1650000
+  },
+  {
+    "hotel_id": 8575336,
+    "accessibilityLabel": "Swan Paradise A Pramana Experience.\n4 out of 5 stars.\n8.9 Fabulous 772 reviews.\n‎Gianyar‬.\n Hotel room : 1 bed.\n990977 IDR.\nIncludes taxes and charges.",
+    "property": {
+      "qualityClass": 0,
+      "wishlistName": "Gianyar",
+      "latitude": -8.59394479155748,
+      "checkin": {
+        "untilTime": "00:00",
+        "fromTime": "14:00"
+      },
+      "isPreferredPlus": true,
+      "checkout": {
+        "untilTime": "12:00",
+        "fromTime": "06:00"
+      },
+      "isFirstPage": true,
+      "blockIds": ["857533605_0_1_1_0"],
+      "rankingPosition": 5,
+      "reviewScore": 8.9,
+      "checkinDate": "2024-05-19",
+      "longitude": 115.294848849359,
+      "propertyClass": 4,
+      "countryCode": "id",
+      "ufi": -2678309,
+      "currency": "IDR",
+      "position": 5,
+      "priceBreakdown": {
+        "benefitBadges": [],
+        "grossPrice": {
+          "value": 990976.921742148,
+          "currency": "IDR"
+        },
+        "taxExceptions": []
+      },
+      "mainPhotoId": 424553875,
+      "reviewScoreWord": "Fabulous",
+      "accuratePropertyClass": 4,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/424553875.jpg?k=d6e5359c986b14e30aa688b8297fe667de06bdff02daf02f20b31a40ce47c36f&o="
+      ],
+      "reviewCount": 772,
+      "name": "Swan Paradise A Pramana Experience",
+      "optOutFromGalleryChanges": 0,
+      "isPreferred": true,
+      "id": 8575336,
+      "checkoutDate": "2024-05-20"
+    },
+    "price": 990976.921742148
+  },
+  {
+    "hotel_id": 1294421,
+    "accessibilityLabel": "The Royal Purnama - Adults Only.\n5 out of 5 stars.\n9.2 Superb 492 reviews.\n‎Keramas‬.\n1 bed.\n2626757 IDR.\nIncludes taxes and charges.",
+    "property": {
+      "isPreferredPlus": true,
+      "qualityClass": 0,
+      "latitude": -8.61932106160131,
+      "wishlistName": "Keramas",
+      "checkin": {
+        "fromTime": "14:00",
+        "untilTime": "00:00"
+      },
+      "checkout": {
+        "untilTime": "12:00",
+        "fromTime": "00:00"
+      },
+      "isFirstPage": true,
+      "blockIds": ["0_0_1_1_0"],
+      "reviewScore": 9.2,
+      "rankingPosition": 7,
+      "longitude": 115.308938026428,
+      "checkinDate": "2024-05-19",
+      "propertyClass": 5,
+      "ufi": 900050857,
+      "countryCode": "id",
+      "currency": "IDR",
+      "reviewScoreWord": "Superb",
+      "mainPhotoId": 286017870,
+      "priceBreakdown": {
+        "benefitBadges": [],
+        "grossPrice": {
+          "value": 2626756.89744925,
+          "currency": "IDR"
+        },
+        "taxExceptions": []
+      },
+      "position": 7,
+      "name": "The Royal Purnama - Adults Only",
+      "reviewCount": 492,
+      "optOutFromGalleryChanges": 0,
+      "isPreferred": true,
+      "id": 1294421,
+      "accuratePropertyClass": 5,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/286017870.jpg?k=11f4fa0e7cbb6f1469473ffe2d26a4226aef015fe7dca9aaa7b5ea27ee8e406c&o="
+      ],
+      "checkoutDate": "2024-05-20"
+    },
+    "price": 2626756.89744925
+  },
+  {
+    "hotel_id": 10079827,
+    "accessibilityLabel": "Villa Lembah Damai by Pramana Villas.\n8.8 Fabulous 115 reviews.\n‎Gianyar‬.\n Private suite : 1 bed.\nOriginal price 2997296 IDR. Current price 1498648 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "isPreferredPlus": true,
+      "checkin": {
+        "untilTime": "00:00",
+        "fromTime": "14:00"
+      },
+      "qualityClass": 0,
+      "latitude": -8.3554798990992,
+      "wishlistName": "Gianyar",
+      "blockIds": ["1007982703_373530131_2_2_0"],
+      "isFirstPage": true,
+      "checkout": {
+        "untilTime": "12:00",
+        "fromTime": "08:00"
+      },
+      "reviewScore": 8.8,
+      "rankingPosition": 8,
+      "longitude": 115.298791123848,
+      "checkinDate": "2024-05-19",
+      "countryCode": "id",
+      "ufi": -2678309,
+      "currency": "IDR",
+      "propertyClass": 0,
+      "mainPhotoId": 460267554,
+      "reviewScoreWord": "Fabulous",
+      "priceBreakdown": {
+        "benefitBadges": [
+          {
+            "variant": "constructive",
+            "identifier": "Getaway 2021 Deals",
+            "text": "Getaway Deal",
+            "explanation": "Getaway Deal"
+          }
+        ],
+        "grossPrice": {
+          "value": 1498648,
+          "currency": "IDR"
+        },
+        "strikethroughPrice": {
+          "value": 2997296,
+          "currency": "IDR"
+        },
+        "taxExceptions": []
+      },
+      "position": 8,
+      "isPreferred": true,
+      "id": 10079827,
+      "reviewCount": 115,
+      "name": "Villa Lembah Damai by Pramana Villas",
+      "optOutFromGalleryChanges": 0,
+      "accuratePropertyClass": 0,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/460267554.jpg?k=b6c7443d359ee6254ae3d1b30830f56bc33a09d9a7b289b8c8915a8ff79688dd&o="
+      ],
+      "checkoutDate": "2024-05-20"
+    },
+    "price": 1498648
+  },
+  {
+    "hotel_id": 413008,
+    "accessibilityLabel": "Desa Swan Villas & SPA, Keramas.\n4 out of 5 stars.\n8.8 Fabulous 803 reviews.\n‎Keramas‬.\n1 bed.\n1506681 IDR.\nIncludes taxes and charges.",
+    "property": {
+      "isPreferredPlus": true,
+      "latitude": -8.59766197919151,
+      "wishlistName": "Keramas",
+      "qualityClass": 0,
+      "checkin": {
+        "fromTime": "14:00",
+        "untilTime": "00:00"
+      },
+      "isFirstPage": true,
+      "checkout": {
+        "fromTime": "00:00",
+        "untilTime": "12:00"
+      },
+      "blockIds": ["0_0_1_1_0"],
+      "reviewScore": 8.8,
+      "rankingPosition": 9,
+      "longitude": 115.334382802248,
+      "checkinDate": "2024-05-19",
+      "propertyClass": 4,
+      "currency": "IDR",
+      "countryCode": "id",
+      "ufi": 900050857,
+      "reviewScoreWord": "Fabulous",
+      "mainPhotoId": 385933210,
+      "priceBreakdown": {
+        "taxExceptions": [],
+        "benefitBadges": [],
+        "grossPrice": {
+          "value": 1506680.54832552,
+          "currency": "IDR"
+        }
+      },
+      "position": 9,
+      "optOutFromGalleryChanges": 0,
+      "name": "Desa Swan Villas & SPA, Keramas",
+      "reviewCount": 803,
+      "id": 413008,
+      "isPreferred": true,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/385933210.jpg?k=40b85b2992f5c1e0ab1fd6dc19ca8b78936755b1af4cc86113d9c462ebeef058&o="
+      ],
+      "accuratePropertyClass": 4,
+      "checkoutDate": "2024-05-20"
+    },
+    "price": 1506680.54832552
+  },
+  {
+    "hotel_id": 8161107,
+    "accessibilityLabel": "Pangkung Carik Villa by Pramana Villas.\n8.6 Fabulous 112 reviews.\n‎Blahbatu‬.\n Entire villa – 25 m² : 1 bed • 1 bedroom • 1 bathroom.\nOriginal price 1909308 IDR. Current price 916468 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "propertyClass": 0,
+      "countryCode": "id",
+      "ufi": -2673498,
+      "currency": "IDR",
+      "position": 10,
+      "priceBreakdown": {
+        "benefitBadges": [
+          {
+            "explanation": "Getaway Deal",
+            "identifier": "Getaway 2021 Deals",
+            "variant": "constructive",
+            "text": "Getaway Deal"
+          }
+        ],
+        "grossPrice": {
+          "value": 916468,
+          "currency": "IDR"
+        },
+        "strikethroughPrice": {
+          "value": 1909308,
+          "currency": "IDR"
+        },
+        "taxExceptions": []
+      },
+      "mainPhotoId": 339161526,
+      "reviewScoreWord": "Fabulous",
+      "accuratePropertyClass": 0,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/339161526.jpg?k=5d07d973a00fd2e93a27a46844b9c49042270dcc33ab20da7159b785043ccd1c&o="
+      ],
+      "reviewCount": 112,
+      "name": "Pangkung Carik Villa by Pramana Villas",
+      "optOutFromGalleryChanges": 0,
+      "isPreferred": true,
+      "id": 8161107,
+      "checkoutDate": "2024-05-20",
+      "qualityClass": 0,
+      "latitude": -8.55241340517965,
+      "wishlistName": "Blahbatu",
+      "checkin": {
+        "fromTime": "14:00",
+        "untilTime": "00:00"
+      },
+      "isPreferredPlus": true,
+      "checkout": {
+        "fromTime": "07:00",
+        "untilTime": "12:00"
+      },
+      "isFirstPage": true,
+      "blockIds": ["816110701_344093201_2_2_0"],
+      "rankingPosition": 10,
+      "reviewScore": 8.6,
+      "checkinDate": "2024-05-19",
+      "longitude": 115.289149936523
+    },
+    "price": 916468
+  },
+  {
+    "hotel_id": 7531166,
+    "accessibilityLabel": "Pramana Giri Kusuma.\n4 out of 5 stars.\n9.0 Superb 392 reviews.\n‎Payangan‬.\n Private suite : 1 bed.\nOriginal price 6331952 IDR. Current price 2849378 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "checkout": {
+        "fromTime": "06:00",
+        "untilTime": "12:00"
+      },
+      "isFirstPage": true,
+      "blockIds": ["753116601_331910880_0_41_0"],
+      "isPreferredPlus": true,
+      "latitude": -8.41499338348622,
+      "wishlistName": "Payangan",
+      "qualityClass": 0,
+      "checkin": {
+        "fromTime": "14:00",
+        "untilTime": "23:30"
+      },
+      "longitude": 115.244023337051,
+      "checkinDate": "2024-05-19",
+      "reviewScore": 9,
+      "rankingPosition": 11,
+      "reviewScoreWord": "Superb",
+      "mainPhotoId": 468254555,
+      "position": 11,
+      "priceBreakdown": {
+        "strikethroughPrice": {
+          "value": 6331952,
+          "currency": "IDR"
+        },
+        "taxExceptions": [],
+        "benefitBadges": [
+          {
+            "explanation": "Getaway Deal",
+            "identifier": "Getaway 2021 Deals",
+            "variant": "constructive",
+            "text": "Getaway Deal"
+          }
+        ],
+        "grossPrice": {
+          "value": 2849378,
+          "currency": "IDR"
+        }
+      },
+      "propertyClass": 4,
+      "currency": "IDR",
+      "countryCode": "id",
+      "ufi": -2691715,
+      "checkoutDate": "2024-05-20",
+      "optOutFromGalleryChanges": 0,
+      "name": "Pramana Giri Kusuma",
+      "reviewCount": 392,
+      "id": 7531166,
+      "isPreferred": true,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/468254555.jpg?k=174879a255df141459eaac6eaa6b5e21fe3a0aa09a394837cd1f629777b07c91&o="
+      ],
+      "accuratePropertyClass": 4
+    },
+    "price": 2849378
+  },
+  {
+    "hotel_id": 176866,
+    "accessibilityLabel": "New Sunari Lovina Beach Resort.\n4 out of 5 stars.\n8.2 Very good 1034 reviews.\n‎Lovina‬.\n Hotel room : 2 beds.\nOriginal price 1809720 IDR. Current price 1085832 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "longitude": 115.03445148468,
+      "checkinDate": "2024-05-19",
+      "reviewScore": 8.2,
+      "rankingPosition": 12,
+      "checkout": {
+        "fromTime": "00:00",
+        "untilTime": "12:00"
+      },
+      "isFirstPage": true,
+      "blockIds": ["17686607_88825595_0_41_0"],
+      "isPreferredPlus": true,
+      "qualityClass": 0,
+      "wishlistName": "Lovina",
+      "latitude": -8.15395329035662,
+      "checkin": {
+        "fromTime": "14:00",
+        "untilTime": "00:00"
+      },
+      "checkoutDate": "2024-05-20",
+      "reviewCount": 1034,
+      "name": "New Sunari Lovina Beach Resort",
+      "optOutFromGalleryChanges": 0,
+      "isPreferred": true,
+      "id": 176866,
+      "accuratePropertyClass": 4,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/295442076.jpg?k=d1d9dde7664d8720fd052c3e3618dff4a6f102d9f6e4ffbacce366f9baf68cbc&o="
+      ],
+      "mainPhotoId": 295442076,
+      "reviewScoreWord": "Very good",
+      "position": 12,
+      "priceBreakdown": {
+        "strikethroughPrice": {
+          "value": 1809720,
+          "currency": "IDR"
+        },
+        "taxExceptions": [],
+        "benefitBadges": [],
+        "grossPrice": {
+          "value": 1085832,
+          "currency": "IDR"
+        }
+      },
+      "propertyClass": 4,
+      "countryCode": "id",
+      "ufi": -2697286,
+      "currency": "IDR"
+    },
+    "price": 1085832
+  },
+  {
+    "hotel_id": 9102786,
+    "accessibilityLabel": "Bubble Hotel Bali Ubud - Adults Only.\n9.1 Superb 595 reviews.\n‎Gianyar‬.\n Private suite : 1 bed.\nOriginal price 2511407 IDR. Current price 1883555 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "checkinDate": "2024-05-19",
+      "longitude": 115.3014041,
+      "rankingPosition": 13,
+      "reviewScore": 9.1,
+      "blockIds": ["910278603_362262235_0_2_0"],
+      "isFirstPage": true,
+      "checkout": {
+        "fromTime": "00:00",
+        "untilTime": "12:00"
+      },
+      "checkin": {
+        "fromTime": "15:00",
+        "untilTime": "20:00"
+      },
+      "wishlistName": "Gianyar",
+      "latitude": -8.4415993,
+      "qualityClass": 0,
+      "checkoutDate": "2024-05-20",
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/504162048.jpg?k=2b044d1b337f0f43bbbc9a33d6f2382929c18f99af44dd231b30bb672ca9d6ec&o="
+      ],
+      "accuratePropertyClass": 0,
+      "id": 9102786,
+      "isPreferred": true,
+      "optOutFromGalleryChanges": 1,
+      "name": "Bubble Hotel Bali Ubud - Adults Only",
+      "reviewCount": 595,
+      "priceBreakdown": {
+        "taxExceptions": [],
+        "strikethroughPrice": {
+          "currency": "IDR",
+          "value": 2511407
+        },
+        "grossPrice": {
+          "value": 1883555,
+          "currency": "IDR"
+        },
+        "benefitBadges": [
+          {
+            "explanation": "Getaway Deal",
+            "variant": "constructive",
+            "identifier": "Getaway 2021 Deals",
+            "text": "Getaway Deal"
+          }
+        ]
+      },
+      "position": 13,
+      "reviewScoreWord": "Superb",
+      "mainPhotoId": 504162048,
+      "currency": "IDR",
+      "countryCode": "id",
+      "ufi": -2678309,
+      "propertyClass": 0
+    },
+    "price": 1883555
+  },
+  {
+    "hotel_id": 254715,
+    "accessibilityLabel": "Taman Sari Bali Resort and Spa.\n4 out of 5 stars.\n8.8 Fabulous 467 reviews.\n‎Pemuteran‬.\n Entire studio – 16 m² : Beds: 1 double or 2 singles • 1 bedroom • 1 bathroom.\nOriginal price 1377500 IDR. Current price 991800 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "accuratePropertyClass": 4,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/512897241.jpg?k=c89e4ee661cdcb4395f89cbf626ac0e4337e83d70dfc33768722ffdb7382c3c9&o="
+      ],
+      "name": "Taman Sari Bali Resort and Spa",
+      "reviewCount": 467,
+      "optOutFromGalleryChanges": 0,
+      "isPreferred": true,
+      "id": 254715,
+      "checkoutDate": "2024-05-20",
+      "propertyClass": 4,
+      "countryCode": "id",
+      "ufi": 900048175,
+      "currency": "IDR",
+      "priceBreakdown": {
+        "strikethroughPrice": {
+          "currency": "IDR",
+          "value": 1377500
+        },
+        "taxExceptions": [],
+        "benefitBadges": [
+          {
+            "variant": "constructive",
+            "identifier": "Mobile Rate",
+            "text": "Mobile-only price",
+            "explanation": "Mobile-only price"
+          }
+        ],
+        "grossPrice": {
+          "currency": "IDR",
+          "value": 991800
+        }
+      },
+      "position": 14,
+      "mainPhotoId": 512897241,
+      "reviewScoreWord": "Fabulous",
+      "rankingPosition": 14,
+      "reviewScore": 8.8,
+      "checkinDate": "2024-05-19",
+      "longitude": 114.652872383595,
+      "qualityClass": 0,
+      "wishlistName": "Pemuteran",
+      "latitude": -8.14143167430184,
+      "checkin": {
+        "fromTime": "13:00",
+        "untilTime": "00:00"
+      },
+      "isPreferredPlus": true,
+      "isFirstPage": true,
+      "checkout": {
+        "untilTime": "12:00",
+        "fromTime": "00:00"
+      },
+      "blockIds": ["25471513_89691752_2_41_0"]
+    },
+    "price": 991800
+  },
+  {
+    "hotel_id": 8654546,
+    "accessibilityLabel": "Louka Beach Bali.\n5 out of 5 stars.\n9.6 Exceptional 156 reviews.\n‎Tianyar‬.\n Hotel room : 2 beds.\nOriginal price 6000000 IDR. Current price 4800000 IDR..\nIncludes taxes and charges.",
+    "property": {
+      "reviewScore": 9.6,
+      "rankingPosition": 15,
+      "longitude": 115.462869762474,
+      "checkinDate": "2024-05-19",
+      "isPreferredPlus": true,
+      "wishlistName": "Tianyar",
+      "latitude": -8.17276759368001,
+      "qualityClass": 0,
+      "checkin": {
+        "untilTime": "23:30",
+        "fromTime": "07:00"
+      },
+      "checkout": {
+        "fromTime": "11:00",
+        "untilTime": "17:00"
+      },
+      "isFirstPage": true,
+      "blockIds": ["865454606_378088363_2_41_0"],
+      "optOutFromGalleryChanges": 1,
+      "reviewCount": 156,
+      "name": "Louka Beach Bali",
+      "id": 8654546,
+      "isPreferred": true,
+      "photoUrls": [
+        "https://cf.bstatic.com/xdata/images/hotel/square60/417689575.jpg?k=c282dd3296976388035da3967f2a348f1b762d357a0a953bfb547083ca84510f&o="
+      ],
+      "accuratePropertyClass": 5,
+      "checkoutDate": "2024-05-20",
+      "propertyClass": 5,
+      "currency": "IDR",
+      "countryCode": "id",
+      "ufi": -2700552,
+      "mainPhotoId": 417689575,
+      "reviewScoreWord": "Exceptional",
+      "position": 15,
+      "priceBreakdown": {
+        "strikethroughPrice": {
+          "currency": "IDR",
+          "value": 6000000
+        },
+        "taxExceptions": [],
+        "benefitBadges": [
+          {
+            "identifier": "Getaway 2021 Deals",
+            "variant": "constructive",
+            "text": "Getaway Deal",
+            "explanation": "Getaway Deal"
+          }
+        ],
+        "grossPrice": {
+          "value": 4800000,
+          "currency": "IDR"
+        }
+      }
+    },
+    "price": 4800000
+  }
+]

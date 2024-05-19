@@ -1,26 +1,24 @@
 import Footer from "../components/Footer";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import dataHotels from "./dataHotels.json";
 
 export default function Hotels() {
-  const [hotels, setHotels] = useState([]);
+  // const [hotels, setHotels] = useState([]);
+  const [hotels, setHotels] = useState(dataHotels);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [score, setScore] = useState(0); 
+  const [loading, setLoading] = useState(false);
+  const [score, setScore] = useState(0);
 
   const applyDiscount = (price) => {
     if (score === 10) {
-      return price * 0.8; 
+      return price * 0.8;
     }
-    return price; 
+    return price;
   };
 
   useEffect(() => {
-    searchHotels();
-  }, [score]);
-
-  useEffect(() => {
-    searchHotels();
+    // searchHotels();
   }, []);
 
   const options = {
@@ -118,7 +116,9 @@ export default function Hotels() {
                           hotel.property.priceBreakdown.grossPrice.value
                         )
                       )}{" "}
-                      <span className="text-base md:text-xs font-normal">/ night</span>
+                      <span className="text-base md:text-xs font-normal">
+                        / night
+                      </span>
                     </p>
                   </div>
                   <div className="flex gap-2 text-xs font-semibold uppercase text-gray-500">

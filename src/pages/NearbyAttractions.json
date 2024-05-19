@@ -1,0 +1,162 @@
+[
+  {
+    "latitude": -8.3812306,
+    "average_out_of_10": 8.5,
+    "longitude": 115.4176194,
+    "distance": 3.32321137743543,
+    "tag": "Besakih Temple",
+    "total_votes": 12
+  },
+  {
+    "longitude": 115.3593,
+    "total_votes": 6,
+    "tag": "Penglipuran Village",
+    "distance": 7.31355598046496,
+    "latitude": -8.42098399999998,
+    "average_out_of_10": 8.7
+  },
+  {
+    "tag": "Kehen Temple",
+    "distance": 7.97383621118567,
+    "total_votes": 5,
+    "latitude": -8.441864,
+    "average_out_of_10": 8.4,
+    "longitude": 115.359865
+  },
+  {
+    "average_out_of_10": 8.5,
+    "latitude": -8.3812306,
+    "longitude": 115.4176194,
+    "tag": "Besakih Temple",
+    "distance": 3.32321137743543,
+    "total_votes": 12
+  },
+  {
+    "total_votes": 5,
+    "tag": "Kehen Temple",
+    "distance": 7.97383621118567,
+    "longitude": 115.359865,
+    "latitude": -8.441864,
+    "average_out_of_10": 8.4
+  },
+  {
+    "total_votes": 11,
+    "longitude": 115.345287,
+    "latitude": -8.47496,
+    "average_out_of_10": 9.6,
+    "distance": 11.3413206112362,
+    "tag": "Tirta Sudamala Temple"
+  },
+  {
+    "tag": "Mount Agung",
+    "distance": 11.7024752617845,
+    "total_votes": 8,
+    "average_out_of_10": 9.8,
+    "latitude": -8.3433106,
+    "longitude": 115.5070575
+  },
+  {
+    "longitude": 115.315059,
+    "latitude": -8.41580899999997,
+    "average_out_of_10": 9.6,
+    "total_votes": 11,
+    "tag": "Tirta Empul Temple",
+    "distance": 12.0936269843255
+  },
+  {
+    "latitude": -8.411841,
+    "average_out_of_10": 8.8,
+    "longitude": 115.587503,
+    "distance": 17.8718837530095,
+    "tag": "Tirta Gangga Water Palace",
+    "total_votes": 48
+  },
+  {
+    "latitude": -8.2499705,
+    "average_out_of_10": 8.9,
+    "longitude": 115.3998057,
+    "distance": 18.0496654953081,
+    "tag": "Lake Batur",
+    "total_votes": 260
+  },
+  {
+    "average_out_of_10": 8.7,
+    "latitude": -8.5137835,
+    "distance": 18.479326446644,
+    "tag": "Penataran Sasih Temple",
+    "total_votes": 280,
+    "longitude": 115.293570484131
+  },
+  {
+    "total_votes": 620,
+    "longitude": 115.292437076569,
+    "average_out_of_10": 8.9,
+    "latitude": -8.5159416666911,
+    "distance": 18.7269336069474,
+    "tag": "Pusering Jagat Temple"
+  },
+  {
+    "longitude": 115.3753057,
+    "average_out_of_10": 9.7,
+    "latitude": -8.2401299,
+    "total_votes": 35,
+    "distance": 19.7028015984516,
+    "tag": "Mount Batur"
+  },
+  {
+    "latitude": -8.25789901468183,
+    "average_out_of_10": 8.8,
+    "distance": 19.9525297478993,
+    "tag": "Kintamani",
+    "total_votes": 233,
+    "longitude": 115.329236984253
+  },
+  {
+    "total_votes": 555,
+    "tag": "Goa Gajah",
+    "distance": 19.700474098498,
+    "longitude": 115.287153,
+    "latitude": -8.52337,
+    "average_out_of_10": 8.4
+  },
+  {
+    "total_votes": 410,
+    "longitude": 115.276681,
+    "distance": 17.9794226845067,
+    "tag": "Petulu White Herons",
+    "latitude": -8.478426,
+    "average_out_of_10": 8.8
+  },
+  {
+    "average_out_of_10": 8.7,
+    "latitude": -8.42098399999998,
+    "tag": "Penglipuran Village",
+    "distance": 7.31355598046496,
+    "longitude": 115.3593,
+    "total_votes": 6
+  },
+  {
+    "latitude": -8.433542,
+    "average_out_of_10": 9.2,
+    "distance": 16.2320984289225,
+    "tag": "Tegallalang Rice Terrace",
+    "total_votes": 136,
+    "longitude": 115.279169
+  },
+  {
+    "longitude": 115.279199,
+    "total_votes": 81,
+    "average_out_of_10": 9.3,
+    "latitude": -8.43404599999997,
+    "tag": "Ceking Ricefield Terrace",
+    "distance": 16.2379230339865
+  },
+  {
+    "total_votes": 2,
+    "distance": 16.4969718241342,
+    "tag": "Goa Lawah Temple",
+    "longitude": 115.4677378,
+    "latitude": -8.5522271,
+    "average_out_of_10": "8.0"
+  }
+]

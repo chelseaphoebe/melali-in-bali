@@ -1,0 +1,1661 @@
+[
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRCGrBNSlhGg",
+    "name": "Mount Batur Sunrise Trekking Open Trip All-Inclusive",
+    "slug": "prcgrbnslhgg-mount-batur-sunrise-trekking-open-trip-all-inclusive",
+    "shortDescription": "Mount Batur with high 1717 m above sea level and can summit by fit physically hiker around 2 hour...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 2784.93,
+      "currency": "INR",
+      "publicAmount": 2784.93
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/171527892.jpg?k=73bb73faca98943f47a1bd80cb928c4d7b61f19d6bbcd4db71f1fac40cb0b0d3&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.6,
+        "total": 57
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Kuta",
+      "ufi": -2683839,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OINZEt7Pe45L"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIUHDaXLTIRt"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRlaCEtrgQo0",
+    "name": "Ubud Explorer Private Day Tour",
+    "slug": "prlacetrgqo0-ubud-explorer-private-day-tour",
+    "shortDescription": "There are many tours on the Island of Bali, but there are a rare few that will allow you to explo...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 3758.91,
+      "currency": "INR",
+      "publicAmount": 3758.91
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/207124586.jpg?k=54b69ccfa86609f2c3ae63b138e7dcbfdd011350a85625a912fb8a0ff5e6f034&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.9,
+        "total": 78
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Ubud",
+      "ufi": -2701757,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIYDU98AEV3Z"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OI8sznvkP6hC"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIBU0w46eroP"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OID0rc2WqXgh"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": [
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "bestseller",
+        "value": true,
+        "rank": 3
+      }
+    ]
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRYVErI6YGPy",
+    "name": "Mt Batur 4WD Jeep, Breakfast & Hot Spring All Inclusive",
+    "slug": "pryveri6ygpy-mount-batur-jeep-sunrise-with-photographer",
+    "shortDescription": "Experience the beauty of sunrise over Mount Batur with our exclusive Mount Batur Jeep Sunrise Tou...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 2004.75,
+      "currency": "INR",
+      "publicAmount": 2004.75
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/305583522.jpg?k=e13dd23c19394bb6097515939db3213bae0b18c51cc9c54b86330eef928ace05&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.7,
+        "total": 33
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Ubud",
+      "ufi": -2701757,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIiOCQzPaDO3"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIHHulr192jF"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRW8Hm6xB73x",
+    "name": "Skip The Line Tour: Uluwatu Temple and Kecak Fire Dance Tour – Half Day",
+    "slug": "prw8hm6xb73x-skip-the-line-tour-uluwatu-temple-and-kecak-fire-dance-tour-half-da",
+    "shortDescription": "● Visit 11th-century Uluwatu Temple, one of the most spiritual spots in Bali\n● Catch a dramatic U...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 2673,
+      "currency": "INR",
+      "publicAmount": 2673
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/273978568.jpg?k=c6d3aebef77634126e415b6de6fe3d604f11bb27328cc0a4bb25f462764119ad&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.6,
+        "total": 58
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Kuta",
+      "ufi": -2683839,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI5pKtPFuiyf"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIWO7sxkpj2D"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PR2mvUedJFhO",
+    "name": "Best of Ubud Day Trip",
+    "slug": "pr2mvuedjfho-best-of-ubud-day-trip",
+    "shortDescription": "A tour to see the noteworthy attractions in Ubud along with the famous Bali swing",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 4742.91,
+      "currency": "INR",
+      "publicAmount": 4742.91
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/119095896.jpg?k=f63e2e14663b0c74d42866545954c0b3803ef3fd49149529c335f7593edfd887&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 141,
+      "percentage": "91%",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.6,
+        "total": 206
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Ubud",
+      "ufi": -2701757,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OILcAy3BQNMe"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OINibxRGiejY"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": [
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "bestseller",
+        "value": true,
+        "rank": 1
+      },
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "bestsellerInMonth",
+        "value": true,
+        "rank": 1
+      },
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "bestsellerInWeek",
+        "value": true,
+        "rank": 1
+      },
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "bestsellerOnWeekends",
+        "value": true,
+        "rank": 1
+      },
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "bestsellerForTours",
+        "value": true,
+        "rank": 1
+      }
+    ]
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PR3jma7Fiaqn",
+    "name": "Nusa Penida Day Tour from Bali",
+    "slug": "pr3jma7fiaqn-full-day-guided-tour-of-nusa-penida",
+    "shortDescription": "Highlights of the island on a visit from Bali, with optional snorkeling included",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 4399.35,
+      "currency": "INR",
+      "publicAmount": 4399.35
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/257906533.jpg?k=596e10a608ca89d4a58075fc65da87b3d6c7a0bf36531c772d643123e288308e&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.3,
+        "total": 2438
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Kuta",
+      "ufi": -2683839,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIBMM7d8JHkB"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIff0Lfl2Vab"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIPc5rTht8DA"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIhEPbkv2jvg"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIC2d5MNGluX"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIIiCBhP8iFg"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIXWFRavcHrw"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIjOScG08nSm"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIo6OquZXvjS"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIwnlQsd6Zg2"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIpUc5QJSVsf"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIIk18ksJIJl"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIIVKOpKZHts"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIbcm2zE5wEh"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIrsmbpousAG"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIhNlhjdFvo2"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIAxZHRKCmJu"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIaxU4FWB3ty"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OID4rTifUDcD"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIOwiMIGojTr"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIe6btLwmKO5"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI1FsPYi1fMQ"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OILsUq668rhx"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIZOHiatPP62"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIIsPuc6IUJn"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIwX2w4UcT88"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIQPcE7YijEN"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": [
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "bestseller",
+        "value": true,
+        "rank": 3
+      }
+    ]
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": false
+    },
+    "id": "PROoMIUWU0Hv",
+    "name": "Waterbom Bali",
+    "slug": "proomiuwu0hv-waterbom-bali",
+    "shortDescription": "Admission to a water park with thrilling slides, pools, a lazy river and more",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 2486.2,
+      "currency": "INR",
+      "publicAmount": 2486.2
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/205023131.jpg?k=54c29b7114ecf97d98f92af8b33067c72487800e3242b3c8679d092b41d3ec32&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 37,
+      "percentage": "92%",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.9,
+        "total": 473
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Kuta",
+      "ufi": -2683839,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIeD9rTdObtn"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OI2zV41ZPXOe"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OI42YkIJiVbO"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIUwZYHqBcc1"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIZHSg5fNmVf"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OINxMp67yfgk"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PR2PFLctW6L5",
+    "name": "Guided Tour of Bali",
+    "slug": "pr2pflctw6l5-guided-tour-of-bali",
+    "shortDescription": "Highlights of the most photogenic locations in the region on a small-group visit",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 2297.11,
+      "currency": "INR",
+      "publicAmount": 2297.11
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/249575189.jpg?k=8324d6ef7766f191007a91afc069963aba9ff6080eec11f495ba28c2af326714&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 20,
+      "percentage": "90%",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.5,
+        "total": 121
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Seminyak",
+      "ufi": 900040134,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OILylPAE65Di"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OINhY0OLpXNF"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIg27mgz7VIm"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": [
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "bestseller",
+        "value": true,
+        "rank": 1
+      },
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "popularFor1Traveler",
+        "value": true,
+        "rank": 1
+      }
+    ]
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRUz6ISeUCjC",
+    "name": "White Water-rafting Trip with Lunch",
+    "slug": "pruz6iseucjc-white-water-rafting-trip-with-lunch",
+    "shortDescription": "Thrilling rafting adventure down Ubud's Ayung River, passing lush forest, a waterfall and more",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 2840.06,
+      "currency": "INR",
+      "publicAmount": 2840.06
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/130157015.jpg?k=0932dd5f19928d82b4e063c7db3c67c5a06e824441f00f0793acb6ff1261f342&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 10,
+      "percentage": "100%",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.8,
+        "total": 97
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Kuta",
+      "ufi": -2683839,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI1ZiZJs4qR9"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI43SD1v1g0e"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI3iameYoSF0"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIkibKg5bXjq"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRgVvYjC2iXO",
+    "name": "Bali Quad Bike with Waterfall and Gorilla Cave",
+    "slug": "prgvvyjc2ixo-bali-quad-bike-with-waterfall-and-gorilla-cave",
+    "shortDescription": "All-inclusive scenic ride through Bali on a quad bike",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 6264.85,
+      "currency": "INR",
+      "publicAmount": 6264.85
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/186244019.jpg?k=6334b1d212c2f115f4b6fb1019160c350236c411cc2e33a06d857d88f3e7a192&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 21,
+      "percentage": "86%",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.7,
+        "total": 126
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Ubud",
+      "ufi": -2701757,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI1Zi2QacHSw"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OId4OgMsAtyt"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRKMFs1ErClH",
+    "name": "Best of Ubud Full Day Private Guided Tour",
+    "slug": "prkmfs1erclh-amazing-of-bali-full-day-sightseeing-private-guided-tour",
+    "shortDescription": "Experience the most funtastic attraction of Bali in one day private sightseeing tour. Unlocked a ...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 3173.35,
+      "currency": "INR",
+      "publicAmount": 6101.96
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/131856173.jpg?k=5a680640466b4680dca8e11bfacaf02522613c67cc0cd09d73ac3717bb12ca30&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4,
+        "total": 2
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Nusa Dua",
+      "ufi": 900040039,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIE2eCsu1xxm"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIx18U3XtDJs"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIPwYrb87z2s"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIdPM2A2Ik5z"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": false
+    },
+    "id": "PRD7n5bnXB8R",
+    "name": "Garuda Wisnu Kencana Cultural Park Ticket in Bali",
+    "slug": "prd7n5bnxb8r-admission-to-garuda-wisnu-kencana-cultural-park",
+    "shortDescription": "Ticket to enter one of the greatest attractions in Bali",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 622.68,
+      "currency": "INR",
+      "publicAmount": 622.68
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/153574594.jpg?k=9909167f93ebb528910a8f7ab5dc1c84461a52b16548d011cac066e4b6f2cc46&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.6,
+        "total": 352
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Kuta",
+      "ufi": -2683839,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIQ17iEyk2qu"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": [
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "bestseller",
+        "value": true,
+        "rank": 2
+      }
+    ]
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": false
+    },
+    "id": "PR535waPPKru",
+    "name": "Nusa Penida 4 Point Snorkeling with Manta Bay & Island Tour",
+    "slug": "pr535wappkru-ceraki-bali-cooking-class-with-traditional-market-tour",
+    "shortDescription": "06.30: Pick up from the hotel (based on your hotel location in Bali)\n08.00: Arrive at Sanur port ...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 4332.77,
+      "currency": "INR",
+      "publicAmount": 4761.28
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/302961042.jpg?k=2f3ade3eba582d8fcb925e8591dc9f1d97115e495548f34f33267e21176bc643&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 3.6,
+        "total": 8
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Ubud",
+      "ufi": -2701757,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIgfpRxXRwxA"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIyeGJD1YwyM"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIE3pHiqb9FL"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIOiKSQrzfua"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI17JbKbZnqa"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIA35qKyEIYy"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIeQGDJpNfJV"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIXVhVDcRtbn"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRIiE1ODohto",
+    "name": "Private Tour Tanah Lot Temple & Uluwatu Sunset (Include All Tickets Entrance)",
+    "slug": "priie1odohto-private-tour-tanah-lot-temple-uluwatu-sunset-include-all-tickets-en",
+    "shortDescription": "Tanah Lot, the 1st most visited places of interest in Bali, it is located on the West coast of Ba...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 3758.91,
+      "currency": "INR",
+      "publicAmount": 3758.91
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/131505550.jpg?k=e16c7096d7202da954ebbc0a195e92379f3958d8fdec03fb790698e3c3dd7b15&o="
+    },
+    "reviewsStats": null,
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Seminyak",
+      "ufi": 900040134,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIHRjLdL2Z8a"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIKnGQM6M6JW"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRrgTBmo2f6E",
+    "name": "Private Full Day Jeep Sunrise Tour & Quad Bike Adventure in Bali",
+    "slug": "prrgtbmo2f6e-private-full-day-jeep-sunrise-tour-quad-bike-adventure-in-bali",
+    "shortDescription": "Experiencing a combination of a jeep sunrise tour and a quad bike tour in Bali offers a unique an...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 13949.72,
+      "currency": "INR",
+      "publicAmount": 13949.72
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/208477915.jpg?k=7686003ec00b900f960b79e36bbc4902c28fceb12b01f8d04ca3533f584ea254&o="
+    },
+    "reviewsStats": null,
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Kuta",
+      "ufi": -2683839,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI1Nkt67T7Ma"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIymSrd3i2Ya"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIl7hVuOYSo7"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PR7tngepJ8sI",
+    "name": "Ayung River Rafting with Optional Waterfalls Trip",
+    "slug": "pr7tngepj8si-ayung-river-rafting-with-optional-waterfalls-trip",
+    "shortDescription": "A river rafting opportunity with authentic local food along with an optional waterfalls tour",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 1051.33,
+      "currency": "INR",
+      "publicAmount": 1051.33
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/183814418.jpg?k=5627314bd3ed763c32861dc7def17aab93e42806da489d52d754d8444b813e0b&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 1,
+      "percentage": "100%",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.8,
+        "total": 178
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Denpasar",
+      "ufi": -2676772,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIF4Y0Z8KRE7"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIVq2k1sHD1E"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIr4fJevVDPN"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIgxIcLjO3vf"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OI6UZUROpZE3"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIklFviGWWA6"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIyMPY4DB2pU"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI8Gkeexdosl"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OI3oQGuidH8k"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIukwp2udgav"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIoeB6yPxtO6"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OI5u4jBSmIBS"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIvUVDObevlt"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OItx0qE6lAmG"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OI7t4zhIN4oR"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": [
+      {
+        "__typename": "AttractionsProductFlags",
+        "flag": "bestseller",
+        "value": true,
+        "rank": 1
+      }
+    ]
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRzrXfdmAlCT",
+    "name": "Private Departure Transfer: Hotel to Bali Airport",
+    "slug": "przrxfdmalct-private-departure-transfer-hotel-to-bali-airport",
+    "shortDescription": "Our transfer transfer to airport provide you a private vehicle and driver with english speaking d...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 626.48,
+      "currency": "INR",
+      "publicAmount": 626.48
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/329117202.jpg?k=6efa967fe99f1f6270428f0594ca41df569b8d3a8d8c0fbd3642bc074f79e4a5&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.8,
+        "total": 89
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Ubud",
+      "ufi": -2701757,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI5jJHTthFlG"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIV5V6fRIath"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIYmqulXxFhl"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIEKUdrcvuKC"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRAKZldS6XjN",
+    "name": "Full-Day Tour to Water Temples and UNESCO Rice Terraces in Bali",
+    "slug": "prakzlds6xjn-bali-full-day-water-temples-and-unesco-rice-terraces-tour",
+    "shortDescription": "Join the trip to most natural place in Bali. You will stop to some places around Bedugul in weste...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 5847.19,
+      "currency": "INR",
+      "publicAmount": 5847.19
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/130170056.jpg?k=01c6f6138eae535024e1668a2b76df99ed501d851d7606b812e16b0436b07ca2&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.8,
+        "total": 135
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Ubud",
+      "ufi": -2701757,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI1DHCxhcPJj"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIvpulVVvCgM"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIlhwJcrUDSa"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIIlStjUPh75"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIgl8cL2x8Ej"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OISYKFBOutD7"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRuOhjVgUDyw",
+    "name": "Bali Dream Tours and Transportation",
+    "slug": "pruohjvgudyw-bali-dream-toursand-transportation",
+    "shortDescription": "Flexibility to customize your itinerary to your own preferences\n\nMultiple departure times and loc...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 5262.47,
+      "currency": "INR",
+      "publicAmount": 5262.47
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://q-xx.bstatic.com/xdata/images/xphoto/300x320/198164976.jpg?k=42cc843f04b758ec220cb3bbf77b2ba3958bad1d93684cc045941248eb1452ba&o="
+    },
+    "reviewsStats": null,
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Seminyak",
+      "ufi": 900040134,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIfLZ3oXj9rs"
+          },
+          {
+            "__typename": "OfferItem",
+            "id": "OIbEwxbt1nLH"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  },
+  {
+    "__typename": "AttractionsProduct",
+    "cancellationPolicy": {
+      "__typename": "AttractionsCancellationPolicy",
+      "hasFreeCancellation": true
+    },
+    "id": "PRf7msqfzcXx",
+    "name": "Ubud: Monkey Forest, Jungle Swing, Rice Terrace, and Water Temple",
+    "slug": "prf7msqfzcxx-ubud-monkey-forest-jungle-swing-rice-terrace-water-temple-and-water",
+    "shortDescription": "Full Day Tours explore Ubud to visit amazing tourist destinations in Bali which are tourist sites...",
+    "representativePrice": {
+      "__typename": "AttractionsPrice",
+      "chargeAmount": 5144.69,
+      "currency": "INR",
+      "publicAmount": 5144.69
+    },
+    "primaryPhoto": {
+      "__typename": "AttractionsPhoto",
+      "small": "https://r-xx.bstatic.com/xdata/images/xphoto/300x320/119068767.jpg?k=7d2a89c26c44facc2748766609caf0af6b13886da6eff2a92e0e0063c01b3669&o="
+    },
+    "reviewsStats": {
+      "__typename": "AttractionsProductReviewStats",
+      "allReviewsCount": 0,
+      "percentage": "0",
+      "combinedNumericStats": {
+        "__typename": "AttractionsProductCombinedReviewStats",
+        "average": 4.9,
+        "total": 219
+      }
+    },
+    "ufiDetails": {
+      "__typename": "AttractionLocationResponse",
+      "bCityName": "Ubud",
+      "ufi": -2701757,
+      "url": {
+        "__typename": "AttractionLocationUrl",
+        "country": "id"
+      }
+    },
+    "offers": [
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OI8LpdeOE8ze"
+          }
+        ]
+      },
+      {
+        "__typename": "Offer",
+        "items": [
+          {
+            "__typename": "OfferItem",
+            "id": "OIelLWoOdviX"
+          }
+        ]
+      }
+    ],
+    "supportedFeatures": {
+      "__typename": "AttractionsProductSupportedFeatures",
+      "nativeApp": true
+    },
+    "flags": null
+  }
+]

@@ -4,10 +4,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { WeatherCard } from "../components/WeatherCard";
 import JelajahCard from "../components/JelajahCard";
+import dataNews from "./News.json";
 
 export default function Home() {
   const [weather, setWeather] = useState([]);
-  const [news, setNews] = useState([]);
+  // const [news, setNews] = useState([]);
+  // ini buat gantiin API
+  const [news, setNews] = useState(dataNews);
+
   const url =
     "https://newsapi.org/v2/top-headlines?country=us&apiKey=e05fe913877d4698b7a221862ff21aa4";
 
@@ -48,7 +52,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    fetchNews();
+    // fetchNews(); 
     fetchWeather();
   }, []);
 
