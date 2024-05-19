@@ -1,6 +1,6 @@
 export const NewsCard = ({imageUrl, title, description, link}) => {
     return(
-         <div className="w-[400px] rounded-lg flex flex-col justify-between items-center mb-5">
+         <div className="max-w-[400px] rounded-lg flex flex-col justify-between items-center mb-5">
           <img src={imageUrl} className="w-full h-[200px] object-cover object-center rounded-xl" alt="" />
           <div className="flex flex-col gap-3 m-2 mt-6">
             <p className="text-xl font-bold">{title}</p>

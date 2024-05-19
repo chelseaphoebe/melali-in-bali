@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Navbar.css";
 
 export default function Navbar() {
   const [topPage, setTopPage] = useState("text-white");
@@ -8,7 +7,7 @@ export default function Navbar() {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY === 0) {
-        setTopPage("bg-opacity-75 bg-black text-white");
+        setTopPage("bg-white/0 text-white");
         setImage("./images/logo.png");
       } else {
         setTopPage("bg-white bg-opacity-100 text-black shadow-lg");
@@ -24,7 +23,7 @@ export default function Navbar() {
           <img src={image} alt="" className="size-12" /> {}
         </a>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end w-full">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg

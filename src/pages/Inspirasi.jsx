@@ -42,33 +42,33 @@ const ActivitiesSection = () => {
   return (
     <section
       id="section4"
-      className="max-w-6xl mx-auto my-16 flex flex-col min-h-screen"
+      className="max-w-6xl mx-auto my-36 flex flex-col "
     >
       <h2 className="text-4xl font-bold mb-8 text-center text-black">
         What To Do in Bali?
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-auto">
-        <div className="experience-card">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-screen-xl mx-auto px-12">
+        <div className="experience-card min-h-[300px] w-full">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="text-xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={handleNatureClick}
             data-hover-text="Rekomendasi Tempat Untuk Mendaki Dan Jalan Di Alam"
           >
             Jelajahi Aktivitas Alam
           </button>
         </div>
-        <div className="experience-card1">
+        <div className="experience-card1 min-h-[300px] w-full">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="text-xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={handleCultureClick}
             data-hover-text="Tradisi Beserta Festival Bali Yang Tidak Bisa Dilewatkan"
           >
             Jelajahi Wisata Budaya
           </button>
         </div>
-        <div className="experience-card2">
+        <div className="experience-card2 min-h-[300px] w-full">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="text-xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={handleCulinaryClick}
             data-hover-text="Kuliner Bali Yang Wajib Dicobai Minimal Sekali"
           >
@@ -109,8 +109,6 @@ const Attractions = () => {
     } catch (error) {
       console.error("Error fetching attractions:", error);
       if (error.response) {
-        // The request was made and the server responded with a status code
-        // that falls out of the range of 2xx
         if (error.response.status === 429) {
           setError("Too many requests. Please try again later.");
         } else if (error.response.status === 403) {
@@ -122,10 +120,8 @@ const Attractions = () => {
           setError(`An error occurred: ${error.response.status}`);
         }
       } else if (error.request) {
-        // The request was made but no response was received
         setError("No response from the server. Please try again later.");
       } else {
-        // Something happened in setting up the request that triggered an Error
         setError("An error occurred. Please try again.");
       }
       setLoading(false);
@@ -198,13 +194,13 @@ const NearbyAttractions = () => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [hotelId, setHotelId] = useState("10624997"); // Default hotel_id
+  const [hotelId, setHotelId] = useState("10624997"); 
 
   const options = {
     method: "GET",
     url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/getPopularAttractionNearBy",
     params: {
-      hotel_id: hotelId, // Gunakan nilai hotelId dari state
+      hotel_id: hotelId, 
       languagecode: "en-us",
     },
     headers: {
@@ -220,14 +216,12 @@ const NearbyAttractions = () => {
       const popularLandmarks = response.data.data.popular_landmarks;
       const closestLandmarks = response.data.data.closest_landmarks;
 
-      // Menggabungkan popularLandmarks dan closestLandmarks menjadi satu array
       const attractions = [...popularLandmarks, ...closestLandmarks];
 
       setProducts(attractions);
       setLoading(false);
     } catch (error) {
       console.error("Error fetching attractions:", error);
-      // Handle error
       setLoading(false);
       setError("Failed to fetch attractions data.");
     }
@@ -235,7 +229,7 @@ const NearbyAttractions = () => {
 
   useEffect(() => {
     searchAttractions();
-  }, [hotelId]); // Jalankan useEffect setiap kali nilai hotelId berubah
+  }, [hotelId]); 
 
   const handleHotelIdChange = (event) => {
     setHotelId(event.target.value);

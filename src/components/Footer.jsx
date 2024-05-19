@@ -10,31 +10,41 @@ export default function Footer() {
             Mela<span className="text-yellow-300">li.</span>
           </p>
           <div className="flex justify-center gap-6 md:gap-4">
-            <Icon
-              icon="ic:baseline-facebook"
-              className="w-[30px] h-[30px]"
-              style={{ color: "white" }}
-            />
-            <Icon
-              icon="mdi:twitter"
-              className="w-[30px] h-[30px]"
-              style={{ color: "white" }}
-            />
-            <Icon
-              icon="mdi:instagram"
-              className="w-[30px] h-[30px]"
-              style={{ color: "white" }}
-            />
-            <Icon
-              icon="mdi:youtube"
-              className="w-[30px] h-[30px]"
-              style={{ color: "white" }}
-            />
-            <Icon
-              icon="ic:baseline-tiktok"
-              className="w-[30px] h-[30px]"
-              style={{ color: "white" }}
-            />
+            <a href="https://www.instagram.com/chelseaarantza/" target="_blank">
+              <Icon
+                icon="ic:baseline-facebook"
+                className="w-[30px] h-[30px]"
+                style={{ color: "white" }}
+              />
+            </a>
+            <a href="https://www.instagram.com/chelseaarantza/" target="_blank">
+              <Icon
+                icon="mdi:twitter"
+                className="w-[30px] h-[30px]"
+                style={{ color: "white" }}
+              />
+            </a>
+            <a href="https://www.instagram.com/chelseaarantza/" target="_blank">
+              <Icon
+                icon="mdi:instagram"
+                className="w-[30px] h-[30px]"
+                style={{ color: "white" }}
+              />
+            </a>
+            <a href="https://www.instagram.com/chelseaarantza/" target="_blank">
+              <Icon
+                icon="mdi:youtube"
+                className="w-[30px] h-[30px]"
+                style={{ color: "white" }}
+              />
+            </a>
+            <a href="https://www.instagram.com/chelseaarantza/" target="_blank">
+              <Icon
+                icon="ic:baseline-tiktok"
+                className="w-[30px] h-[30px]"
+                style={{ color: "white" }}
+              />
+            </a>
           </div>
         </div>
         <div className="flex flex-col gap-8 md:gap-4 items-center md:items-stretch">
@@ -80,46 +90,3 @@ export default function Footer() {
     </footer>
   );
 }
-export const WeatherBox = () => {
-  const [weather, setWeather] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchWeather = async () => {
-      try {
-        const response = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=Bali,ID&appid=bd5e378503939ddaee76f12ad7a97608&units=metric`
-        );
-        const data = await response.json();
-        setWeather(data);
-      } catch (err) {
-        setError(err);
-      }
-    };
-
-    fetchWeather();
-  }, []);
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
-  if (!weather) {
-    return <div>Loading...</div>;
-  }
-
-  return (
-    <div className="weather-box">
-      <h2>Cuaca di Bali</h2>
-      <h3>
-        {" "}
-        <p>Suhu: {weather.main.temp}°C</p>
-        <p>Kondisi: {weather.weather[0].description}</p>
-      </h3>
-      <img
-        src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
-        alt="Weather Icon"
-      />
-    </div>
-  );
-};

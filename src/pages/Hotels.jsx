@@ -6,13 +6,13 @@ export default function Hotels() {
   const [hotels, setHotels] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [score, setScore] = useState(0); // Define the score state
+  const [score, setScore] = useState(0); 
 
   const applyDiscount = (price) => {
     if (score === 10) {
-      return price * 0.8; // Apply 20% discount for score 10
+      return price * 0.8; 
     }
-    return price; // No discount applied
+    return price; 
   };
 
   useEffect(() => {
@@ -25,16 +25,16 @@ export default function Hotels() {
 
   const options = {
     method: "GET",
-    // url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels",
+    url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels",
     params: {
       dest_id: "835",
       search_type: "region",
-      arrival_date: "2024-05-18",
-      departure_date: "2024-05-19",
+      arrival_date: "2024-05-19",
+      departure_date: "2024-05-20",
       currency_code: "idr",
     },
     headers: {
-      "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+      // "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -89,7 +89,7 @@ export default function Hotels() {
           Temukan kebahagiaan mu di Bali!
         </p>
       </section>
-      <div className="flex flex-col py-24 px-20">
+      <div className="flex flex-col p-8 md:py-24 md:px-20">
         {hotels.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {hotels.map((hotel) => (
@@ -108,17 +108,17 @@ export default function Hotels() {
                 </div>
                 <div className="bg-white py-4 flex flex-col justify-between flex-grow">
                   <div className="mb-2">
-                    <p className="text-xs line-clamp-1">
+                    <p className="text-base md:text-xs line-clamp-1">
                       {hotel.property.name}
                     </p>
-                    <p className="text-2xl font-semibold leading-tight">
+                    <p className="text-4xl md:text-2xl font-semibold leading-tight">
                       Rp{" "}
                       {Intl.NumberFormat("id-ID").format(
                         Math.trunc(
                           hotel.property.priceBreakdown.grossPrice.value
                         )
                       )}{" "}
-                      <span className="text-xs font-normal">/ night</span>
+                      <span className="text-base md:text-xs font-normal">/ night</span>
                     </p>
                   </div>
                   <div className="flex gap-2 text-xs font-semibold uppercase text-gray-500">

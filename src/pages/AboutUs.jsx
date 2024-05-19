@@ -18,7 +18,7 @@ const AboutUs = () => {
       <div className="">
         <div className="flex flex-col justify-center items-center">
           <div className="bg-slate-900 w-full min-h-36 py-16 px-24">
-            <div className="flex justify-center items-center gap-8 max-w-screen-md mx-auto">
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-8 max-w-screen-md mx-auto">
               <div className="text-white font-medium text-7xl">VISI</div>
               <div className="flex flex-col gap-4">
                 <p className="text-white text-2xl">
@@ -36,13 +36,13 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="bg-slate-800 w-full min-h-36 py-16 px-24">
-            <div className="flex justify-center items-center gap-8 max-w-screen-md mx-auto">
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-8 max-w-screen-md mx-auto">
               <div className="flex flex-col gap-4">
-                <p className="text-white text-right text-2xl">
+                <p className="text-white lg:text-right text-2xl">
                   Informasi wisata lengkap dan fitur perencanaan interaktif.
                 </p>
                 <hr class="w-full h-[1px] mx-auto bg-gray-600 border-0 rounded md-1"></hr>
-                <p className="text-white font-light text-base text-right">
+                <p className="text-white font-light text-base lg:text-right">
                   Menyediakan informasi lengkap dan akurat tentang destinasi
                   wisata, meliputi atraksi, akomodasi, transportasi, dan tips
                   perjalanan. Menawarkan fitur perencanaan perjalanan yang
@@ -50,13 +50,15 @@ const AboutUs = () => {
                   liburan dengan mudah dan menyenangkan.
                 </p>
               </div>
-              <div className="text-white font-medium text-7xl">MISI</div>
+              <div className="text-white font-medium text-7xl order-first lg:order-none ">
+                MISI
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <section className="py-20 px-10 gap-4 pt-14 grid grid-cols-4">
-        <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
+      <section className="py-20 px-10 gap-4 pt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+        <div className="flex min-h-[450px] max-w-full sm:max-w-[380px] justify-between overflow-hidden rounded-3xl">
           <div className="bg-[url('/public/images/chelsea.jpeg')] bg-cover flex items-end group bg-center">
             <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
               <p className="text-3xl text-white">Chelsea</p>
@@ -105,7 +107,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
+        <div className="flex min-h-[450px] max-w-full sm:max-w-[380px] justify-between overflow-hidden rounded-3xl">
           <div className="bg-[url('/public/images/austin.png')] bg-cover flex items-end group bg-center">
             <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
               <p className="text-3xl text-white">Austin</p>
@@ -132,7 +134,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
+        <div className="flex min-h-[450px] max-w-full sm:max-w-[380px] justify-between overflow-hidden rounded-3xl">
           <div className="bg-[url('/public/images/feli.png')] bg-cover flex items-end group bg-center">
             <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
               <p className="text-3xl text-white">Felicia</p>
@@ -177,7 +179,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className="flex min-h-[450px] max-w-[380px] justify-between overflow-hidden rounded-3xl">
+        <div className="flex min-h-[450px] max-w-full sm:max-w-[380px] justify-between overflow-hidden rounded-3xl">
           <div className="bg-[url('/public/images/josh.png')] bg-cover flex items-end group bg-center">
             <div className="bg-gradient-to-b from-[#091426]/0 to-[#091426] p-4">
               <p className="text-3xl text-white">Joshua</p>
@@ -188,31 +190,28 @@ const AboutUs = () => {
                 orang yang suka berolahraga dan beraktivitas fisik.
               </p>
               <div className="flex gap-6 md:gap-4 mt-4">
-                <a
-                  href="https://www.instagram.com/austingilbert.l/"
-                  target="_blank"
-                >
+                <a href="https://www.instagram.com/josw_jy/" target="_blank">
                   <Icon
                     icon="mdi:instagram"
                     className="w-[30px] h-[30px]"
                     style={{ color: "white" }}
                   />
                 </a>
-                <a href="https://www.instagram.com/austingilbert.l/">
+                <a href="https://www.instagram.com/josw_jy/">
                   <Icon
                     icon="mdi:twitter"
                     className="w-[30px] h-[30px]"
                     style={{ color: "white" }}
                   />
                 </a>
-                <a href="https://www.instagram.com/austingilbert.l/">
+                <a href="https://www.instagram.com/josw_jy/">
                   <Icon
                     icon="mdi:youtube"
                     className="w-[30px] h-[30px]"
                     style={{ color: "white" }}
                   />
                 </a>
-                <a href="https://www.instagram.com/austingilbert.l/">
+                <a href="https://www.instagram.com/josw_jy/">
                   <Icon
                     icon="ic:baseline-tiktok"
                     className="w-[30px] h-[30px]"

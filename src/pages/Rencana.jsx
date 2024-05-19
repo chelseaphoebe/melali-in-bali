@@ -8,21 +8,20 @@ const Flights = ({ score }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
     if (score === 10) {
-      // Apply 20% discount
       const discountedPrice = totalPrice * 0.8;
       setTotalPrice(discountedPrice);
     }
   }, [score, totalPrice]);
-  const [fromId, setFromId] = useState("CGK.AIRPORT"); // State untuk menyimpan nilai fromId yang dipilih
+  const [fromId, setFromId] = useState("CGK.AIRPORT");
   const [departDate, setDepartDate] = useState(() => {
     const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1); // Menambahkan 1 hari ke tanggal saat ini
+    tomorrow.setDate(tomorrow.getDate() + 1); 
     return tomorrow.toISOString().slice(0, 10);
   });
 
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false); // Ubah menjadi false, sehingga loading tidak langsung dimulai
+  const [loading, setLoading] = useState(false); 
 
   const handleFromIdChange = (e) => {
     setFromId(e.target.value);
@@ -34,12 +33,12 @@ const Flights = ({ score }) => {
 
   const searchFlights = async () => {
     try {
-      setLoading(true); // Mulai loading
+      setLoading(true); 
       const response = await axios.request({
         method: "GET",
         url: "https://booking-com15.p.rapidapi.com/api/v1/flights/searchFlights",
         params: {
-          fromId: fromId, // Menggunakan nilai fromId yang dipilih
+          fromId: fromId, 
           toId: "DPS.AIRPORT",
           departDate: departDate,
           pageNo: "1",
@@ -48,18 +47,18 @@ const Flights = ({ score }) => {
           currency_code: "AED",
         },
         headers: {
-         // "X-RapidAPI-Key":"ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+          // "X-RapidAPI-Key":"ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
           "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
         },
       });
       setData(response.data.data.aggregation.airlines || []);
-      setLoading(false); // Berhenti loading setelah mendapatkan data
+      setLoading(false); 
     } catch (error) {
       console.error("Error fetching flights:", error);
       setError(
         "An error occurred while fetching flights. Please try again later."
       );
-      setLoading(false); // Berhenti loading jika terjadi error
+      setLoading(false); 
     }
   };
 
@@ -128,13 +127,13 @@ const Flights = ({ score }) => {
           <div
             key={airline.iataCode}
             className="flex flex-col justify-center items-center overflow-hidden rounded-2xl mx-auto text-center"
-            style={{ maxWidth: "300px", height: "auto" }} // Sesuaikan ukuran kartu di sini
+            style={{ maxWidth: "300px", height: "auto" }} 
           >
             <div className="bg-white rounded-t-2xl overflow-hidden">
               <img
                 src={airline.logoUrl}
                 alt={airline.name}
-                className="w-full object-contain h-48 px-6" // Sesuaikan tinggi gambar di sini
+                className="w-full object-contain h-48 px-6" 
               />
             </div>
             <div className="p-4">
@@ -182,7 +181,7 @@ const Taxi = ({ score }) => {
           currency_code: "EUR",
         },
         headers: {
-          //'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
+          // 'X-RapidAPI-Key': 'ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0',
           "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
         },
       });
@@ -231,7 +230,6 @@ const Taxi = ({ score }) => {
     <div className="flex flex-col py-24 px-20">
       <h2 className="text-4xl font-bold mb-8 text-center text-black">Taxi</h2>
       <div className="mb-4">
-        {/* Pick up place */}
         <div>
           <label
             htmlFor="pickUpPlaceId"
@@ -245,7 +243,6 @@ const Taxi = ({ score }) => {
             onChange={handlePickUpPlaceIdChange}
             className="mb-8 block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm"
           >
-            {/* Pilihan tempat penjemputan */}
             <option value="ChIJ6xifn-ch0i0RtMkTgYxo5mw">
               Padma Resort Ubud
             </option>
@@ -283,7 +280,6 @@ const Taxi = ({ score }) => {
             onChange={handleDropOffPlaceIdChange}
             className="mb-8 block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm"
           >
-            {/* Pilihan tempat tujuan */}
             <option value="ChIJ6xifn-ch0i0RtMkTgYxo5mw">
               Padma Resort Ubud
             </option>
@@ -352,13 +348,13 @@ const Taxi = ({ score }) => {
             <div
               key={result.resultId}
               className="flex flex-col justify-center items-center overflow-hidden rounded-2xl mx-auto text-center"
-              style={{ maxWidth: "300px", height: "auto" }} // Sesuaikan ukuran kartu di sini
+              style={{ maxWidth: "300px", height: "auto" }} 
             >
               <div className="bg-white rounded-t-2xl overflow-hidden">
                 <img
                   src={result.imageUrl}
                   alt={result.supplierName}
-                  className="w-full object-cover h-48" // Sesuaikan tinggi gambar di sini
+                  className="w-full object-cover h-48" 
                 />
               </div>
               <div className="p-4">
@@ -384,14 +380,7 @@ const Rencana = () => {
   const [mapData, setMapData] = useState({});
 
   useEffect(() => {
-    setItinerary([
-      // isi itinerary disini
-    ]);
-
-    setTips([
-      // isi tips disini
-    ]);
-
+  
     const options = {
       method: "POST",
       url: "https://google-api31.p.rapidapi.com/map",
@@ -399,7 +388,7 @@ const Rencana = () => {
       url: "https://google-api31.p.rapidapi.com/map",
       headers: {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
+        // "X-RapidAPI-Key": "3c4ecc4659msh98585703592d74fp16a40djsn9157a658dcfa",
         "X-RapidAPI-Host": "google-api31.p.rapidapi.com",
       },
       data: {
@@ -429,7 +418,7 @@ const Rencana = () => {
   return (
     <>
       <section>
-        <div className="bg-[url('/public/images/bggrencana.jpg')] bg-center bg-cover bg-no-repeat min-h-screen px-52 flex items-center justify-center">
+        <div className="bg-[url('/public/images/bggrencana.jpg')] bg-center bg-cover bg-no-repeat min-h-screen md:px-52 flex items-center justify-center">
           <p
             className="text-white text-5xl font-semibold text-center tracking-wide banner-text"
             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
@@ -439,95 +428,88 @@ const Rencana = () => {
           </p>
         </div>
       </section>
-      <div>
-        <div className="grid grid-cols-4 relative gap-8 mr-8 mt-8">
-          <div className="col-span-3">
-            <div
-              className="w-full h-screen top-0 sticky bg-[url('/public/images/bgrencana.jpg')] bg-cover flex justify-center items-center flex-col"
-              alt=""
-            >
-              <h1 className="text-white text-3xl text-center mb-2">
-                Rencana Perjalanan selama 7 hari
-              </h1>
-              <p className="text-white texl-xl text-center font-normal">
-                Temukan petualangan dan keindahan alam Bali di halaman
-                rekomendasi wisata kami. <br />
-                Dari pantai-pantai berpasir putih hingga kuil-kuil suci,
-                eksplorasi tak terbatas.
-              </p>
-            </div>
-          </div>
-          <div className="justify-center flex-wrap gap-6">
-            <RencanaCard
-              imageUrl="monkey.png"
-              day="01"
-              title="Selamat Datang di Bali"
-              desc="Mulai dengan mengunjungi Ubud, menikmati Monkey Forest, eksplorasi pasar tradisional, dan berinteraksi lokal."
-            />
-            <RencanaCard
-              imageUrl="pura.jpg"
-              day="02"
-              title="Menyelami Budaya Bali"
-              desc="Hari kedua, telusuri kekayaan budaya Bali. Kunjungi Pura Tirta Empul, kuil suci dengan mata air penyembuhan. Nikmati pertunjukan tari di Pura Saraswati, Ubud."
-            />
-            <RencanaCard
-              imageUrl="menjangan.jpg"
-              day="03"
-              title="Petualangan di Bali Barat"
-              desc="Nikmati petualangan di Taman Nasional Bali Barat: trekking, snorkeling di Pulau Menjangan, dan kunjungi Pura Pulaki."
-            />
-            <RencanaCard
-              imageUrl="virgin.jpg"
-              day="04"
-              title="Pantai Timur Bali"
-              desc="Ke Pantai Timur Bali, Pantai Virgin dan Desa Tenganan: pasir putih, air laut jernih, dan tradisi Bali."
-            />
-            <RencanaCard
-              imageUrl="lembongan.jpg"
-              day="05"
-              title="Jelajahi Nusa Lembongan"
-              desc="Jelajahi keindahan Nusa Lembongan, snorkeling di Pantai Dream atau Mushroom, renang di Blue Lagoon, dan selancar di Devil's Tear."
-            />
-            <RencanaCard
-              imageUrl="kintamani.png"
-              day="06"
-              title="Petualangan di Kintamani dan Tegalalang"
-              desc="Nikmati Gunung Batur di Kintamani, Tegalalang: Sawah terasering, desa tradisional, dan Tirta Empul."
-            />
-            <RencanaCard
-              imageUrl="seminyak.jpg"
-              day="07"
-              title="Menikmati Santai di Pantai Seminyak"
-              desc="Santai di Pantai Seminyak, nikmati matahari terbenam, jelajahi toko butik, dan makan malam di restoran pantai."
-            />
+
+      <div className="lg:grid grid-cols-4 relative gap-8 lg:mr-8 mb-24 lg:mt-24">
+        <div className="col-span-3">
+          <div
+            className="w-full py-24 px-12 md:h-screen top-0 md:sticky bg-[url('/public/images/bgrencana.jpg')] bg-cover flex justify-center items-center flex-col"
+            alt=""
+          >
+            <h1 className="text-white text-3xl text-center mb-2">
+              Rencana Perjalanan selama 7 hari
+            </h1>
+            <p className="text-white texl-xl text-center font-normal">
+              Temukan petualangan dan keindahan alam Bali di halaman
+              rekomendasi wisata kami. <br />
+              Dari pantai-pantai berpasir putih hingga kuil-kuil suci,
+              eksplorasi tak terbatas.
+            </p>
           </div>
         </div>
-        <div className="content">
-          <div className="weather-box-and-map-box">
-            <div className="map-box">
-              <h2>One of the Favorite Destinastion in Bali</h2>
-              {mapData.geometry && (
-                <>
-                  <p>Latitude: {mapData.geometry.location.lat}</p>
-                  <p>Longitude: {mapData.geometry.location.lng}</p>
-                </>
-              )}
-              {/* tambahkan komponen map disini */}
-              <iframe
-                width="100%"
-                height="300"
-                frameborder="5"
-                src={`https://maps.google.com/maps?q=Ubud+Bali&t=&z=13&ie=UTF8&iwloc=&output=embed`}
-              />
-            </div>
-          </div>
-        </div >
-        <div className="grid mx-auto grid-cols-2">
+        <div className="flex justify-center flex-wrap gap-6 mt-12 md:mt-0">
+          <RencanaCard
+            imageUrl="monkey.png"
+            day="01"
+            title="Selamat Datang di Bali"
+            desc="Mulai dengan mengunjungi Ubud, menikmati Monkey Forest, eksplorasi pasar tradisional, dan berinteraksi lokal."
+          />
+          <RencanaCard
+            imageUrl="pura.jpg"
+            day="02"
+            title="Menyelami Budaya Bali"
+            desc="Hari kedua, telusuri kekayaan budaya Bali. Kunjungi Pura Tirta Empul, kuil suci dengan mata air penyembuhan. Nikmati pertunjukan tari di Pura Saraswati, Ubud."
+          />
+          <RencanaCard
+            imageUrl="menjangan.jpg"
+            day="03"
+            title="Petualangan di Bali Barat"
+            desc="Nikmati petualangan di Taman Nasional Bali Barat: trekking, snorkeling di Pulau Menjangan, dan kunjungi Pura Pulaki."
+          />
+          <RencanaCard
+            imageUrl="virgin.jpg"
+            day="04"
+            title="Pantai Timur Bali"
+            desc="Ke Pantai Timur Bali, Pantai Virgin dan Desa Tenganan: pasir putih, air laut jernih, dan tradisi Bali."
+          />
+          <RencanaCard
+            imageUrl="lembongan.jpg"
+            day="05"
+            title="Jelajahi Nusa Lembongan"
+            desc="Jelajahi keindahan Nusa Lembongan, snorkeling di Pantai Dream atau Mushroom, renang di Blue Lagoon, dan selancar di Devil's Tear."
+          />
+          <RencanaCard
+            imageUrl="kintamani.png"
+            day="06"
+            title="Petualangan di Kintamani dan Tegalalang"
+            desc="Nikmati Gunung Batur di Kintamani, Tegalalang: Sawah terasering, desa tradisional, dan Tirta Empul."
+          />
+          <RencanaCard
+            imageUrl="seminyak.jpg"
+            day="07"
+            title="Menikmati Santai di Pantai Seminyak"
+            desc="Santai di Pantai Seminyak, nikmati matahari terbenam, jelajahi toko butik, dan makan malam di restoran pantai."
+          />
+        </div>
+      </div>
+      <div className="">
+        <h2>One of the Favorite Destination in Bali</h2>
+        {mapData.geometry && (
+          <>
+            <p>Latitude: {mapData.geometry.location.lat}</p>
+            <p>Longitude: {mapData.geometry.location.lng}</p>
+          </>
+        )}
+        <iframe
+          title="Ubud Map"
+          src={`https://maps.google.com/maps?q=Ubud+Bali&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+          className="w-full h-[800px] border-0"
+        />
+      </div>
+      <div className="md:grid mx-auto grid-cols-2">
         <Flights />
         <Taxi />
-        </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

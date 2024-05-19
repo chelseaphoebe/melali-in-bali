@@ -62,7 +62,7 @@ export default function Home() {
     <>
       {/* Content goes here */}
       <section id="section1">
-        <div className="bg-[url('/public/images/background.jpg')] bg-center bg-cover bg-no-repeat min-h-screen px-52 flex items-center justify-center">
+        <div className="bg-[url('/public/images/background.jpg')] bg-center bg-cover bg-no-repeat min-h-screen md:px-52 flex items-center justify-center">
           <p
             className="text-white text-5xl font-semibold text-center tracking-wide banner-text"
             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
@@ -72,9 +72,9 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <div className="flex justify-center my-14 p-10">
-        <div className="flex">
-          <div className="bg-[#091426] p-10 gap-20 rounded-3xl flex justify-center">
+      <div className="flex justify-center md:my-14">
+        <div className="bg-[#091426] p-10 gap-10 md:gap-20 md:rounded-3xl flex flex-grow md:flex-grow-0 flex-col md:flex-row justify-center items-center md:items-start">
+          <div className="flex flex-row gap-8">
             <div>
               <p className="text-3xl text-white">Bali,</p>
               {weather.weather && (
@@ -102,37 +102,37 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col justify-center gap-3">
-              <div className="flex justify-between gap-16">
-                <p className="text-white font-normal">Temperatur Terendah</p>
-                <p className="text-white">
-                  {weather.main ? weather.main.temp_min : ""}
-                </p>
-              </div>
-              <div className="flex justify-between">
-                <hr class="w-72 h-[1px] mx-auto bg-gray-100 border-0 rounded md-10 dark:bg-gray-700"></hr>
-              </div>
-              <div className="flex justify-between gap-16">
-                <p className="text-white font-normal">Temperatur Tertinggi</p>
-                <p className="text-white">
-                  {weather.main ? weather.main.temp_max : ""}
-                </p>
-              </div>
-              <div className="flex justify-between">
-                <hr class="w-72 h-[1px] mx-auto bg-gray-100 border-0 rounded md-10 dark:bg-gray-700"></hr>
-              </div>
-              <div className="flex justify-between gap-16">
-                <p className="text-white font-normal">Angin</p>
-                <p className="text-white">
-                  {weather.wind ? weather.wind.speed : ""}
-                </p>
-              </div>
+          </div>
+          <div className="flex flex-col justify-center gap-3">
+            <div className="flex justify-between gap-16">
+              <p className="text-white font-normal">Temperatur Terendah</p>
+              <p className="text-white">
+                {weather.main ? weather.main.temp_min : ""}
+              </p>
+            </div>
+            <div className="flex justify-between">
+              <hr class="w-72 h-[1px] mx-auto bg-gray-100 border-0 rounded md-10 dark:bg-gray-700"></hr>
+            </div>
+            <div className="flex justify-between gap-16">
+              <p className="text-white font-normal">Temperatur Tertinggi</p>
+              <p className="text-white">
+                {weather.main ? weather.main.temp_max : ""}
+              </p>
+            </div>
+            <div className="flex justify-between">
+              <hr class="w-72 h-[1px] mx-auto bg-gray-100 border-0 rounded md-10 dark:bg-gray-700"></hr>
+            </div>
+            <div className="flex justify-between gap-16">
+              <p className="text-white font-normal">Angin</p>
+              <p className="text-white">
+                {weather.wind ? weather.wind.speed : ""}
+              </p>
             </div>
           </div>
         </div>
       </div>
       <div>
-        <div className="flex flex-wrap justify-center gap-6 overflow-hidden">
+        <div className="flex flex-wrap justify-center md:gap-6 overflow-hidden">
           <JelajahCard
             imageFile="lempuyang.jpg"
             judul="Lempuyang Temple"
@@ -214,9 +214,9 @@ export default function Home() {
           />
         </div>
       </div>
-      <div id="section3" className="flex mt-20">
-        <div className="w-2/3">
-          <div className="max-w-xs md:max-w-6xl mx-auto my-10 lg:px-10 px-28 flex flex-wrap gap-16">
+      <div id="section3" className="flex flex-col md:flex-row md:mt-20">
+        <div className="md:w-2/3">
+          <div className="max-w-xs md:max-w-6xl mx-auto my-10 md:px-10 flex flex-wrap gap-16 justify-center">
             {news.map((data, index) => (
               <NewsCard
                 key={index}
@@ -229,10 +229,10 @@ export default function Home() {
           </div>
         </div>
         <div
-          className="w-1/3 h-screen top-0 sticky bg-[url('/public/images/bgNews1.png')] bg-cover bg-blend-darken flex justify-center items-center flex-col"
+          className="md:w-1/3 order-first md:order-none py-24 md:h-screen top-0 md:sticky bg-[url('/public/images/bgNews1.png')] grayscale bg-cover bg-blend-darken flex justify-center items-center flex-col"
           alt=""
         >
-          <h1 className="text-white text-3xl text-center mb-2 mx-12">
+          <h1 className="text-white text-3xl text-center my-2 mx-12">
             Berita Terkini
           </h1>
           <p className="text-white text-base text-center font-normal mx-10">
