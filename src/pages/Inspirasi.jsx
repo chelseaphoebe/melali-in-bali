@@ -251,7 +251,7 @@ const NearbyAttractions = () => {
       <h2 className="text-4xl font-bold mb-8 text-center text-black">
         Popular Attraction Near By Hotel
       </h2>
-      <div className="mb-4 text-center">
+      {/* <div className="mb-4 text-center">
         <label htmlFor="hotelId">Select Hotel:</label>
         <select
           id="hotelId"
@@ -279,7 +279,7 @@ const NearbyAttractions = () => {
           <option value="10079827">Villa Lembah Damai by Pramana Villas</option>
           <option value="413008">Desa Swan Villas & SPA, Keramas</option>
         </select>
-      </div>
+      </div> */}
       {products.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {products.map((attraction, index) => (
