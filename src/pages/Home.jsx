@@ -8,7 +8,7 @@ import dataNews from "./News.json";
 
 export default function Home() {
   const [weather, setWeather] = useState([]);
-  // const [news, setNews] = useState([]);
+  // const [news, setNews] = useState([]); // uncomment jika mau menyalakan API
   // ini buat gantiin API
   const [news, setNews] = useState(dataNews);
 
@@ -52,7 +52,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    // fetchNews(); 
+    // fetchNews(); // uncomment jika mau menyalakan API
     fetchWeather();
   }, []);
 

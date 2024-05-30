@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import dataHotels from "./dataHotels.json";
 
 export default function Hotels() {
-  // const [hotels, setHotels] = useState([]);
-  const [hotels, setHotels] = useState(dataHotels);
+  // const [hotels, setHotels] = useState([]); // uncomment jika mau menyalakan API
+  const [hotels, setHotels] = useState(dataHotels); // comment jika mau menyalakan API
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [score, setScore] = useState(0);
@@ -18,7 +18,7 @@ export default function Hotels() {
   };
 
   useEffect(() => {
-    // searchHotels();
+    // searchHotels(); // uncomment jika mau menyalakan API
   }, []);
 
   const options = {
@@ -32,7 +32,7 @@ export default function Hotels() {
       currency_code: "idr",
     },
     headers: {
-      // "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+      // "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0", // uncomment jika mau menyalakan API
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };

@@ -83,8 +83,8 @@ const ActivitiesSection = () => {
 };
 
 const Attractions = () => {
-  // const [products, setProducts] = useState([]);
-  const [products, setProducts] = useState(dataAttractions);
+  // const [products, setProducts] = useState([]); // uncomment jika mau menyalakan API
+  const [products, setProducts] = useState(dataAttractions); // comment jika mau menyalakan API
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false); // true-false 
 
@@ -98,7 +98,7 @@ const Attractions = () => {
       languagecode: "en-us",
     },
     headers: {
-      // "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+      // "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0", // uncomment jika mau menyalakan API
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -132,7 +132,7 @@ const Attractions = () => {
   };
 
   useEffect(() => {
-    // searchAttractions();
+    // searchAttractions(); // uncomment jika mau menyalakan API
   }, []);
 
   if (loading) {
@@ -203,11 +203,11 @@ const NearbyAttractions = () => {
     method: "GET",
     url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/getPopularAttractionNearBy",
     params: {
-      hotel_id: hotelId, 
+      hotel_id: hotelId,
       languagecode: "en-us",
     },
     headers: {
-    //  "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0",
+      //  "X-RapidAPI-Key": "ef2b5618e6msh9ae6a9656f7cf54p15200ajsnd6385c2fd5b0", // uncomment jika mau menyalakan API
       "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
     },
   };
@@ -231,7 +231,7 @@ const NearbyAttractions = () => {
   };
 
   useEffect(() => {
-    // searchAttractions();
+    // searchAttractions(); // uncomment jika mau menyalakan API
   }, [hotelId]); 
 
   const handleHotelIdChange = (event) => {
@@ -279,7 +279,8 @@ const NearbyAttractions = () => {
           <option value="10079827">Villa Lembah Damai by Pramana Villas</option>
           <option value="413008">Desa Swan Villas & SPA, Keramas</option>
         </select>
-      </div> */}
+      </div> */}{" "}
+      {/* uncomment jika mau menyalakan API */}
       {products.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {products.map((attraction, index) => (
